@@ -58,11 +58,12 @@ for i in range(2,poc.shape[1]):
     g.add((component, RDF.type, C[poc[i][0]]))
 
     for j in range(2,poc.shape[0]):
-        material_property = INST[poc[i][1]+'-'+str(material_properties[j])]
-        g.add((material_property, RDF.type, MMO[material_properties[j]]))
-        g.add((component, C.hasMaterialProperty, material_property))
-        g.add((material_property, SAREF.hasValue, Literal(poc[i][j])))
-        g.add((material_property, OM.hasUnit , OM[units[j]]))
+        if not pd.isna(poc[i][j]):
+            material_property = INST[poc[i][1]+'-'+str(material_properties[j])]
+            g.add((material_property, RDF.type, MMO[material_properties[j]]))
+            g.add((component, C.hasMaterialProperty, material_property))
+            g.add((material_property, SAREF.hasValue, Literal(poc[i][j])))
+            g.add((material_property, OM.hasUnit , OM[units[j]]))
 
 #Create concrete types instances and link their components components
 for i in range(cc.shape[1]):

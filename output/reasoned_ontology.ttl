@@ -1,0 +1,167 @@
+@prefix : <https://w3id.org/conprop#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> a owl:AnnotationProperty .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit> a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain <https://w3id.org/pmd/materials-mechanics-ontology/Property> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Unit> .
+
+<https://w3id.org/conprop> owl:imports <file://C:/Users/mlaur/Documents/01.1_PhD/12_Collaborations/Agnieska/EurocodesOntologies/workflow-test/test-data.owl> .
+
+: a owl:Ontology ;
+    dcterms:creator "Agnieszka Jędrzejewska, Maria Laura Leonardi, José Granja, Daniel Oliveira,  Miguel Azenha."^^xsd:string ;
+    dcterms:description "Ontology allowing to derive input physical and mechanical properties of a concrete structure for thermo-mechanical analysis."@en ;
+    dcterms:title "Concrete Properties Ontology"@en ;
+    owl:versionIRI <https://w3id.org/conprop/0.1> ;
+    :preferredNamespacePrefix "ConProp"^^xsd:string ;
+    :preferredNamespaceUri "https://w3id.org/conprop#"^^xsd:string .
+
+:AdditionMaterial a owl:Class ;
+    rdfs:label "addition"^^xsd:string ;
+    rdfs:subClassOf :BinderMaterial ;
+    owl:disjointWith :Cement .
+
+:BinderQuantity a owl:Class ;
+    rdfs:subClassOf :ComponentQuantity .
+
+:CoarseAggregateMaterial a owl:Class ;
+    rdfs:label "coarse aggregate"^^xsd:string ;
+    rdfs:comment "Aggregate characterised by the size which does not allow it to pass through a certain threshold sieve size in the sieve particle size distribution analysis."^^xsd:string ;
+    rdfs:subClassOf :AggregateMaterial ;
+    owl:disjointWith :FineAggregateMaterial .
+
+:CoarseAggregateQuantity a owl:Class ;
+    rdfs:subClassOf :ComponentQuantity .
+
+:CorrosionResistance a owl:Class ;
+    rdfs:label "corrosion resistance"^^xsd:string ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/ChemicalProperty> ;
+    owl:disjointWith <https://w3id.org/pmd/materials-mechanics-ontology/Composition> .
+
+:Creep a owl:Class ;
+    rdfs:label "creep"@en ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/MechanicalProperty> .
+
+:Emissivity a owl:Class ;
+    rdfs:label "emissivity"^^xsd:string ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/ThermalProperty> .
+
+:Extrudability a owl:Class ;
+    rdfs:label "extrudability"^^xsd:string ;
+    rdfs:subClassOf :ManufacturingProperty .
+
+:FineAggregateQuantity a owl:Class ;
+    rdfs:subClassOf :ComponentQuantity .
+
+:Flowability a owl:Class ;
+    rdfs:label "flowability"^^xsd:string ;
+    rdfs:subClassOf :ManufacturingProperty .
+
+:HydrationHeat a owl:Class ;
+    rdfs:label "cumulative unit hydration heat"@en ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/ThermalProperty> .
+
+:OpenTime a owl:Class ;
+    rdfs:label "open time"^^xsd:string ;
+    rdfs:subClassOf :ManufacturingProperty .
+
+:Pumpability a owl:Class ;
+    rdfs:label "pumpability"^^xsd:string ;
+    rdfs:subClassOf :ManufacturingProperty .
+
+:WaterQuantity a owl:Class ;
+    rdfs:subClassOf :ComponentQuantity .
+
+:Workability a owl:Class ;
+    rdfs:label "workability"^^xsd:string ;
+    rdfs:subClassOf :ManufacturingProperty .
+
+:hasChemicalComponent a owl:ObjectProperty ;
+    rdfs:domain :BinderMaterial ;
+    rdfs:range <https://w3id.org/pmd/materials-mechanics-ontology/Composition> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+:hasComponentQuantity a owl:ObjectProperty ;
+    rdfs:domain <http://bimerr.iot.linkeddata.es/def/material-properties#Material> ;
+    rdfs:range :ComponentQuantity .
+
+:hasMaterialProperty a owl:ObjectProperty ;
+    rdfs:domain <http://bimerr.iot.linkeddata.es/def/material-properties#Material> ;
+    rdfs:range <https://w3id.org/pmd/materials-mechanics-ontology/MaterialProperty> ;
+    owl:inverseOf :isMaterialPropertyOf .
+
+:hasSelection a owl:ObjectProperty ;
+    rdfs:domain <http://bimerr.iot.linkeddata.es/def/material-properties#Concrete> ;
+    rdfs:range :Selection .
+
+:isComponentMaterialOf a owl:ObjectProperty ;
+    owl:inverseOf :isMadeOfComponentMaterial .
+
+:preferredNamespacePrefix a owl:AnnotationProperty .
+
+:preferredNamespaceUri a owl:AnnotationProperty .
+
+<http://bimerr.iot.linkeddata.es/def/material-properties#Concrete> owl:disjointWith :ConcreteComponentMaterial .
+
+:AdmixtureMaterial a owl:Class ;
+    rdfs:label "admixture"^^xsd:string ;
+    rdfs:comment "https://www.wikidata.org/wiki/Q831619"^^xsd:anyURI,
+        "Natural or manufactured chemical or additive added during concrete mixing to enhance specific properties of the fresh or hardened concrete."^^xsd:string ;
+    rdfs:subClassOf :ConcreteComponentMaterial .
+
+:Cement a owl:Class ;
+    rdfs:label "cement"@en ;
+    rdfs:comment "A chemical substance used for construction that sets, hardens, and adheres to other materials to bind them together."@en ;
+    rdfs:subClassOf :BinderMaterial .
+
+:FineAggregateMaterial a owl:Class ;
+    rdfs:label "fine aggregate"^^xsd:string ;
+    rdfs:comment "Aggregate characterised by the size which allows it to pass through a certain threshold sieve size in the sieve particle size distribution analysis."^^xsd:string ;
+    rdfs:subClassOf :AggregateMaterial .
+
+:isMadeOfComponentMaterial a owl:ObjectProperty ;
+    rdfs:domain <http://bimerr.iot.linkeddata.es/def/material-properties#Material> ;
+    rdfs:range <http://bimerr.iot.linkeddata.es/def/material-properties#Material> .
+
+:isMaterialPropertyOf a owl:ObjectProperty .
+
+:AggregateMaterial a owl:Class ;
+    rdfs:label "aggregate"@en ;
+    rdfs:comment "https://www.wikidata.org/wiki/Q866298"^^xsd:anyURI,
+        "Inert material with sufficient compressive strength and appropriate size distribution added as load to a composite."^^xsd:string ;
+    rdfs:subClassOf :ConcreteComponentMaterial .
+
+:BinderMaterial a owl:Class ;
+    rdfs:label "binder"^^xsd:string ;
+    rdfs:comment "A material or substance that holds or draws other materials together to form a cohesive whole mechanically, chemically, by adhesion or cohesion. More narrowly, binders are liquid or dough-like substances that harden by a chemical or physical process and bind fibres, filler powder and other particles added into it."@en ;
+    rdfs:subClassOf :ConcreteComponentMaterial .
+
+:ConcreteComponentMaterial a owl:Class ;
+    rdfs:label "concrete component"@en ;
+    rdfs:comment "A consitituent of the fresh concrete mix, which usually encompasses water, aggregate (fine and coarse) and binder (cement and additions)."^^xsd:string ;
+    rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/material-properties#Material> .
+
+:ComponentQuantity a owl:Class ;
+    rdfs:label "concrete component quantity"^^xsd:string ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/Property> ;
+    owl:disjointWith <https://w3id.org/pmd/materials-mechanics-ontology/MaterialProperty> .
+
+:ManufacturingProperty a owl:Class ;
+    rdfs:label "manufacturing property"^^xsd:string ;
+    rdfs:subClassOf <https://w3id.org/pmd/materials-mechanics-ontology/MaterialProperty> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( <http://bimerr.iot.linkeddata.es/def/material-properties#Water> :AdmixtureMaterial :AggregateMaterial :BinderMaterial ) .
+
