@@ -86,16 +86,19 @@ for i in range(1,cmq.shape[1]-1):
     print("-------"+concrete_name+"----------")
     for j in range(1, cmq.shape[0]):
         if not pd.isna(cmq[i][j]):
+            print(concrete_name,quantity_classes[j] )
             component_quantity = INST[concrete_name+'-'+quantity_classes[j]]
             print(component_quantity)
             g.add((component_quantity, RDF.type, INST[quantity_classes[j]]))
             g.add((INST[concrete_name], C.hasComponentQuantity, component_quantity))
             g.add((component_quantity, SAREF.hasValue, Literal(cmq[i][j])))
             g.add((component_quantity, OM.hasUnit, OM[units[j]]))      
-    for i in range(1,cp.shape[0]):
-        g.add((INST[concrete_name], C.hasMaterialProperty, MMO[cp[0][i]]))
-        g.add((INST[concrete_name], C.hasMaterialProperty, [cp[0][i]]))
-        print(cp[0][i])
+    for k in range(1,cp.shape[0]):
+        property_instance = INST[concrete_name+cp[0][k]]
+        g.add((property_instance, RDF.type, MMO[cp[0][k]]))
+        g.add((INST[concrete_name], C.hasMaterialProperty, property_instance))
+        g.add((property_instance, OM.hasUnit, OM[cp[1][k]]))
+
 
 path = 'test.ttl'
 g.serialize(destination= path , format ='turtle')
