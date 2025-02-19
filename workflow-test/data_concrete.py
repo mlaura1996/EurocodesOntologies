@@ -72,7 +72,6 @@ for i in range(cc.shape[1]):
     for j in range(1,cc.shape[0]):
         g.add((INST[concrete_name], C.isMadeOfComponentMaterial, INST[cc[i][j]]))
 
-
 # Assign quantities to each  of the components of the concrete instances
 components_name =  cmq[0]
 units = cmq[3]
