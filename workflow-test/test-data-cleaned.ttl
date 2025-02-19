@@ -1,0 +1,262 @@
+@prefix ns1: <https://w3id.org/conprop#> .
+@prefix ns2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix ns3: <https://w3id.org/saref#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://random-url-to-your-data.com/data#BridgeConcrete> a <http://bimerr.iot.linkeddata.es/def/material-properties#Concrete> ;
+    ns1:hasComponentQuantity <https://random-url-to-your-data.com/data#BridgeConcrete-Basalt-Quantity>,
+        <https://random-url-to-your-data.com/data#BridgeConcrete-CementCEM-I-Quantity>,
+        <https://random-url-to-your-data.com/data#BridgeConcrete-QuartziteSand-Quantity>,
+        <https://random-url-to-your-data.com/data#BridgeConcrete-TapWater-Quantity> ;
+    ns1:isMadeOfComponentMaterial <https://random-url-to-your-data.com/data#Basalt>,
+        <https://random-url-to-your-data.com/data#CementCEM-I>,
+        <https://random-url-to-your-data.com/data#QuartziteSand>,
+        <https://random-url-to-your-data.com/data#TapWater> .
+
+<https://random-url-to-your-data.com/data#CementCEM-II> a ns1:Cement ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#CementCEM-II-MassDensity>,
+        <https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#CementCEM-II-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#CementCEM-II-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#CementCEM-III> a ns1:Cement ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#CementCEM-III-MassDensity>,
+        <https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#CementCEM-III-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#CementCEM-III-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#CementCEM-IV> a ns1:Cement ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity>,
+        <https://random-url-to-your-data.com/data#CementCEM-IV-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#CementCEM-IV-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#CementCEM-V> a ns1:Cement ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#CementCEM-V-MassDensity>,
+        <https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#CementCEM-V-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#DefaultConcrete> a <http://bimerr.iot.linkeddata.es/def/material-properties#Concrete> ;
+    ns1:hasComponentQuantity <https://random-url-to-your-data.com/data#DefaultConcrete-CementCEM-I-Quantity>,
+        <https://random-url-to-your-data.com/data#DefaultConcrete-LimeStone-Quantity>,
+        <https://random-url-to-your-data.com/data#DefaultConcrete-QuartziteSand-Quantity>,
+        <https://random-url-to-your-data.com/data#DefaultConcrete-TapWater-Quantity> ;
+    ns1:isMadeOfComponentMaterial <https://random-url-to-your-data.com/data#CementCEM-I>,
+        <https://random-url-to-your-data.com/data#Limestone>,
+        <https://random-url-to-your-data.com/data#QuartziteSand>,
+        <https://random-url-to-your-data.com/data#TapWater> .
+
+<https://random-url-to-your-data.com/data#Granite> a ns1:CoarseAggregateMaterial ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#Granite-MassDensity>,
+        <https://random-url-to-your-data.com/data#Granite-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#Granite-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#Basalt> a ns1:CoarseAggregateMaterial ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#Basalt-MassDensity>,
+        <https://random-url-to-your-data.com/data#Basalt-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#Basalt-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#Basalt-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#Basalt-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 2900 .
+
+<https://random-url-to-your-data.com/data#Basalt-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 770 .
+
+<https://random-url-to-your-data.com/data#Basalt-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.9e+00 .
+
+<https://random-url-to-your-data.com/data#Basalt-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin ;
+    ns3:hasValue 8 .
+
+<https://random-url-to-your-data.com/data#BridgeConcrete-Basalt-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 640 .
+
+<https://random-url-to-your-data.com/data#BridgeConcrete-CementCEM-I-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 360 .
+
+<https://random-url-to-your-data.com/data#BridgeConcrete-QuartziteSand-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 1290 .
+
+<https://random-url-to-your-data.com/data#BridgeConcrete-TapWater-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 145 .
+
+<https://random-url-to-your-data.com/data#CementCEM-I-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 3000 .
+
+<https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 560 .
+
+<https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.3e+00 .
+
+<https://random-url-to-your-data.com/data#CementCEM-I-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#CementCEM-II-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 3000 .
+
+<https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 560 .
+
+<https://random-url-to-your-data.com/data#CementCEM-II-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.3e+00 .
+
+<https://random-url-to-your-data.com/data#CementCEM-II-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#CementCEM-III-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 3000 .
+
+<https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 560 .
+
+<https://random-url-to-your-data.com/data#CementCEM-III-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.3e+00 .
+
+<https://random-url-to-your-data.com/data#CementCEM-III-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 3000 .
+
+<https://random-url-to-your-data.com/data#CementCEM-IV-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 560 .
+
+<https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.3e+00 .
+
+<https://random-url-to-your-data.com/data#CementCEM-IV-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#CementCEM-V-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 3000 .
+
+<https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 560 .
+
+<https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 1.3e+00 .
+
+<https://random-url-to-your-data.com/data#CementCEM-V-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#DefaultConcrete-CementCEM-I-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 350 .
+
+<https://random-url-to-your-data.com/data#DefaultConcrete-LimeStone-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 700 .
+
+<https://random-url-to-your-data.com/data#DefaultConcrete-QuartziteSand-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 1200 .
+
+<https://random-url-to-your-data.com/data#DefaultConcrete-TapWater-Quantity> ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 150 .
+
+<https://random-url-to-your-data.com/data#Granite-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 2700 .
+
+<https://random-url-to-your-data.com/data#Granite-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 740 .
+
+<https://random-url-to-your-data.com/data#Granite-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 2.9e+00 .
+
+<https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin ;
+    ns3:hasValue 7 .
+
+<https://random-url-to-your-data.com/data#Limestone> a ns1:CoarseAggregateMaterial ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#Limestone-MassDensity>,
+        <https://random-url-to-your-data.com/data#Limestone-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#Limestone-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#Limestone-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 2500 .
+
+<https://random-url-to-your-data.com/data#Limestone-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 910 .
+
+<https://random-url-to-your-data.com/data#Limestone-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 3 .
+
+<https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin ;
+    ns3:hasValue 6 .
+
+<https://random-url-to-your-data.com/data#QuartziteSand-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 2700 .
+
+<https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 720 .
+
+<https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 4.6e+00 .
+
+<https://random-url-to-your-data.com/data#QuartziteSand-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#TapWater-MassDensity> a <https://w3id.org/pmd/materials-mechanics-ontology/MassDensity> ;
+    ns2:hasUnit ns2:kilogramPerCubicmetre ;
+    ns3:hasValue 1000 .
+
+<https://random-url-to-your-data.com/data#TapWater-SpecificHeat> a <https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat> ;
+    ns2:hasUnit ns2:joulePerKelvinKilogram ;
+    ns3:hasValue 4180 .
+
+<https://random-url-to-your-data.com/data#TapWater-ThermalConductivity> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity> ;
+    ns2:hasUnit ns2:wattPerMetreKelvin ;
+    ns3:hasValue 6e-01 .
+
+<https://random-url-to-your-data.com/data#TapWater-ThermalExpansionCoefficient> a <https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient> ;
+    ns2:hasUnit ns2:inverseOfKelvin .
+
+<https://random-url-to-your-data.com/data#CementCEM-I> a ns1:Cement ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#CementCEM-I-MassDensity>,
+        <https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#CementCEM-I-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#QuartziteSand> a ns1:FineAggregateMaterial ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#QuartziteSand-MassDensity>,
+        <https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#QuartziteSand-ThermalExpansionCoefficient> .
+
+<https://random-url-to-your-data.com/data#TapWater> a ns1:Water ;
+    ns1:hasMaterialProperty <https://random-url-to-your-data.com/data#TapWater-MassDensity>,
+        <https://random-url-to-your-data.com/data#TapWater-SpecificHeat>,
+        <https://random-url-to-your-data.com/data#TapWater-ThermalConductivity>,
+        <https://random-url-to-your-data.com/data#TapWater-ThermalExpansionCoefficient> .
+
