@@ -4,7 +4,7 @@ from owlready2 import *
 from utils.comparisons import compare_graphs
 
 # ✅ 1️⃣ Ensure Temp Directory is Set for Owlready2
-TEMP_DIR = "C:/Users/mlaur/AppData/Local/Temp/Owlready2"
+TEMP_DIR = "temp"
 os.makedirs(TEMP_DIR, exist_ok=True)  # Create if it doesn't exist
 os.environ["OWLREADY2_TMPDIR"] = TEMP_DIR  # Set for Owlready2
 

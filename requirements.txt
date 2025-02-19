@@ -6,13 +6,9 @@ colorama
 et_xmlfile==2.0.0
 frozenlist
 idna
-ifcopenshell==0.8.0
 isodate==0.7.2
 lark==1.2.2
 loguru
-mkl-service==2.4.0
-mkl_fft
-mkl_random
 msgpack
 multidict
 numpy
@@ -30,7 +26,6 @@ six==1.17.0
 svgwrite
 typing_extensions==4.12.2
 tzdata==2024.2
-vtk==9.3.1
 wheel==0.44.0
 win32-setctime
 wslink

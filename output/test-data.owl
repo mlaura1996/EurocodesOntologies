@@ -5,6 +5,17 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:saref="https://w3id.org/saref#"
 >
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-ThermalConductivity"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete">
     <rdf:type rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
     <conProp:hasComponentQuantity rdf:resource="https://random-url-to-your-data.com/data#BridgeConcrete-BinderQuantity"/>
@@ -22,28 +33,58 @@
     <conProp:isMadeOfComponentMaterial rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand"/>
     <conProp:isMadeOfComponentMaterial rdf:resource="https://random-url-to-your-data.com/data#TapWater"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-WaterQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#WaterQuantity"/>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</saref:hasValue>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2700</saref:hasValue>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteMassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteMassDensity">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat">
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteSpecificHeat">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-II">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-ThermalConductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone">
+    <rdf:type rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-ThermalConductivity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite">
+    <rdf:type rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-ThermalConductivity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand">
+    <rdf:type rdf:resource="https://w3id.org/conprop#FineAggregateMaterial"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-WaterQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#WaterQuantity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-CoarseAggregateQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#CoarseAggregateQuantity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</saref:hasValue>
   </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete">
     <rdf:type rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
@@ -62,25 +103,220 @@
     <conProp:isMadeOfComponentMaterial rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand"/>
     <conProp:isMadeOfComponentMaterial rdf:resource="https://random-url-to-your-data.com/data#TapWater"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-BinderQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#BinderQuantity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2700</saref:hasValue>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteSpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteThermalExpansionCoefficient">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteThermalExpansionCoefficient">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-WaterQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#WaterQuantity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</saref:hasValue>
   </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-FineAggregateQuantity">
     <rdf:type rdf:resource="https://random-url-to-your-data.com/data#FineAggregateQuantity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1290</saref:hasValue>
   </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-ThermalExpansionCoefficient">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2900</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteModulusOfElasticity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ModulusOfElasticity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gigapascal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-FineAggregateQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#FineAggregateQuantity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteTensileStrength">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/TensileStrength"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteTensileStrength">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/TensileStrength"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteModulusOfElasticity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ModulusOfElasticity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gigapascal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2700</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-CoarseAggregateQuantity">
+    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#CoarseAggregateQuantity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.9</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Water"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-ThermalConductivity"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-ThermalConductivity">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.9</saref:hasValue>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat">
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-SpecificHeat">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720</saref:hasValue>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">740</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-MassDensity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-SpecificHeat">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4180</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.6</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I">
+    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-MassDensity"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat"/>
+    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</saref:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity">
+    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
+    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
   </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt">
     <rdf:type rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
@@ -99,260 +335,24 @@
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteThermalExpansionCoefficient">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone">
-    <rdf:type rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-ThermalConductivity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand">
-    <rdf:type rdf:resource="https://w3id.org/conprop#FineAggregateMaterial"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteThermalExpansionCoefficient">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.9</saref:hasValue>
-  </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-II-ThermalConductivity">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Water"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#TapWater-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">740</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite">
-    <rdf:type rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-ThermalConductivity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-I-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
   </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-BinderQuantity">
     <rdf:type rdf:resource="https://random-url-to-your-data.com/data#BinderQuantity"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</saref:hasValue>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Granite-ThermalExpansionCoefficient">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</saref:hasValue>
-  </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV-SpecificHeat">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
   </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-III-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteSpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-ThermalExpansionCoefficient">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-CoarseAggregateQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#CoarseAggregateQuantity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-ThermalExpansionCoefficient">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalExpansionCoefficient"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/inverseOfKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</saref:hasValue>
-  </rdf:Description>
   <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-SpecificHeat">
     <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
     <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
     <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">910</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Basalt-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2900</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4180</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcrete-CoarseAggregateQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#CoarseAggregateQuantity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-III-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteModulusOfElasticity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ModulusOfElasticity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gigapascal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2700</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteMassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-IV-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.3</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#TapWater-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.6</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-II">
-    <rdf:type rdf:resource="https://w3id.org/conprop#Cement"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-MassDensity"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat"/>
-    <conProp:hasMaterialProperty rdf:resource="https://random-url-to-your-data.com/data#CementCEM-II-ThermalConductivity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-II-SpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-BinderQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#BinderQuantity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-FineAggregateQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#FineAggregateQuantity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteSpecificHeat">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeat"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteModulusOfElasticity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ModulusOfElasticity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gigapascal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#Limestone-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcrete-WaterQuantity">
-    <rdf:type rdf:resource="https://random-url-to-your-data.com/data#WaterQuantity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#QuartziteSand-ThermalConductivity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#CementCEM-V-MassDensity">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"/>
-    <saref:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</saref:hasValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#DefaultConcreteTensileStrength">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/TensileStrength"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://random-url-to-your-data.com/data#BridgeConcreteTensileStrength">
-    <rdf:type rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/TensileStrength"/>
-    <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal"/>
   </rdf:Description>
 </rdf:RDF>
