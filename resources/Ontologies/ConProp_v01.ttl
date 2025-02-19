@@ -1,7 +1,5 @@
 @prefix : <https://w3id.org/conprop#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-@prefix beo: <https://pi.pauwel.be/voc/buildingelement> .
-@prefix bot: <https://w3id.org/bot#> .
 @prefix mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> .
 @prefix mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -15,6 +13,9 @@
 
 <https://w3id.org/conprop#> rdf:type owl:Ontology ;
                              owl:versionIRI <https://w3id.org/conprop/0.1> ;
+                             owl:import <http://www.ontology-of-units-of-measure.org/resource/om-2> ;
+                             owl:import <http://bimerr.iot.linkeddata.es/def/material-properties> ;
+                             owl:import <https://w3id.org/pmd/materials-mechanics-ontology> ;
                              <http://purl.org/dc/terms/creator> "Agnieszka Jędrzejewska, Maria Laura Leonardi, José Granja, Daniel Oliveira,  Miguel Azenha." ;
                              <http://purl.org/dc/terms/description> "Ontology allowing to derive input physical and mechanical properties of a concrete structure for thermo-mechanical analysis."@en ;
                              <http://purl.org/dc/terms/title> "Concrete Properties Ontology"@en ;
