@@ -7,10 +7,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 data:BridgeConcrete a mat:Concrete ;
-    conProp:hasComponentQuantity data:BridgeConcrete-Basalt,
-        data:BridgeConcrete-CementCEM-I,
-        data:BridgeConcrete-QuartziteSand,
-        data:BridgeConcrete-TapWater ;
+    conProp:hasComponentQuantity data:BridgeConcrete-BinderQuantity,
+        data:BridgeConcrete-CoarseAggregateQuantity,
+        data:BridgeConcrete-FineAggregateQuantity,
+        data:BridgeConcrete-WaterQuantity ;
     conProp:isMadeOfComponentMaterial data:Basalt,
         data:CementCEM-I,
         data:QuartziteSand,
@@ -41,10 +41,10 @@ data:CementCEM-V a conProp:Cement ;
         data:CementCEM-V-ThermalExpansionCoefficient .
 
 data:DefaultConcrete a mat:Concrete ;
-    conProp:hasComponentQuantity data:DefaultConcrete-CementCEM-I,
-        data:DefaultConcrete-LimeStone,
-        data:DefaultConcrete-QuartziteSand,
-        data:DefaultConcrete-TapWater ;
+    conProp:hasComponentQuantity data:DefaultConcrete-BinderQuantity,
+        data:DefaultConcrete-CoarseAggregateQuantity,
+        data:DefaultConcrete-FineAggregateQuantity,
+        data:DefaultConcrete-WaterQuantity ;
     conProp:isMadeOfComponentMaterial data:CementCEM-I,
         data:Limestone,
         data:QuartziteSand,
@@ -55,6 +55,12 @@ data:Granite a conProp:CoarseAggregateMaterial ;
         data:Granite-SpecificHeat,
         data:Granite-ThermalConductivity,
         data:Granite-ThermalExpansionCoefficient .
+
+data:Basalt a conProp:CoarseAggregateMaterial ;
+    conProp:hasMaterialProperty data:Basalt-MassDensity,
+        data:Basalt-SpecificHeat,
+        data:Basalt-ThermalConductivity,
+        data:Basalt-ThermalExpansionCoefficient .
 
 data:Basalt-MassDensity a mmo:MassDensity ;
     om:hasUnit om:kilogramPerCubicmetre ;
@@ -72,19 +78,19 @@ data:Basalt-ThermalExpansionCoefficient a mmo:ThermalExpansionCoefficient ;
     om:hasUnit om:inverseOfKelvin ;
     saref:hasValue 8 .
 
-data:BridgeConcrete-Basalt a data:Basalt ;
-    om:hasUnit om:kilogramPerCubicmetre ;
-    saref:hasValue 640 .
-
-data:BridgeConcrete-CementCEM-I a data:CementCEM-I ;
+data:BridgeConcrete-BinderQuantity a data:BinderQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 360 .
 
-data:BridgeConcrete-QuartziteSand a data:QuartziteSand ;
+data:BridgeConcrete-CoarseAggregateQuantity a data:CoarseAggregateQuantity ;
+    om:hasUnit om:kilogramPerCubicmetre ;
+    saref:hasValue 640 .
+
+data:BridgeConcrete-FineAggregateQuantity a data:FineAggregateQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 1290 .
 
-data:BridgeConcrete-TapWater a data:TapWater ;
+data:BridgeConcrete-WaterQuantity a data:WaterQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 145 .
 
@@ -168,19 +174,19 @@ data:CementCEM-V-ThermalExpansionCoefficient a mmo:ThermalExpansionCoefficient ;
     om:hasUnit om:inverseOfKelvin ;
     saref:hasValue "NaN"^^xsd:double .
 
-data:DefaultConcrete-CementCEM-I a data:CementCEM-I ;
+data:DefaultConcrete-BinderQuantity a data:BinderQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 350 .
 
-data:DefaultConcrete-LimeStone a data:LimeStone ;
+data:DefaultConcrete-CoarseAggregateQuantity a data:CoarseAggregateQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 700 .
 
-data:DefaultConcrete-QuartziteSand a data:QuartziteSand ;
+data:DefaultConcrete-FineAggregateQuantity a data:FineAggregateQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 1200 .
 
-data:DefaultConcrete-TapWater a data:TapWater ;
+data:DefaultConcrete-WaterQuantity a data:WaterQuantity ;
     om:hasUnit om:kilogramPerCubicmetre ;
     saref:hasValue 150 .
 
@@ -253,12 +259,6 @@ data:TapWater-ThermalConductivity a mmo:ThermalConductivity ;
 data:TapWater-ThermalExpansionCoefficient a mmo:ThermalExpansionCoefficient ;
     om:hasUnit om:inverseOfKelvin ;
     saref:hasValue "NaN"^^xsd:double .
-
-data:Basalt a conProp:CoarseAggregateMaterial ;
-    conProp:hasMaterialProperty data:Basalt-MassDensity,
-        data:Basalt-SpecificHeat,
-        data:Basalt-ThermalConductivity,
-        data:Basalt-ThermalExpansionCoefficient .
 
 data:CementCEM-I a conProp:Cement ;
     conProp:hasMaterialProperty data:CementCEM-I-MassDensity,
