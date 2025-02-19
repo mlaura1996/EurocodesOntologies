@@ -18,7 +18,7 @@ dcterms:title a owl:AnnotationProperty .
     rdfs:domain <https://w3id.org/pmd/materials-mechanics-ontology/Property> ;
     rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Unit> .
 
-<https://w3id.org/conprop> owl:imports <file://C:/Users/mlaur/Documents/01.1_PhD/12_Collaborations/Agnieska/EurocodesOntologies/workflow-test/test-data.owl> .
+<https://w3id.org/conprop> owl:imports <file://C:/Users/mlaur/Documents/01.1_PhD/12_Collaborations/Agnieska/EurocodesOntologies/output/test-data.owl> .
 
 : a owl:Ontology ;
     dcterms:creator "Agnieszka Jędrzejewska, Maria Laura Leonardi, José Granja, Daniel Oliveira,  Miguel Azenha."^^xsd:string ;

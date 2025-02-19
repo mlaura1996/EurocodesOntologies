@@ -16,6 +16,11 @@
   <preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/conprop#</preferredNamespaceUri>
 </owl:Ontology>
 
+<owl:ObjectProperty rdf:about="#isMadeOfComponentMaterial">
+  <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+  <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/Property"/>
@@ -28,14 +33,13 @@
   <rdfs:range rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/Composition"/>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#isMadeOfComponentMaterial">
-  <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
-  <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="#hasComponentQuantity">
   <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
   <rdfs:range rdf:resource="#ComponentQuantity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isComponentMaterialOf">
+  <owl:inverseOf rdf:resource="#isMadeOfComponentMaterial"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#hasMaterialProperty">
@@ -51,38 +55,19 @@
   <rdfs:range rdf:resource="#Selection"/>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#isComponentMaterialOf">
-  <owl:inverseOf rdf:resource="#isMadeOfComponentMaterial"/>
-</owl:ObjectProperty>
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
 
 <owl:AnnotationProperty rdf:about="#preferredNamespacePrefix"/>
+
+<owl:AnnotationProperty rdf:about="#preferredNamespaceUri"/>
+
+<owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
 
 <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
 
 <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
 
-<owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-
-<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-
-<owl:AnnotationProperty rdf:about="#preferredNamespaceUri"/>
-
-<owl:Class rdf:about="#Pumpability">
-  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pumpability</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#ManufacturingProperty">
-  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MaterialProperty"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufacturing property</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#Creep">
-  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MechanicalProperty"/>
-  <rdfs:label xml:lang="en">creep</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#CoarseAggregateQuantity">
+<owl:Class rdf:about="#WaterQuantity">
   <rdfs:subClassOf rdf:resource="#ComponentQuantity"/>
 </owl:Class>
 
@@ -92,6 +77,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concrete component quantity</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="#Flowability">
+  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowability</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ManufacturingProperty">
+  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MaterialProperty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufacturing property</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="#AggregateMaterial">
   <rdfs:subClassOf rdf:resource="#ConcreteComponentMaterial"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.wikidata.org/wiki/Q866298</rdfs:comment>
@@ -99,10 +94,27 @@
   <rdfs:label xml:lang="en">aggregate</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="#CoarseAggregateQuantity">
+  <rdfs:subClassOf rdf:resource="#ComponentQuantity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BinderMaterial">
+  <rdfs:subClassOf rdf:resource="#ConcreteComponentMaterial"/>
+  <rdfs:comment xml:lang="en">A material or substance that holds or draws other materials together to form a cohesive whole mechanically, chemically, by adhesion or cohesion. More narrowly, binders are liquid or dough-like substances that harden by a chemical or physical process and bind fibres, filler powder and other particles added into it.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binder</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="#ConcreteComponentMaterial">
   <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A consitituent of the fresh concrete mix, which usually encompasses water, aggregate (fine and coarse) and binder (cement and additions).</rdfs:comment>
   <rdfs:label xml:lang="en">concrete component</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#AdmixtureMaterial">
+  <rdfs:subClassOf rdf:resource="#ConcreteComponentMaterial"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.wikidata.org/wiki/Q831619</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural or manufactured chemical or additive added during concrete mixing to enhance specific properties of the fresh or hardened concrete.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">admixture</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#CoarseAggregateMaterial">
@@ -118,45 +130,13 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fine aggregate</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="#Pumpability">
+  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pumpability</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="#FineAggregateQuantity">
   <rdfs:subClassOf rdf:resource="#ComponentQuantity"/>
-</owl:Class>
-
-<owl:Class rdf:about="#Workability">
-  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">workability</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#Flowability">
-  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowability</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#WaterQuantity">
-  <rdfs:subClassOf rdf:resource="#ComponentQuantity"/>
-</owl:Class>
-
-<owl:Class rdf:about="#HydrationHeat">
-  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalProperty"/>
-  <rdfs:label xml:lang="en">cumulative unit hydration heat</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#BinderMaterial">
-  <rdfs:subClassOf rdf:resource="#ConcreteComponentMaterial"/>
-  <rdfs:comment xml:lang="en">A material or substance that holds or draws other materials together to form a cohesive whole mechanically, chemically, by adhesion or cohesion. More narrowly, binders are liquid or dough-like substances that harden by a chemical or physical process and bind fibres, filler powder and other particles added into it.</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binder</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#AdditionMaterial">
-  <rdfs:subClassOf rdf:resource="#BinderMaterial"/>
-  <owl:disjointWith rdf:resource="#Cement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">addition</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#Cement">
-  <rdfs:subClassOf rdf:resource="#BinderMaterial"/>
-  <rdfs:comment xml:lang="en">A chemical substance used for construction that sets, hardens, and adheres to other materials to bind them together.</rdfs:comment>
-  <rdfs:label xml:lang="en">cement</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#Emissivity">
@@ -164,16 +144,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emissivity</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#Extrudability">
+<owl:Class rdf:about="#Workability">
   <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extrudability</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#AdmixtureMaterial">
-  <rdfs:subClassOf rdf:resource="#ConcreteComponentMaterial"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.wikidata.org/wiki/Q831619</rdfs:comment>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural or manufactured chemical or additive added during concrete mixing to enhance specific properties of the fresh or hardened concrete.</rdfs:comment>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">admixture</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">workability</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#CorrosionResistance">
@@ -182,9 +155,36 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corrosion resistance</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="#Extrudability">
+  <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extrudability</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Creep">
+  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MechanicalProperty"/>
+  <rdfs:label xml:lang="en">creep</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HydrationHeat">
+  <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalProperty"/>
+  <rdfs:label xml:lang="en">cumulative unit hydration heat</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Cement">
+  <rdfs:subClassOf rdf:resource="#BinderMaterial"/>
+  <rdfs:comment xml:lang="en">A chemical substance used for construction that sets, hardens, and adheres to other materials to bind them together.</rdfs:comment>
+  <rdfs:label xml:lang="en">cement</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="#OpenTime">
   <rdfs:subClassOf rdf:resource="#ManufacturingProperty"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open time</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#AdditionMaterial">
+  <rdfs:subClassOf rdf:resource="#BinderMaterial"/>
+  <owl:disjointWith rdf:resource="#Cement"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">addition</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="#BinderQuantity">
@@ -196,7 +196,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/conprop">
-  <owl:imports rdf:resource="file://C:/Users/mlaur/Documents/01.1_PhD/12_Collaborations/Agnieska/EurocodesOntologies/workflow-test/test-data.owl"/>
+  <owl:imports rdf:resource="file://C:/Users/mlaur/Documents/01.1_PhD/12_Collaborations/Agnieska/EurocodesOntologies/output/test-data.owl"/>
 </rdf:Description>
 
 <owl:AllDisjointClasses>

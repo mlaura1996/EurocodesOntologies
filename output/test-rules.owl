@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://www.w3.org/2003/11/swrl#"
+   xmlns:ns2="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b248">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b249"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b253"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b165">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b166"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b167"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b62">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b63"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b64"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b110">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b111"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b57">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CASH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CASHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b142">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b13">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b50">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b51"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b63">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b229">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FASH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FASHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b192">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b193"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b194"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b166">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/LinearExpansionCoefficient"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CCTE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b222">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b223"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b224"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b75">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b7"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b74">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b75"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b76"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b195">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeatCapacity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b146">
+    <rdf:first rdf:resource="https://w3id.org/conprop#BQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b147"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b138">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b68">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b69"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b70"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FAQ">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b66">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b67"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b128">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b140">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b131">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b132"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b133"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b180">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b181"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b182"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b117">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b118"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b119"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b217">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#BinderQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b218">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b219"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b220"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b247">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CMD"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#MDv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b271">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b272"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b69">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b278">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Copv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b279"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b148">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b149"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b43">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#FineAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b147">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b148"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b186">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b187"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b188"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b256">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b257"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b259">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b260"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b33">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b78">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b79"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b176">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b177"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b178"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b156">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CA"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b24">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b25"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b178">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b179"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b180"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b77">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CMD"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#MDv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b273">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Wpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b274"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b221">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b48">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b49"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b206">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b207"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b208"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b191">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeatCapacity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b25">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b32">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b33"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b73">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b64">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b65"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b35">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#W"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b257">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FASHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b276">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b277"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CAQ">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b106">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b107"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b227">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CASH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CASHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b41">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b236">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b237"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b238"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b268">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b269"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b275"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b82">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CASHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b71">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b54">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b55"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b21">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b158">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CA"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b134">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#MD"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b155">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b156"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b157"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b36">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b37"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b16">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b17"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b208">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b209"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b210"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b150">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b151"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b190">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b191"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b192"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b122">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#WaterQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b15">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b172">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b173"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b174"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CASH">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b121">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b122"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b123"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b88">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b89"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b93"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b199">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeatCapacity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b216">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b217"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b218"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b281">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CoSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b153">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b154"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b155"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b14">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b15"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b123">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b124"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b125"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b22">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b23"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b97">
+    <rdf:first rdf:resource="https://w3id.org/conprop#BSHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b237">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b215">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#WaterQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b52">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b53"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b184">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b185"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b186"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b125">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b126"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b127"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b194">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b195"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b196"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b235">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b93">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b94"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b98"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b31">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b272">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b273"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b182">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b183"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b184"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b231">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b188">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b189"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b190"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b127">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b128"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b129"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b100">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Copv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b101"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b87">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FASHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b76">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b77"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b113">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b114"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b115"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b102">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b103"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b265">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Bpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b266"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b244">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b245"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b246"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b173">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#BSHv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#BQ">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b18">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b19"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b116">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#BinderQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b245">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b234">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b235"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b236"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b58">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b59"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CoSHv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b84">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b85"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b111">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CoSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b160">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/LinearExpansionCoefficient"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CTE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b254">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b255"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b230">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b231"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b232"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b30">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b31"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b98">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b99"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b105"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b37">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b224">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b225"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b226"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b39">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b67">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b163">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b164"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b165"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b264">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b265"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b267">
+    <rdf:first rdf:resource="https://w3id.org/conprop#BSHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b45">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#WaterQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b119">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b120"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b121"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b263">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b264"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b268"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b10">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b11"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b118">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b211">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b44">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b45"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b29">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/ThermalConductivity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b161">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b162"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b163"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#WQ">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b17">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#W"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b220">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b221"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b222"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b279">
+    <rdf:first rdf:resource="https://w3id.org/conprop#MDv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b101">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b102"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b143">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b144"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b92">
+    <rdf:first rdf:resource="https://w3id.org/conprop#WSHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b223">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b219">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b42">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b43"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b112">
+    <ns2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns2:isRuleEnabled>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Density of concrete based on mix composition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <ns1:body rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b113"/>
+    <ns1:head rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b150"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b183">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CAQv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b61">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b115">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b116"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b117"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b241">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b238">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b239"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b240"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b40">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b41"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b55">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b3"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b108">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Copv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b109"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b200">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b201"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b202"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b70">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b71"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b239">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b225">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b207">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeatCapacity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b152">
+    <ns2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns2:isRuleEnabled>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Thermal expansion coefficient of concrete based on aggregate</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <ns1:body rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b153"/>
+    <ns1:head rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b169"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b96">
+    <rdf:first rdf:resource="https://w3id.org/conprop#BQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b137">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b138"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b139"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b154">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b162">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CTE"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CTEv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b79">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b189">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b114">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b26">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b27"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b51">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b38">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b39"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b99">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b100"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b136">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b20">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b21"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b164">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CA"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CTE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b179">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Water"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#W"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b196">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b197"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b198"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b209">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b280">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b281"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b53">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b168">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CCTE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b65">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAQ"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQv"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CASHv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b185">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b212">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b213"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b214"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b60">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b61"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b62"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b151">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#MD"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#MDv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b169">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b170"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b174">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b175"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b176"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b193">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b145">
+    <rdf:first rdf:resource="https://w3id.org/conprop#MDv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b146"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FASH">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b177">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#FineAggregateMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b59">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FASH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FASHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b72">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b73"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b124">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#MD"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#MDv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b210">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b211"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b212"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b80">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b81"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#FineAggregateMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b104">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Bpv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b204">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b205"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b206"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b9"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b47">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#BinderQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b85">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b86"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b258">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b259"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b263"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b94">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b95"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b120">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#FineAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b171">
+    <ns2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns2:isRuleEnabled>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Specific heat of concrete based on mix</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <ns1:body rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b172"/>
+    <ns1:head rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b280"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b129">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b130"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b131"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b1">
+    <ns2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns2:isRuleEnabled>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:label>Thermal conductivity of concrete based on mix</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <ns1:body rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b2"/>
+    <ns1:head rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b110"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b126">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b130">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b132">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b139">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b140"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b141"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b243">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/MassDensity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CMD"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b277">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CoSHv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b278"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b275">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b276"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b144">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b145"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b175">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#CoarseAggregateMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CTEv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b28">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b29"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b170">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CCTE"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CTEv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b187">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#W"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b251">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b252"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b202">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b203"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b204"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b83">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b84"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b88"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b19">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#isMadeOfComponentMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b34">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b35"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b197">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b253">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b254"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b258"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b213">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#FineAggregateQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b228">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b229"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b230"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b246">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b247"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b248"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b242">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b243"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b244"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b250">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b251"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b232">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b233"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b234"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CA">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b105">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b106"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b214">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b215"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b216"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b46">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b47"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b48"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b205">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#W"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#WSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b270">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Copv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b271"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b233">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/saref#hasValue"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BSH"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#BSHv"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b266">
+    <rdf:first rdf:resource="https://w3id.org/conprop#BQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b267"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#Bpv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b5"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#BSH">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b12">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b13"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b11">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#BinderMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BM"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b135">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b136"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b137"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#W">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b203">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/pmd/materials-mechanics-ontology/SpecificHeatCapacity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#WSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CSH">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b262">
+    <rdf:first rdf:resource="https://w3id.org/conprop#WSHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b91">
+    <rdf:first rdf:resource="https://w3id.org/conprop#WQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b92"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b226">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b227"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b228"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#WSH">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FApv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b167">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b168"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b252">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CASHv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b27">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#CAM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b269">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b270"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#BQv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b141">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b142"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b143"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#C">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b274">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Bpv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Water"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#W"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b260">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Wpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b261"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b240">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b241"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b242"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b86">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b157">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b158"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b159"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b109">
+    <rdf:first rdf:resource="https://w3id.org/conprop#MDv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b133">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b134"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b135"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FAQv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b201">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#FAM"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#FASH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b249">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b250"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b56">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b57"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b159">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b160"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b161"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CApv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#BM">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b49">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasComponentQuantity"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CAQ"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b23">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <ns1:propertyPredicate rdf:resource="https://w3id.org/conprop#hasMaterialProperty"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#C"/>
+    <ns1:argument2 rdf:resource="https://w3id.org/conprop#CSH"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b81">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CAQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#Wpv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b198">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b199"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b200"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CMD">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b95">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Bpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b96"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b90">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Wpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b91"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b261">
+    <rdf:first rdf:resource="https://w3id.org/conprop#WQv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b262"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b255">
+    <rdf:first rdf:resource="https://w3id.org/conprop#FApv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b256"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b107">
+    <rdf:first rdf:resource="https://w3id.org/conprop#CoSHv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b108"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b181">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <ns1:classPredicate rdf:resource="https://w3id.org/conprop#BinderMaterial"/>
+    <ns1:argument1 rdf:resource="https://w3id.org/conprop#BM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#MD">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b149">
+    <rdf:first rdf:resource="https://w3id.org/conprop#WQv"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b103">
+    <rdf:first rdf:resource="https://w3id.org/conprop#Wpv"/>
+    <rdf:rest rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b104"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CAM">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FAM">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#WSHv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CTE">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#CCTE">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#Copv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#FASHv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/conprop#WQv">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b89">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+    <ns1:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+    <ns1:arguments rdf:nodeID="nbd6ce02565db40d4a6e2f4a42c734dc1b90"/>
+  </rdf:Description>
+</rdf:RDF>
