@@ -44,10 +44,11 @@ g.bind("mmo", MMO)
 g.bind("om", OM)
 
 # Read the Excel file
-excel_file = "workflow-test/data for Concrete Properties Ontology.xlsx"
+excel_file = "resources/External/data for Concrete Properties Ontology.xlsx"
 poc = pd.read_excel(excel_file, header=None, sheet_name="Properties of Components")
 cc = pd.read_excel(excel_file, header=None, sheet_name="Concrete Composition")
 cmq = pd.read_excel(excel_file, header=None, sheet_name="Concrete Mix Quantity")
+cp = pd.read_excel(excel_file, header=None, sheet_name="Concrete Properties")
 
 #Add material properties to general components
 material_properties = poc[0]
@@ -73,6 +74,8 @@ for i in range(cc.shape[1]):
         g.add((INST[concrete_name], C.isMadeOfComponentMaterial, INST[cc[i][j]]))
 
 
+
+
 # Assign quantities to each  of the components of the concrete instances
 quantity_classes =  cmq[0]
 units = cmq[3]
@@ -83,13 +86,19 @@ for i in range(1,cmq.shape[1]-1):
     print("-------"+concrete_name+"----------")
     for j in range(1, cmq.shape[0]):
         if not pd.isna(cmq[i][j]):
+            print(concrete_name,quantity_classes[j] )
             component_quantity = INST[concrete_name+'-'+quantity_classes[j]]
             print(component_quantity)
             g.add((component_quantity, RDF.type, INST[quantity_classes[j]]))
             g.add((INST[concrete_name], C.hasComponentQuantity, component_quantity))
             g.add((component_quantity, SAREF.hasValue, Literal(cmq[i][j])))
-            g.add((component_quantity, OM.hasUnit, OM[units[j]]))
-            
+            g.add((component_quantity, OM.hasUnit, OM[units[j]]))      
+    for k in range(1,cp.shape[0]):
+        property_instance = INST[concrete_name+cp[0][k]]
+        g.add((property_instance, RDF.type, MMO[cp[0][k]]))
+        g.add((INST[concrete_name], C.hasMaterialProperty, property_instance))
+        g.add((property_instance, OM.hasUnit, OM[cp[1][k]]))
+
 
 path = 'test.ttl'
 g.serialize(destination= path , format ='turtle')
