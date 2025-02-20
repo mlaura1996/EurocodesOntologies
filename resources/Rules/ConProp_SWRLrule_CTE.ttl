@@ -1,0 +1,151 @@
+@prefix : <https://w3id.org/conprop#> .
+@prefix mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> .
+@prefix mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix matonto: <http://matonto.org/ontologies/matonto#> .
+@base <https://w3id.org/conprop#> .
+
+#################################################################
+#    Rules
+#################################################################
+
+:C rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CAM rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FAM rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:W rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:BM rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CSH rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CASH rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FASH rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:WSH rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:BSH rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CAQ rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FAQ rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:WQ rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:BQ rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CASHv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FASHv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:WSHv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:BSHv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CAQv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FAQv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:WQv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:BQv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CMD rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:MDv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CApv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:FApv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:Wpv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:Bpv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:Copv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CoSHv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:MD rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CA rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CTE rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CTEv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:CCTE rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "Thermal expansion coefficient of concrete based on aggregate" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> mat:Concrete ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :C
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CoarseAggregateMaterial ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :CA
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isMadeOfComponentMaterial ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :C ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :CA
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> mmo:LinearExpansionCoefficient ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :CTE
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> saref:hasValue ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :CTE ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :CTEv
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMaterialProperty ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :CA ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :CTE
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> mmo:LinearExpansionCoefficient ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :CCTE
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMaterialProperty ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> :C ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> :CCTE
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> saref:hasValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :CCTE ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :CTEv
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
