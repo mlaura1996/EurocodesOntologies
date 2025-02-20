@@ -89,7 +89,7 @@ for i in range(1,cmq.shape[1]-1):
             print(concrete_name,quantity_classes[j] )
             component_quantity = INST[concrete_name+'-'+quantity_classes[j]]
             print(component_quantity)
-            g.add((component_quantity, RDF.type, INST[quantity_classes[j]]))
+            g.add((component_quantity, RDF.type, C[quantity_classes[j]]))
             g.add((INST[concrete_name], C.hasComponentQuantity, component_quantity))
             g.add((component_quantity, SAREF.hasValue, Literal(cmq[i][j])))
             g.add((component_quantity, OM.hasUnit, OM[units[j]]))      
