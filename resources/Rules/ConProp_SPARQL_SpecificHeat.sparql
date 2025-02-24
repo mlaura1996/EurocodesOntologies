@@ -1,0 +1,83 @@
+PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> 
+PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> 
+PREFIX saref: <https://w3id.org/saref#> 
+PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX inst:  <https://random-url-to-your-data.com/data#> 
+
+DELETE{
+	?CoSH saref:hasValue ?oldCoSHv .
+}
+INSERT{
+    ?CoSH a mmo:SpecificHeat .
+    ?C conprop:hasMaterialProperty ?CoSH.
+	?CoSH saref:hasValue ?CoSHv .
+}
+WHERE {
+    ?C a mat:Concrete .
+    ?CMD a mmo:MassDensity .
+    
+    ?CAM a conprop:CoarseAggregateMaterial .
+    ?FAM a conprop:FineAggregateMaterial .
+    ?W a conprop:Water .
+    ?BM a conprop:BinderMaterial .
+    
+     
+    ?CASH a mmo:SpecificHeat .
+    ?FASH a mmo:SpecificHeat .
+    ?WSH a mmo:SpecificHeat .
+    ?BSH a mmo:SpecificHeat .
+    
+    ?CAQ a conprop:CoarseAggregateQuantity .
+    ?FAQ a conprop:FineAggregateQuantity .
+    ?WQ a conprop:WaterQuantity .
+    ?BQ a conprop:BinderQuantity .
+	
+    ?C conprop:hasComponentQuantity ?CAQ .
+    ?C conprop:hasComponentQuantity ?FAQ .
+    ?C conprop:hasComponentQuantity ?WQ .
+    ?C conprop:hasComponentQuantity ?BQ .
+    
+    ?C conprop:hasMaterialProperty ?CMD .
+	
+    ?C conprop:isMadeOfComponentMaterial ?CAM .
+    ?C conprop:isMadeOfComponentMaterial ?FAM .
+    ?C conprop:isMadeOfComponentMaterial ?W .
+    ?C conprop:isMadeOfComponentMaterial ?BM .
+
+    ?CAM conprop:hasMaterialProperty ?CASH .
+    ?FAM conprop:hasMaterialProperty ?FASH .
+    ?W conprop:hasMaterialProperty ?WSH .
+    ?BM conprop:hasMaterialProperty ?BSH .
+
+    ?CAQ saref:hasValue ?CAQv .
+    ?FAQ saref:hasValue ?FAQv .
+    ?WQ saref:hasValue ?WQv .
+    ?BQ saref:hasValue ?BQv .
+
+    ?CASH saref:hasValue ?CASHv .
+    ?FASH saref:hasValue ?FASHv .
+    ?WSH saref:hasValue ?WSHv .
+    ?BSH saref:hasValue ?BSHv .
+	
+    ?CMD saref:hasValue ?MDv .
+
+    BIND (?CAQv * ?CASHv AS ?CApv) .
+    BIND (?FAQv * ?FASHv AS ?FApv) .
+    BIND (?WQv * ?WSHv AS ?Wpv) .
+    BIND (?BQv * ?BSHv AS ?Bpv) .
+    BIND (?CApv + ?FApv + ?Wpv + ?Bpv AS ?Copv) .
+    BIND (?Copv / ?MDv AS ?CoSHv) .
+	
+	BIND (IRI(CONCAT(STR(?C), "-SpecificHeat")) AS ?CoSH) .
+    
+    OPTIONAL{
+        ?CoSH a mmo:SpecificHeat .
+    	?C conprop:hasMaterialProperty ?CoSH.
+    }
+    
+    OPTIONAL{
+        ?CoSH a mmo:SpecificHeat .
+    	?C conprop:hasMaterialProperty ?CoSH .
+	 	?CoSH saref:hasValue ?oldCoSHv .
+    }
+}

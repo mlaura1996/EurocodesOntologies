@@ -19,7 +19,12 @@ WHERE {
     ?CA conprop:hasMaterialProperty ?CTE .
     ?CTE saref:hasValue ?CTEv .
     
-    BIND (IRI(CONCAT(STR(?C), "ThermalExpansionCoefficient")) AS ?CCTE) .
+    BIND (IRI(CONCAT(STR(?C), "-ThermalExpansionCoefficient")) AS ?CCTE) .
+    
+    OPTIONAL{
+        ?C conprop:hasMaterialProperty ?CCTE .
+        ?CCTE a mmo:ThermalExpansionCoefficient .
+    }
     
     OPTIONAL{
         ?C conprop:hasMaterialProperty ?CCTE .

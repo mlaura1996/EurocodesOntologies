@@ -26,8 +26,13 @@ WHERE {
     ?WQ saref:hasValue ?WQv .
 
     BIND (?BQv + ?CAQv + ?FAQv + ?WQv AS ?MDv) .
-    BIND (IRI(CONCAT(STR(?C), "MassDensity")) AS ?MD) .
+    BIND (IRI(CONCAT(STR(?C), "-MassDensity")) AS ?MD) .
 
+    OPTIONAL {
+        ?C conprop:hasMaterialProperty ?MD .
+        ?MD a mmo:MassDensity .
+    }
+    
     OPTIONAL {
         ?C conprop:hasMaterialProperty ?MD .
         ?MD a mmo:MassDensity .
