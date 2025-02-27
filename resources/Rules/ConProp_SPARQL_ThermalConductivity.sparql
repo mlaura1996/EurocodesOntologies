@@ -1,0 +1,75 @@
+PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> 
+PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> 
+PREFIX saref: <https://w3id.org/saref#> 
+PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX inst:  <https://random-url-to-your-data.com/data#> 
+
+DELETE{
+    ?CoTC saref:hasValue ?oldCoTCv .
+}
+INSERT{
+    ?CoTC a mmo:ThermalConductivity .
+    ?C conprop:hasMaterialProperty ?CoTC .
+    ?CoTC saref:hasValue ?CoTCv .
+}
+WHERE {
+    ?C a mat:Concrete .
+   
+    ?CAM a conprop:CoarseAggregateMaterial .
+    ?FAM a conprop:FineAggregateMaterial .
+    ?W a conprop:Water .
+    ?BM a conprop:BinderMaterial .
+    
+    ?CATC a mmo:ThermalConductivity .
+    ?FATC a mmo:ThermalConductivity .
+    ?WTC a mmo:ThermalConductivity .
+    ?BTC a mmo:ThermalConductivity .
+    
+    ?CAQ a conprop:CoarseAggregateQuantity .
+    ?FAQ a conprop:FineAggregateQuantity .
+    ?WQ a conprop:WaterQuantity .
+    ?BQ a conprop:BinderQuantity .
+    
+    ?CMD a mmo:MassDensity .
+
+    ?C conprop:isMadeOfComponentMaterial ?CAM, ?FAM, ?W, ?BM .
+    ?C conprop:hasComponentQuantity ?CAQ, ?FAQ, ?WQ, ?BQ .
+    ?C conprop:hasMaterialProperty ?CMD .
+
+    ?CAM conprop:hasMaterialProperty ?CATC .
+    ?FAM conprop:hasMaterialProperty ?FATC .
+    ?W conprop:hasMaterialProperty ?WTC .
+    ?BM conprop:hasMaterialProperty ?BTC .
+
+    ?CAQ saref:hasValue ?CAQv .
+    ?FAQ saref:hasValue ?FAQv .
+    ?WQ saref:hasValue ?WQv .
+    ?BQ saref:hasValue ?BQv .
+
+    ?CATC saref:hasValue ?CATCv .
+    ?FATC saref:hasValue ?FATCv .
+    ?WTC saref:hasValue ?WTCv .
+    ?BTC saref:hasValue ?BTCv .
+    
+    ?CMD saref:hasValue ?MDv .
+
+    BIND (?CAQv * ?CATCv AS ?CApv) .
+    BIND (?FAQv * ?FATCv AS ?FApv) .
+    BIND (?WQv * ?WTCv AS ?Wpv) .
+    BIND (?BQv * ?BTCv AS ?Bpv) .
+    BIND (?CApv + ?FApv + ?Wpv + ?Bpv AS ?Copv) .
+    BIND (?Copv / ?MDv AS ?CoTCv) .
+    
+    BIND (IRI(CONCAT(STR(?C), "-ThermalConductivity")) AS ?CoTC) .
+    
+    OPTIONAL{
+        ?CoTC a mmo:ThermalConductivity .
+    	?C conprop:hasMaterialProperty ?CoTC .
+    }
+    
+    OPTIONAL{
+        ?CoTC a mmo:ThermalConductivity .
+    	?C conprop:hasMaterialProperty ?CoTC .
+    	?CoTC saref:hasValue ?oldCoTCv 
+    }
+}

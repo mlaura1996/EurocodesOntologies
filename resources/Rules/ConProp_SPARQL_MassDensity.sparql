@@ -1,0 +1,41 @@
+PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#>
+PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/>
+PREFIX saref: <https://w3id.org/saref#>
+PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX inst: <https://random-url-to-your-data.com/data#>
+
+DELETE {
+    ?MD saref:hasValue ?oldMDv .
+}
+INSERT {
+    ?MD a mmo:MassDensity .
+    ?MD saref:hasValue ?MDv .
+    ?C conprop:hasMaterialProperty ?MD .
+}
+WHERE {
+    ?BQ a conprop:BinderQuantity .
+    ?CAQ a conprop:CoarseAggregateQuantity .
+    ?FAQ a conprop:FineAggregateQuantity .
+    ?WQ a conprop:WaterQuantity .
+
+    ?C conprop:hasComponentQuantity ?BQ, ?CAQ, ?FAQ, ?WQ .
+
+    ?BQ saref:hasValue ?BQv .
+    ?CAQ saref:hasValue ?CAQv .
+    ?FAQ saref:hasValue ?FAQv .
+    ?WQ saref:hasValue ?WQv .
+
+    BIND (?BQv + ?CAQv + ?FAQv + ?WQv AS ?MDv) .
+    BIND (IRI(CONCAT(STR(?C), "-MassDensity")) AS ?MD) .
+
+    OPTIONAL {
+        ?C conprop:hasMaterialProperty ?MD .
+        ?MD a mmo:MassDensity .
+    }
+    
+    OPTIONAL {
+        ?C conprop:hasMaterialProperty ?MD .
+        ?MD a mmo:MassDensity .
+        ?MD saref:hasValue ?oldMDv .
+    }
+}

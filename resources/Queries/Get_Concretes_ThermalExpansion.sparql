@@ -1,0 +1,13 @@
+PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> 
+PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> 
+PREFIX saref: <https://w3id.org/saref#> 
+PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX inst:  <https://random-url-to-your-data.com/data#> 
+
+SELECT ?C ?CTEv
+WHERE{
+    ?C a mat:Concrete .
+    ?C conprop:hasMaterialProperty ?CTE .
+    ?CTE a mmo:ThermalExpansionCoefficient .
+	?CTE saref:hasValue ?CTEv .  
+}
