@@ -1,0 +1,225 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Strona-1" id="bfpIUBYZOSyoBEFZxALf">
+    <mxGraphModel dx="1434" dy="1663" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oXl_BOpVXPp__jFsRonq-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6600CC;strokeWidth=2;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
+          <mxGeometry x="68" y="-649" width="913" height="477" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-4" value="Weather Ontology (WEAT)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="185" y="-163" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-5" target="oXl_BOpVXPp__jFsRonq-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-5" value="Weather Property&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="185" y="-103" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-6" value="SAREF4City Ontology (SAREF4CITY)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="85" y="-434" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-8" value="saref:hasProperty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-7" target="oXl_BOpVXPp__jFsRonq-3" edge="1">
+          <mxGeometry x="-0.3771" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="115" y="-231" />
+              <mxPoint x="117" y="-231" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-11" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;bso:containsElement&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-7" target="TjiLIoovZlyQzD9gfW8A-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-7" value="Administrative Area&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="85" y="-374" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-9" value="Built Element Ontology (BEO)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="295" y="-434" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-15" value="dot:hasDamage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-10" target="TjiLIoovZlyQzD9gfW8A-13" edge="1">
+          <mxGeometry x="0.4667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-18" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;bso:isMadeOf&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-10" target="TjiLIoovZlyQzD9gfW8A-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-31" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;bso:hasPhysicalQuantity&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-10" target="TjiLIoovZlyQzD9gfW8A-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="-193" />
+              <mxPoint x="804" y="-193" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-37" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;bso:hasElementProperty&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-10" target="TjiLIoovZlyQzD9gfW8A-36" edge="1">
+          <mxGeometry x="0.5294" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-10" value="Built Element&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="295" y="-374" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-12" value="Damage Topology Ontology (DOT)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="-624" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-13" value="Damage&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="245" y="-564" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-16" value="Material Properties Ontology (MAT)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="485" y="-434" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-30" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;bso:hasMaterialProperty&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-17" target="TjiLIoovZlyQzD9gfW8A-21" edge="1">
+          <mxGeometry x="-0.4074" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-17" value="Material&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="485" y="-374" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-19" value="Materials Mechanics Ontology (MMO)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="666" y="-434" width="198" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-20" target="TjiLIoovZlyQzD9gfW8A-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-20" value="Property&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="705" y="-313" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-21" target="TjiLIoovZlyQzD9gfW8A-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="646" y="-263" />
+              <mxPoint x="735" y="-263" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-21" value="MaterialProperty&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="586" y="-246" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-23" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;Concrete Properties Ontology (CPO)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="998.5" y="-434" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-24" target="TjiLIoovZlyQzD9gfW8A-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-24" value="ComponentQuantity&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="998.5" y="-374" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-14" value="om:hasUnit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-25" target="TjiLIoovZlyQzD9gfW8A-33" edge="1">
+          <mxGeometry x="0.5901" relative="1" as="geometry">
+            <mxPoint x="640" y="-484" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-4" value="saref:hasValue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TjiLIoovZlyQzD9gfW8A-25" target="YQ8FHnfMijXepD7SE1NM-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="845" y="-344" />
+              <mxPoint x="845" y="-298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-25" value="mmo:UseCaseMaterialsMechanics&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="666" y="-374" width="198" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-28" target="TjiLIoovZlyQzD9gfW8A-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-28" value="PhysicalQuantity&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="744" y="-246" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-32" value="Ontology of Units of Measure (OM)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="585" y="-570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-33" value="Unit&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="585" y="-510" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-35" value="&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;Element Properties Ontology (ELEM)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="399" y="-624" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-42" value="om:hasUnit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="TjiLIoovZlyQzD9gfW8A-36" target="TjiLIoovZlyQzD9gfW8A-33" edge="1">
+          <mxGeometry x="0.2241" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-2" value="saref:hasValue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="TjiLIoovZlyQzD9gfW8A-36" target="YQ8FHnfMijXepD7SE1NM-1">
+          <mxGeometry x="0.6402" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-36" value="ElementProperty&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="399" y="-564" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-38" value="Concrete Damage Ontology (CDO)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="45" y="-776" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="TjiLIoovZlyQzD9gfW8A-39" target="TjiLIoovZlyQzD9gfW8A-13" edge="1">
+          <mxGeometry x="-0.2308" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TjiLIoovZlyQzD9gfW8A-39" value="Crack&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="45" y="-716" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="muFWhNRLHK-0fH_Vdfo0-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="muFWhNRLHK-0fH_Vdfo0-15" target="TjiLIoovZlyQzD9gfW8A-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="muFWhNRLHK-0fH_Vdfo0-15" value="&lt;div&gt;&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;Concrete Elements Ontology (CEO)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="399" y="-774" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="muFWhNRLHK-0fH_Vdfo0-19" value="&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;concrete-related extension&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="27" y="-802" width="171" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-2" value="SAREF Ontology (SAREF)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="185" y="-299" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-6" value="saref:hasValue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="oXl_BOpVXPp__jFsRonq-3" target="YQ8FHnfMijXepD7SE1NM-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-3" value="Property&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="185" y="-239" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="oXl_BOpVXPp__jFsRonq-7" target="TjiLIoovZlyQzD9gfW8A-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-7" value="Strain&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="902" y="-246" width="63" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-9" value="&lt;font style=&quot;color: rgb(255, 0, 128);&quot;&gt;Concrete Imposed Strains Ontology (CISO)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1004.5" y="-306" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="oXl_BOpVXPp__jFsRonq-10" target="oXl_BOpVXPp__jFsRonq-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="978" y="-231" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-10" value="ImposedStrain&lt;sup&gt;c&lt;/sup&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1004.5" y="-246" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-15" value="&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;concrete-related extension&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="369" y="-802" width="171" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-16" value="&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;concrete-related extension&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="979" y="-332" width="171" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-17" value="&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;concrete-related extension&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="973" y="-460" width="171" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oXl_BOpVXPp__jFsRonq-19" value="&lt;font style=&quot;color: rgb(102, 0, 204);&quot;&gt;&lt;b style=&quot;&quot;&gt;Building Structures Ontology (BSO)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="758" y="-680" width="223" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-1" value="xsd:float" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="535" y="-624" width="53" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-3" value="xsd:float" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="876" y="-309.5" width="53" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="YQ8FHnfMijXepD7SE1NM-5" value="xsd:float" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="78.5" y="-200" width="53" height="23" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
