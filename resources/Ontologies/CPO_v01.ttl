@@ -1,5 +1,7 @@
 @prefix : <https://w3id.org/cpo#> .
 @prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix beo: <https://w3id.org/beo#> .
+@prefix bso: <https://w3id.org/bso#> .
 @prefix mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> .
 @prefix mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -59,10 +61,10 @@ om:hasUnit rdf:type owl:ObjectProperty ,
 
 
 ###  https://w3id.org/bso#hasMaterialProperty
-<https://w3id.org/bso#hasMaterialProperty> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain mat:Material ;
-                                           rdfs:range mmo:MaterialProperty ;
-                                           rdfs:label "has material property" .
+bso:hasMaterialProperty rdf:type owl:ObjectProperty ;
+                        rdfs:domain mat:Material ;
+                        rdfs:range mmo:MaterialProperty ;
+                        rdfs:label "has material property" .
 
 
 ###  https://w3id.org/cpo#hasBinderQuantity
@@ -71,6 +73,12 @@ om:hasUnit rdf:type owl:ObjectProperty ,
                    rdfs:domain :BinderMaterial ;
                    rdfs:range :BinderQuantity ;
                    rdfs:label "has binder quantity" .
+
+
+###  https://w3id.org/cpo#hasCementClass
+:hasCementClass rdf:type owl:ObjectProperty ;
+                rdfs:domain :Cement ;
+                rdfs:range :CementClass .
 
 
 ###  https://w3id.org/cpo#hasChemicalComponent
@@ -182,6 +190,10 @@ om:Unit rdf:type owl:Class .
         rdfs:label "cement"@en .
 
 
+###  https://w3id.org/cpo#CementClass
+:CementClass rdf:type owl:Class .
+
+
 ###  https://w3id.org/cpo#CoarseAggregateMaterial
 :CoarseAggregateMaterial rdf:type owl:Class ;
                          rdfs:subClassOf :AggregateMaterial ;
@@ -223,6 +235,16 @@ om:Unit rdf:type owl:Class .
        rdfs:label "creep"@en .
 
 
+###  https://w3id.org/cpo#DevelopmentRateClass
+:DevelopmentRateClass rdf:type owl:Class ;
+                      rdfs:subClassOf :CementClass .
+
+
+###  https://w3id.org/cpo#EarlyAgeTensileCapacity
+:EarlyAgeTensileCapacity rdf:type owl:Class ;
+                         rdfs:subClassOf :TensileCapacity .
+
+
 ###  https://w3id.org/cpo#Emissivity
 :Emissivity rdf:type owl:Class ;
             rdfs:subClassOf mmo:ThermalProperty ;
@@ -260,6 +282,11 @@ om:Unit rdf:type owl:Class .
                rdfs:label "cumulative unit hydration heat"@en .
 
 
+###  https://w3id.org/cpo#LongTermTensileCapacity
+:LongTermTensileCapacity rdf:type owl:Class ;
+                         rdfs:subClassOf :TensileCapacity .
+
+
 ###  https://w3id.org/cpo#ManufacturingProperty
 :ManufacturingProperty rdf:type owl:Class ;
                        rdfs:subClassOf mmo:MaterialProperty ;
@@ -276,6 +303,16 @@ om:Unit rdf:type owl:Class .
 :Pumpability rdf:type owl:Class ;
              rdfs:subClassOf :ManufacturingProperty ;
              rdfs:label "pumpability" .
+
+
+###  https://w3id.org/cpo#StrengthClass
+:StrengthClass rdf:type owl:Class ;
+               rdfs:subClassOf :CementClass .
+
+
+###  https://w3id.org/cpo#TensileCapacity
+:TensileCapacity rdf:type owl:Class ;
+                 rdfs:subClassOf mmo:MechanicalProperty .
 
 
 ###  https://w3id.org/cpo#WaterQuantity
@@ -312,13 +349,92 @@ mmo:MechanicalProperty rdf:type owl:Class ;
                        rdfs:subClassOf mmo:MaterialProperty .
 
 
-###  https://w3id.org/pmd/materials-mechanics-ontology/Property
-mmo:Property rdf:type owl:Class .
+###  https://w3id.org/pmd/materials-mechanics-ontology/TensileUltimateStrength
+mmo:TensileUltimateStrength rdf:type owl:Class ;
+                            rdfs:subClassOf mmo:MechanicalProperty .
 
 
 ###  https://w3id.org/pmd/materials-mechanics-ontology/ThermalProperty
 mmo:ThermalProperty rdf:type owl:Class ;
                     rdfs:subClassOf mmo:MaterialProperty .
+
+
+###  https://w3id.org/beo#BuiltElement
+beo:BuiltElement rdf:type owl:Class ;
+                 rdfs:subClassOf owl:Thing ;
+                 rdfs:label "built element" .
+
+
+###  https://w3id.org/cpo#AutogenousShrinkageStrain
+:AutogenousShrinkageStrain rdf:type owl:Class ;
+                           rdfs:subClassOf :ImposedStrain ;
+                           rdfs:label "autogenous shrinkage strain" .
+
+
+###  https://w3id.org/cpo#DryingShrinkageStrain
+:DryingShrinkageStrain rdf:type owl:Class ;
+                       rdfs:subClassOf :ImposedStrain ;
+                       rdfs:label "drying shrinkage strain" .
+
+
+###  https://w3id.org/cpo#ImposedStrain
+:ImposedStrain rdf:type owl:Class ;
+               rdfs:subClassOf mmo:Strain ;
+               rdfs:label "imposed strain" .
+
+
+###  https://w3id.org/cpo#RestraintStrain
+:RestraintStrain rdf:type owl:Class ;
+                 rdfs:subClassOf mmo:Strain ;
+                 rdfs:label "restraint strain" .
+
+
+###  https://w3id.org/cpo#ThermalStrain
+:ThermalStrain rdf:type owl:Class ;
+               rdfs:subClassOf :ImposedStrain ;
+               rdfs:label "thermal strain" .
+
+
+###  https://w3id.org/pmd/materials-mechanics-ontology/PhysicalQuantity
+mmo:PhysicalQuantity rdf:type owl:Class ;
+                     rdfs:subClassOf mmo:UseCaseMaterialsMechanics ;
+                     rdfs:label "physical quantity" .
+
+
+###  https://w3id.org/pmd/materials-mechanics-ontology/Property
+mmo:Property rdf:type owl:Class ;
+             rdfs:subClassOf mmo:UseCaseMaterialsMechanics ;
+             rdfs:label "property"@en .
+
+
+###  https://w3id.org/pmd/materials-mechanics-ontology/Strain
+mmo:Strain rdf:type owl:Class ;
+           rdfs:subClassOf mmo:PhysicalQuantity ;
+           rdfs:label "strain" .
+
+
+###  https://w3id.org/pmd/materials-mechanics-ontology/UseCaseMaterialsMechanics
+mmo:UseCaseMaterialsMechanics rdf:type owl:Class ;
+                              rdfs:subClassOf owl:Thing .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/cpo#ClassN
+:ClassN rdf:type owl:NamedIndividual ,
+                 :DevelopmentRateClass .
+
+
+###  https://w3id.org/cpo#ClassR
+:ClassR rdf:type owl:NamedIndividual ,
+                 :DevelopmentRateClass .
+
+
+###  https://w3id.org/cpo#ClassS
+:ClassS rdf:type owl:NamedIndividual ,
+                 :DevelopmentRateClass .
 
 
 #################################################################

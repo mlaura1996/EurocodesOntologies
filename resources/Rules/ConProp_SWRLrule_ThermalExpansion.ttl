@@ -6,7 +6,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix saref: <https://w3id.org/saref#> .
-@prefix matonto: <http://matonto.org/ontologies/matonto#> .
+@prefix bso: <https://w3id.org/bso#> .
+@prefix cpo: <https://w3id.org/cpo#> .
 @base <https://w3id.org/conprop#> .
 
 #################################################################
@@ -94,12 +95,12 @@
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :CoarseAggregateMaterial ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> cpo:CoarseAggregateMaterial ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> :CA
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isMadeOfComponentMaterial ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> cpo:isMadeOfComponentMaterial ;
                                                                              <http://www.w3.org/2003/11/swrl#argument1> :C ;
                                                                              <http://www.w3.org/2003/11/swrl#argument2> :CA
                                                                            ] ;
@@ -116,7 +117,7 @@
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMaterialProperty ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> bso:hasMaterialProperty ;
                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> :CA ;
                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> :CTE
                                                                                                             ] ;
@@ -127,7 +128,7 @@
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMaterialProperty ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> bso:hasMaterialProperty ;
                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> :C ;
                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> :CCTE
                                                                                                                                   ] ;
