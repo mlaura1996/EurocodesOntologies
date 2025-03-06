@@ -1,0 +1,535 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<https://w3id.org/hmo#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix : 		<https://w3id.org/hmo#> .
+@base 			<https://w3id.org/hmo#> .
+
+<https://w3id.org/hmo#> rdf:type owl:Ontology ;
+                        dc:title "Historic Masonry Ontology"@en; 
+                        dc:description "Ontology to represent the historic masonry material"@en; 
+                        owl:versionInfo "0.1"@en;
+                        dc:creator "Maria Laura Leonardi, Stefano Cursi, Elena Gigliarelli, José Granja, Daniel Oliveira, Miguel Azenha." . 
+#################################################################
+
+###  Property Definitions (Number of Property) 48 ###
+#  --------------------------- Property 0------------------------- 
+:MQIWallLeavesConnectionsInPlane rdf:type owl:DatatypeProperty ;
+                                 rdfs:comment "Defines the adequacy of connections of the adjacent leaves in a wall, in the context of in plane loading." ;
+                                 rdfs:label "MQIWallLeavesConnectionsInPlane"@IRI-based; 
+                                 rdfs:label "MQI-In Plane-Wall Leaves Connection"@en; 
+                                 rdfs:domain :MasonryQualityIndex;
+                                 rdfs:range xsd:float . 
+#  --------------------------- Property 1------------------------- 
+:areInterfaceElementsOf rdf:type owl:ObjectProperty; 
+                        owl:inverseOf :hasInterfaceElements ;
+                        rdfs:comment "Defines the relationship between joints and units in a pattern." ;
+                        rdfs:label "areInterfaceElementsOf"@IRI-based; 
+                        rdfs:label "are interface elements of"@en; 
+                        rdfs:domain :Joints;
+                        rdfs:range :Units . 
+#  --------------------------- Property 2------------------------- 
+:MQIUnitsPropertiesVert rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Defines the adequacy of mechanical properties of the units, in the context of vertical loading." ;
+                        rdfs:label "MQIUnitsPropertiesVert"@IRI-based; 
+                        rdfs:label "MQI-Vertical-Units Properties"@en; 
+                        rdfs:domain :MasonryQualityIndex;
+                        rdfs:range xsd:float . 
+#  --------------------------- Property 3------------------------- 
+:MQIUnitsPropertiesInPlane rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Defines the adequacy of mechanical properties of the units, in the context of in plane loading." ;
+                           rdfs:label "MQIUnitsPropertiesInPlane"@IRI-based; 
+                           rdfs:label "MQI-In Plane-Units Properties"@en; 
+                           rdfs:domain :MasonryQualityIndex;
+                           rdfs:range xsd:float . 
+#  --------------------------- Property 4------------------------- 
+:hasSparsePatternEntities rdf:type owl:ObjectProperty; 
+                          owl:inverseOf :areSparsePatternEntitiesOf ;
+                          rdfs:comment "Determines which pattern entities are sparse in a pattern." ;
+                          rdfs:label "hasSparsePatternEntities"@IRI-based; 
+                          rdfs:label "has sparse pattern entities"@en; 
+                          rdfs:domain :Pattern;
+                          rdfs:range :PatternEntities . 
+#  --------------------------- Property 5------------------------- 
+<https://saref.etsi.org/core/isMeasuredIn> rdf:type owl:DatatypeProperty ;
+                                           rdfs:label "isMeasuredIn"@IRI-based; 
+                                           rdfs:range rdfs:Literal . 
+#  --------------------------- Property 6------------------------- 
+:MQIVerticalJointsInPlane rdf:type owl:DatatypeProperty ;
+                          rdfs:comment "Defines the adequacy of In plane joints (based on staggered properties), in the context of in plane loading." ;
+                          rdfs:label "MQIVerticalJointsInPlane"@IRI-based; 
+                          rdfs:label "MQI-In Plane-Vertical Joints"@en; 
+                          rdfs:domain :MasonryQualityIndex;
+                          rdfs:range xsd:float . 
+#  --------------------------- Property 7------------------------- 
+:isHomogenisedMechanicalPropertyOf rdf:type owl:ObjectProperty; 
+                                   owl:inverseOf :hasHomogenisedMechanicalProperty ;
+                                   rdfs:comment "Defines the relationship between an homogenised mechanical property and a masonry wall." ;
+                                   rdfs:label "isHomogenisedMechanicalPropertyOf"@IRI-based; 
+                                   rdfs:label "is homogenised mechanical property of"@en; 
+                                   rdfs:domain :HomogenisedMechanicalProperty;
+                                   rdfs:range :RepresentativeVolumeElement . 
+#  --------------------------- Property 8------------------------- 
+:MQIUnitsShapeInPlane rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "Defines the adequacy of the units shape, in the context of in plane loading." ;
+                      rdfs:label "MQIUnitsShapeInPlane"@IRI-based; 
+                      rdfs:label "MQI-In Plane-Units Shape"@en; 
+                      rdfs:domain :MasonryQualityIndex;
+                      rdfs:range xsd:float . 
+#  --------------------------- Property 9------------------------- 
+:isLocatedIn rdf:type owl:ObjectProperty ;
+             rdfs:comment "Defines the Masonry Layer where a pattern is located." ;
+             rdfs:label "isLocatedIn"@IRI-based; 
+             rdfs:label "is located of"@en; 
+             rdfs:domain :Pattern;
+             rdfs:range :MasonryLayer . 
+#  --------------------------- Property 10------------------------- 
+:isPatternOf rdf:type owl:ObjectProperty; 
+             owl:inverseOf :hasPattern ;
+             rdfs:comment "Used to define when one or more patterns are present in a Representative Volume Element." ;
+             rdfs:label "isPatternOf"@IRI-based; 
+             rdfs:label "is pattern of"@en; 
+             rdfs:domain :Pattern;
+             rdfs:range :RepresentativeVolumeElement . 
+#  --------------------------- Property 11------------------------- 
+:MQIUnitsDimensionsVert rdf:type owl:DatatypeProperty ;
+                        rdfs:comment "Defines the adequacy of units size, in the context of vertical loading." ;
+                        rdfs:label "MQIUnitsDimensionsVert"@IRI-based; 
+                        rdfs:label "MQI-Vertical-Units Dimensions"@en; 
+                        rdfs:domain :MasonryQualityIndex;
+                        rdfs:range xsd:float . 
+#  --------------------------- Property 12------------------------- 
+:MQIMortarQualityInPlane rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Defines the adequacy of the mortar, in the context of in plane loading." ;
+                         rdfs:label "MQIMortarQualityInPlane"@IRI-based; 
+                         rdfs:label "MQI-In Plane-Mortar Quality"@en; 
+                         rdfs:domain :MasonryQualityIndex;
+                         rdfs:range xsd:float . 
+#  --------------------------- Property 13------------------------- 
+:MQIMortarQualityOutOfPlane rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Defines the adequacy of the mortar, in the context of out of plane loading." ;
+                            rdfs:label "MQIMortarQualityOutOfPlane"@IRI-based; 
+                            rdfs:label "MQI-Out Of Plane-Mortar Quality"@en; 
+                            rdfs:domain :MasonryQualityIndex;
+                            rdfs:range xsd:float . 
+#  --------------------------- Property 14------------------------- 
+:MQIVerticalJointsOutOfPlane rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Defines the adequacy of Out of plane joints (based on staggered properties), in the context of out of plane loading." ;
+                             rdfs:label "MQIVerticalJointsOutOfPlane"@IRI-based; 
+                             rdfs:label "MQI-Out Of Plane-Vertical Joints"@en; 
+                             rdfs:domain :MasonryQualityIndex;
+                             rdfs:range xsd:float . 
+#  --------------------------- Property 15------------------------- 
+:MQIUnitsDimensionsInPlane rdf:type owl:DatatypeProperty ;
+                           rdfs:comment "Defines the adequacy of units size, in the context of in plane loading." ;
+                           rdfs:label "MQIUnitsDimensionsInPlane"@IRI-based; 
+                           rdfs:label "MQI-In Plane-Units Dimensions"@en; 
+                           rdfs:domain :MasonryQualityIndex;
+                           rdfs:range xsd:float . 
+#  --------------------------- Property 16------------------------- 
+:areSparsePatternEntitiesOf rdf:type owl:ObjectProperty; 
+                            owl:inverseOf :hasSparsePatternEntities ;
+                            rdfs:comment "It determines when a pattern entity is'sparse'in a pattern, i.e. when it has a distribution of less than 50 per cent in the pattern. " ;
+                            rdfs:label "areSparsePatternEntitiesOf"@IRI-based; 
+                            rdfs:label "are sparse pattern entities of"@en; 
+                            rdfs:domain :PatternEntities;
+                            rdfs:range :Pattern . 
+#  --------------------------- Property 17------------------------- 
+:MQIVerticalJointsVert rdf:type owl:DatatypeProperty ;
+                       rdfs:comment "Defines the adequacy of vertical joints (based on staggered properties), in the context of vertical loading." ;
+                       rdfs:label "MQIVerticalJointsVert"@IRI-based; 
+                       rdfs:label "MQI-Vertical-Vertical Joints"@en; 
+                       rdfs:domain :MasonryQualityIndex;
+                       rdfs:range xsd:float . 
+#  --------------------------- Property 18------------------------- 
+:MQIHorizontalJointsOutOfPlane rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "Defines the adequacy of horizontal joints (based on level of horizontality/continuity), in the context of out of plane loading." ;
+                               rdfs:label "MQIHorizontalJointsOutOfPlane"@IRI-based; 
+                               rdfs:label "MQI-Out Of Plane-Horizontal Joints"@en; 
+                               rdfs:domain :MasonryQualityIndex;
+                               rdfs:range xsd:float . 
+#  --------------------------- Property 19------------------------- 
+:MQIUnitsShapeVert rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Defines the adequacy of the units shape, in the context of vertical loading." ;
+                   rdfs:label "MQIUnitsShapeVert"@IRI-based; 
+                   rdfs:label "MQI-Vertical-Units Shape"@en; 
+                   rdfs:domain :MasonryQualityIndex;
+                   rdfs:range xsd:float . 
+#  --------------------------- Property 20------------------------- 
+:MQITotalVertical rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Defines the total value of MQI for vertical loads" ;
+                  rdfs:label "MQITotalVertical"@IRI-based; 
+                  rdfs:label "Masonry Quality Index total value for vertical loads"@en; 
+                  rdfs:domain :MasonryQualityIndex;
+                  rdfs:range xsd:float . 
+#  --------------------------- Property 21------------------------- 
+:jointsThickness rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Defines the thickness of the joints. " ;
+                 rdfs:label "jointsThickness"@IRI-based; 
+                 rdfs:label "Joint Thickness"@en; 
+                 rdfs:domain :Units;
+                 rdfs:range xsd:float . 
+#  --------------------------- Property 22------------------------- 
+:hasRepresentativeVolumeElement rdf:type owl:ObjectProperty ;
+                                rdfs:comment "Defines the representative volume element of a wall" ;
+                                rdfs:label "hasRepresentativeVolumeElement"@IRI-based; 
+                                rdfs:label "has representative volume element"@en; 
+                                rdfs:domain :MasonryElement;
+                                rdfs:range :RepresentativeVolumeElement . 
+#  --------------------------- Property 23------------------------- 
+:hasInterfaceElements rdf:type owl:ObjectProperty; 
+                      owl:inverseOf :areInterfaceElementsOf ;
+                      rdfs:comment "Defines the relationship between units and joints in a pattern." ;
+                      rdfs:label "hasInterfaceElements"@IRI-based; 
+                      rdfs:label "has interface elements"@en; 
+                      rdfs:domain :Units;
+                      rdfs:range :Joints . 
+#  --------------------------- Property 24------------------------- 
+:MQITotalInPlane rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Defines the total value of MQI for in plane loads" ;
+                 rdfs:label "MQITotalInPlane"@IRI-based; 
+                 rdfs:label "Masonry Quality Index total value for in plane loads"@en; 
+                 rdfs:domain :MasonryQualityIndex;
+                 rdfs:range xsd:float . 
+#  --------------------------- Property 25------------------------- 
+:unitsLengthMaximumValue rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Defines the maximum value of the length of the units in the pattern. " ;
+                         rdfs:label "unitsLengthMaximumValue"@IRI-based; 
+                         rdfs:label "Units Length Has Maximum Value"@en; 
+                         rdfs:domain :Units;
+                         rdfs:range xsd:float . 
+#  --------------------------- Property 26------------------------- 
+:areDominantPatternEntitiesOf rdf:type owl:ObjectProperty; 
+                              owl:inverseOf :hasDominantPatternEntities ;
+                              rdfs:comment "It determines when a pattern entity is 'dominant' in a pattern, i.e. when it has a distribution greater than 50% in the pattern." ;
+                              rdfs:label "areDominantPatternEntitiesOf"@IRI-based; 
+                              rdfs:label "are dominant pattern entities of"@en; 
+                              rdfs:domain :PatternEntities;
+                              rdfs:range :Pattern . 
+#  --------------------------- Property 27------------------------- 
+:MQIWallLeavesConnectionsVert rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Defines the adequacy of connections of the adjacent leaves in a wall, in the context of vertical loading." ;
+                              rdfs:label "MQIWallLeavesConnectionsVert"@IRI-based; 
+                              rdfs:label "MQI-Vertical-Wall Leaves Connection"@en; 
+                              rdfs:domain :MasonryQualityIndex;
+                              rdfs:range xsd:float . 
+#  --------------------------- Property 28------------------------- 
+:MQIHorizontalJointsInPlane rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Defines the adequacy of horizontal joints (based on level of horizontality/continuity), in the context of in plane loading." ;
+                            rdfs:label "MQIHorizontalJointsInPlane"@IRI-based; 
+                            rdfs:label "MQI-In Plane-Horizontal Joints"@en; 
+                            rdfs:domain :MasonryQualityIndex;
+                            rdfs:range xsd:float . 
+#  --------------------------- Property 29------------------------- 
+:MQIUnitsDimensionsOutOfPlane rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Defines the adequacy of units size, in the context of out of plane loading." ;
+                              rdfs:label "MQIUnitsDimensionsOutOfPlane"@IRI-based; 
+                              rdfs:label "MQI-Out Of Plane-Units Dimensions"@en; 
+                              rdfs:domain :MasonryQualityIndex;
+                              rdfs:range xsd:float . 
+#  --------------------------- Property 30------------------------- 
+#<https://saref.etsi.org/core/hasValue> rdf:type owl:DatatypeProperty ;
+#                                       rdfs:label "hasValue"@IRI-based; 
+#                                       rdfs:range rdfs:Literal . 
+#  --------------------------- Property 31------------------------- 
+:MQITotalOutOfPlane rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "Defines the total value of MQI for out of plane loads" ;
+                    rdfs:label "MQITotalOutOfPlane"@IRI-based; 
+                    rdfs:label "Masonry Quality Index total value for out of plane loads"@en; 
+                    rdfs:domain :MasonryQualityIndex;
+                    rdfs:range xsd:float . 
+#  --------------------------- Property 32------------------------- 
+:hasPattern rdf:type owl:ObjectProperty; 
+            owl:inverseOf :isPatternOf ;
+            rdfs:comment "Defines the relationship between a representative volume elements and a pattern." ;
+            rdfs:label "hasPattern"@IRI-based; 
+            rdfs:label "has pattern"@en; 
+            rdfs:domain :RepresentativeVolumeElement;
+            rdfs:range :Pattern . 
+#  --------------------------- Property 33------------------------- 
+:unitsHeightHasMaximumValue rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Defines the maximum value of the height of the units in the pattern. " ;
+                            rdfs:label "unitsHeightHasMaximumValue"@IRI-based; 
+                            rdfs:label "Units Height Has Maximum Value"@en; 
+                            rdfs:domain :Units;
+                            rdfs:range xsd:float . 
+#  --------------------------- Property 34------------------------- 
+:unitsLengthHasMinimumValue rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Defines the minimum value of the length of the units in the pattern. " ;
+                            rdfs:label "unitsLengthHasMinimumValue"@IRI-based; 
+                            rdfs:label "Units Length Has Minimum Value"@en; 
+                            rdfs:domain :Units;
+                            rdfs:range xsd:float . 
+#  --------------------------- Property 35------------------------- 
+:MQIWallLeavesConnectionsOutOfPlane rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "Defines the adequacy of connections of the adjacent leaves in a wall, in the context of out of plane loading." ;
+                                    rdfs:label "MQIWallLeavesConnectionsOutOfPlane"@IRI-based; 
+                                    rdfs:label "MQI-Out Of Plane-Wall Leaves Connection"@en; 
+                                    rdfs:domain :MasonryQualityIndex;
+                                    rdfs:range xsd:float . 
+#  --------------------------- Property 36------------------------- 
+:unitsHeigthHasMinimumValue rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "Defines the minimum value of the height of the units in the pattern. " ;
+                            rdfs:label "unitsHeigthHasMinimumValue"@IRI-based; 
+                            rdfs:label "Units Height Has Minimum Value"@en; 
+                            rdfs:domain :Units;
+                            rdfs:range xsd:float . 
+#  --------------------------- Property 37------------------------- 
+:MQIUnitsPropertiesOutOfPlane rdf:type owl:DatatypeProperty ;
+                              rdfs:comment "Defines the adequacy of mechanical properties of the units, in the context of out of plane loading." ;
+                              rdfs:label "MQIUnitsPropertiesOutOfPlane"@IRI-based; 
+                              rdfs:label "MQI-Out Of Plane-Units Properties"@en; 
+                              rdfs:domain :MasonryQualityIndex;
+                              rdfs:range xsd:float . 
+#  --------------------------- Property 38------------------------- 
+:bricksHaveVolumePercentage rdf:type owl:DatatypeProperty ;
+                            rdfs:comment "In hollow bricks, it defines the percentage of volume, espressed in decimal (eg: 0.4 for 40%). " ;
+                            rdfs:label "bricksHaveVolumePercentage"@IRI-based; 
+                            rdfs:label "Bricks have volume percentage"@en; 
+                            rdfs:domain :Units;
+                            rdfs:range xsd:decimal . 
+#  --------------------------- Property 39------------------------- 
+:MQIUnitsShapeOutOfPlane rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Defines the adequacy of the units shape, in the context of out of plane loading." ;
+                         rdfs:label "MQIUnitsShapeOutOfPlane"@IRI-based; 
+                         rdfs:label "MQI-Out Of Plane-Units Shape"@en; 
+                         rdfs:domain :MasonryQualityIndex;
+                         rdfs:range xsd:float . 
+#  --------------------------- Property 40------------------------- 
+:hasHomogenisedMechanicalProperty rdf:type owl:ObjectProperty; 
+                                  owl:inverseOf :isHomogenisedMechanicalPropertyOf ;
+                                  rdfs:comment "Defines the relationship between a representative volume element and an homogenised mechanical property." ;
+                                  rdfs:label "hasHomogenisedMechanicalProperty"@IRI-based; 
+                                  rdfs:label "has homogenised mechanical property"@en; 
+                                  rdfs:domain :RepresentativeVolumeElement;
+                                  rdfs:range :HomogenisedMechanicalProperty . 
+#  --------------------------- Property 41------------------------- 
+:hasDominantPatternEntities rdf:type owl:ObjectProperty; 
+                            owl:inverseOf :areDominantPatternEntitiesOf ;
+                            rdfs:comment "Determines which pattern entities are dominant (more than 50%) in a pattern." ;
+                            rdfs:label "hasDominantPatternEntities"@IRI-based; 
+                            rdfs:label "has dominant pattern entities"@en; 
+                            rdfs:domain :Pattern;
+                            rdfs:range :PatternEntities . 
+#  --------------------------- Property 42------------------------- 
+:MQIHorizontalJointsVert rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Defines the adequacy of horizontal joints (based on level of horizontality/continuity), in the context of vertical loading." ;
+                         rdfs:label "MQIHorizontalJointsVert"@IRI-based; 
+                         rdfs:label "MQI-Vertical-Horizontal Joints"@en; 
+                         rdfs:domain :MasonryQualityIndex;
+                         rdfs:range xsd:float . 
+#  --------------------------- Property 43------------------------- 
+:MQIMortarQualityVert rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "Defines the adequacy of the mortar, in the context of vertical loading." ;
+                      rdfs:label "MQIMortarQualityVert"@IRI-based; 
+                      rdfs:label "MQI-Vertical-Mortar Quality"@en; 
+                      rdfs:domain :MasonryQualityIndex;
+                      rdfs:range xsd:float . 
+#  --------------------------- Property 44------------------------- 
+:isMasonryLayerOf rdf:type owl:ObjectProperty; 
+                  owl:inverseOf :hasMasonryLayer ;
+                  rdfs:comment "Defines the relationship between a masonry wall and a masonry layer." ;
+                  rdfs:label "isMasonryLayerOf"@IRI-based; 
+                  rdfs:label "is layer of"@en; 
+                  rdfs:domain :MasonryLayer;
+                  rdfs:range :MasonryElement . 
+#  --------------------------- Property 45------------------------- 
+:hasMasonryLayer rdf:type owl:ObjectProperty; 
+                 owl:inverseOf :isMasonryLayerOf ;
+                 rdfs:comment "Defines the relationship between a masonry wall and a masonry layer." ;
+                 rdfs:label "hasMasonryLayer"@IRI-based; 
+                 rdfs:label "has layer"@en; 
+                 rdfs:domain :MasonryElement;
+                 rdfs:range :MasonryLayer . 
+#  --------------------------- Property 46------------------------- 
+#<https://w3id.org/dot/hasDamageArea> rdf:type owl:ObjectProperty ;
+#                                     rdfs:label "hasDamageArea"@IRI-based; 
+#                                     rdfs:domain :PatternEntities;
+#                                     rdfs:range <https://w3id.org/dot#DamageArea> . 
+#  --------------------------- Property 47------------------------- 
+:hasMasonryQualityIndex rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Defines the Masonry Quality Index associated with a wall" ;
+                        rdfs:label "hasMasonryQualityIndex"@IRI-based; 
+                        rdfs:label "has Masonry Quality Index"@en; 
+                        rdfs:domain :MasonryElement;
+                        rdfs:range :MasonryQualityIndex . 
+###  Class Definitions (Number of Classes) 24 ###
+#  --------------------------- Class  0------------------------- 
+#<https://pi.pauwel.be/voc/buildingelement#Wall> rdf:type owl:Class; 
+#                                                rdfs:label "Wall"@IRI-based . 
+#  --------------------------- Class  1------------------------- 
+:TensileStrength rdf:type owl:Class; 
+                 rdfs:comment "The average resistance of the homogenised material to breaking under tension." ;
+                 owl:disjointWith :MassDensity ;
+                 owl:disjointWith :YoungModulus ;
+                 rdfs:subClassOf :HomogenisedMechanicalProperty ;
+                 rdfs:label "TensileStrength"@IRI-based; 
+                 rdfs:label "Tensile Strength"@en . 
+#  --------------------------- Class  2------------------------- 
+:MassDensity rdf:type owl:Class; 
+             rdfs:comment "The mass per unit volume of a masonry wall." ;
+             owl:disjointWith :YoungModulus ;
+             rdfs:subClassOf :HomogenisedMechanicalProperty ;
+             rdfs:label "MassDensity"@IRI-based; 
+             rdfs:label "Mass Density"@en . 
+#  --------------------------- Class  3------------------------- 
+:MasonryLayer rdf:type owl:Class; 
+              rdfs:comment "A layer of a masonry wall." ;
+              owl:disjointWith :PatternEntities ;
+              rdfs:label "MasonryLayer"@IRI-based; 
+              rdfs:label "Masonry Layer"@en . 
+#  --------------------------- Class  4------------------------- 
+#<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class; 
+#                                            rdfs:label "Vocabulary"@IRI-based . 
+#  --------------------------- Class  5------------------------- 
+#foaf:Person rdf:type owl:Class; 
+#            rdfs:label "Person"@IRI-based . 
+#  --------------------------- Class  6------------------------- 
+#<http://bimerr.iot.linkeddata.es/def/material-properties#Property> rdf:type owl:Class; 
+#                                                                   rdfs:label "Property"@IRI-based . 
+#  --------------------------- Class  7------------------------- 
+:Pattern rdf:type owl:Class; 
+         rdfs:comment "The pattern formed by units and joints in a masonry layer." ;
+         owl:disjointWith :MasonryLayer ;
+         owl:disjointWith :PatternEntities ;
+         owl:disjointWith :RepresentativeVolumeElement ;
+         rdfs:label "Pattern"@IRI-based; 
+         rdfs:label "Pattern"@en . 
+#  --------------------------- Class  8------------------------- 
+#<https://w3id.org/dot#DamageArea> rdf:type owl:Class; 
+#                                  rdfs:comment "imported from https://w3id.org/dot ; used to describe damage in hmo:PatternEntities" ;
+#                                  rdfs:label "DamageArea"@IRI-based; 
+#                                  rdfs:label "Damage Area"@en . 
+#  --------------------------- Class  9------------------------- 
+:Units rdf:type owl:Class; 
+       rdfs:comment "The configuration of the units in the pattern." ;
+       owl:disjointWith :Joints ;
+       rdfs:subClassOf :PatternEntities ;
+       rdfs:label "Units"@IRI-based; 
+       rdfs:label "Units"@en . 
+#  --------------------------- Class  10------------------------- 
+:YoungModulus rdf:type owl:Class; 
+              rdfs:comment "Modulus of longitudinal elasticity." ;
+              rdfs:subClassOf :HomogenisedMechanicalProperty ;
+              rdfs:label "YoungModulus"@IRI-based; 
+              rdfs:label "Young Modulus"@en . 
+#  --------------------------- Class  11------------------------- 
+:HomogenisedMechanicalProperty rdf:type owl:Class; 
+                               rdfs:comment "A mechanical property associated to an entire masonry wall, considering the assembly of units and joints." ;
+                               owl:disjointWith :MasonryQualityIndex ;
+                               owl:disjointWith :PatternEntities ;
+                               owl:disjointWith :Units ;
+                               owl:disjointWith :MasonryLayer ;
+                               owl:disjointWith :MasonryElement ;
+                               owl:disjointWith :Pattern ;
+                               owl:disjointWith :RepresentativeVolumeElement ;
+                               rdfs:label "HomogenisedMechanicalProperty"@IRI-based; 
+                               rdfs:label "Homogenised Mechanical Property"@en . 
+#  --------------------------- Class  12------------------------- 
+:MortarJoints rdf:type owl:Class; 
+              rdfs:comment "Joints made of mortar." ;
+              rdfs:subClassOf :Joints ;
+              rdfs:label "MortarJoints"@IRI-based; 
+              rdfs:label "Mortar Joints"@en . 
+#  --------------------------- Class  13------------------------- 
+:RepresentativeVolumeElement rdf:type owl:Class; 
+#                             owl:equivalentClass <http://bimerr.iot.linkeddata.es/def/material-properties#Material> ;
+                             rdfs:comment "In the context of global macro-models, a masonry area to which homogeneous mechanical characteristics can be attributed." ;
+                             owl:disjointWith :MasonryLayer ;
+                             rdfs:label "RepresentativeVolumeElement"@IRI-based; 
+                             rdfs:label "Representative Volume Element"@en . 
+#  --------------------------- Class  14------------------------- 
+:HorizontalJoints rdf:type owl:Class; 
+                  rdfs:comment "Horizontal spaces between masonry units. Can be either dry or made of mortar." ;
+                  owl:disjointWith :VerticalJoints ;
+                  rdfs:subClassOf :Joints ;
+                  rdfs:label "HorizontalJoints"@IRI-based; 
+                  rdfs:label "Horizontal Joints"@en . 
+#  --------------------------- Class  15------------------------- 
+:ShearStrengthTC rdf:type owl:Class; 
+                 rdfs:comment "Average shear strength according to the Turnsek and Cacovic criterion. It is used in the case of irregular-textured masonry and corresponds to diagonal tensile failure at the masonry level." ;
+                 owl:disjointWith :TensileStrength ;
+                 owl:disjointWith :ShearStrengthMC ;
+                 owl:disjointWith :CompressiveStrength ;
+                 owl:disjointWith :YoungModulus ;
+                 owl:disjointWith :MassDensity ;
+                 owl:disjointWith :ShearModulus ;
+                 rdfs:subClassOf :HomogenisedMechanicalProperty ;
+                 rdfs:label "ShearStrengthTC"@IRI-based; 
+                 rdfs:label "Shear Strength (Turnsek and Cacovic)"@en . 
+#  --------------------------- Class  16------------------------- 
+:ShearModulus rdf:type owl:Class; 
+              rdfs:comment "Modulus of tangential elasticity." ;
+              owl:disjointWith :YoungModulus ;
+              owl:disjointWith :TensileStrength ;
+              owl:disjointWith :ShearStrengthMC ;
+              owl:disjointWith :MassDensity ;
+              rdfs:subClassOf :HomogenisedMechanicalProperty ;
+              rdfs:label "ShearModulus"@IRI-based; 
+              rdfs:label "Shear Modulus"@en . 
+#  --------------------------- Class  17------------------------- 
+:CompressiveStrength rdf:type owl:Class; 
+                     rdfs:comment "The average resistance of the homogenised material to breaking under compression." ;
+                     owl:disjointWith :TensileStrength ;
+                     owl:disjointWith :ShearStrengthMC ;
+                     owl:disjointWith :YoungModulus ;
+                     owl:disjointWith :MassDensity ;
+                     owl:disjointWith :ShearModulus ;
+                     rdfs:subClassOf :HomogenisedMechanicalProperty ;
+                     rdfs:label "CompressiveStrength"@IRI-based; 
+                     rdfs:label "Compressive Strength"@en . 
+#  --------------------------- Class  18------------------------- 
+:VerticalJoints rdf:type owl:Class; 
+                rdfs:comment "Vertical spaces between masonry units. Can be either dry or made of mortar." ;
+                rdfs:subClassOf :Joints ;
+                rdfs:label "VerticalJoints"@IRI-based; 
+                rdfs:label "Vertical Joints"@en . 
+#  --------------------------- Class  19------------------------- 
+:PatternEntities rdf:type owl:Class; 
+                 rdfs:comment "A group of entities in a pattern which have the same function, geometry and material properties." ;
+                 rdfs:label "PatternEntities"@IRI-based; 
+                 rdfs:label "Pattern Entities"@en . 
+#  --------------------------- Class  20------------------------- 
+:MasonryQualityIndex rdf:type owl:Class; 
+                     rdfs:comment "A visual method for assessing the structural behavior of masonry walls." ;
+                     owl:disjointWith :MasonryElement ;
+                     owl:disjointWith :Pattern ;
+                     owl:disjointWith :MasonryLayer ;
+                     owl:disjointWith :PatternEntities ;
+                     owl:disjointWith :RepresentativeVolumeElement ;
+                     rdfs:subClassOf :HomogenisedMechanicalProperty ;
+                     rdfs:label "MasonryQualityIndex"@IRI-based; 
+                     rdfs:label "Masonry Quality Index"@en . 
+#  --------------------------- Class  21------------------------- 
+:Joints rdf:type owl:Class; 
+        rdfs:comment "The configuration of the joints in the pattern." ;
+        rdfs:subClassOf :PatternEntities ;
+        rdfs:label "Joints"@IRI-based; 
+        rdfs:label "Joints"@en . 
+#  --------------------------- Class  22------------------------- 
+:MasonryElement rdf:type owl:Class; 
+             rdfs:comment "A load bearing wall made of structural masorny." ;
+             owl:disjointWith :PatternEntities ;
+             owl:disjointWith :MasonryLayer ;
+             owl:disjointWith :Pattern ;
+             rdfs:label "MasonryElement"@IRI-based; 
+             rdfs:label "Masonry Element"@en . 
+#  --------------------------- Class  23------------------------- 
+:ShearStrengthMC rdf:type owl:Class; 
+                 rdfs:comment "Average shear strength according to the Mohr-Coulomb criterion. It is used in the case of regular-textured masonry and corresponds to diagonal tensile failure at the joints level." ;
+                 owl:disjointWith :YoungModulus ;
+                 owl:disjointWith :TensileStrength ;
+                 owl:disjointWith :MassDensity ;
+                 rdfs:subClassOf :HomogenisedMechanicalProperty ;
+                 rdfs:label "ShearStrengthMC"@IRI-based; 
+                 rdfs:label "Shear Strength (Mohr Coulomb)"@en . 

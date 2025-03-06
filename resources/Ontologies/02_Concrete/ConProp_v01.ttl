@@ -54,70 +54,81 @@
 om:hasUnit rdf:type owl:ObjectProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain mmo:Property ;
-           rdfs:range om:Unit .
+           rdfs:range om:Unit ;
+           rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasBinderQuantity
 :hasBinderQuantity rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasComponentQuantity ;
                    rdfs:domain :BinderMaterial ;
-                   rdfs:range :BinderQuantity .
+                   rdfs:range :BinderQuantity ;
+                   rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasChemicalComponent
 :hasChemicalComponent rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain :BinderMaterial ;
-                      rdfs:range mmo:Composition .
+                      rdfs:range mmo:Composition ;
+                      rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasCoarseAggregateQuantity
 :hasCoarseAggregateQuantity rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :hasComponentQuantity ;
                             rdfs:domain :CoarseAggregateMaterial ;
-                            rdfs:range :CoarseAggregateQuantity .
+                            rdfs:range :CoarseAggregateQuantity ;
+                            rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasComponentQuantity
 :hasComponentQuantity rdf:type owl:ObjectProperty ;
                       rdfs:domain mat:Concrete ;
-                      rdfs:range :ComponentQuantity .
+                      rdfs:range :ComponentQuantity ;
+                      rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasFineAggregateQuantity
 :hasFineAggregateQuantity rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :hasComponentQuantity ;
                           rdfs:domain :FineAggregateMaterial ;
-                          rdfs:range :FineAggregateQuantity .
+                          rdfs:range :FineAggregateQuantity ;
+                          rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasMaterialProperty
 :hasMaterialProperty rdf:type owl:ObjectProperty ;
                      owl:inverseOf :isMaterialPropertyOf ;
                      rdfs:domain mat:Material ;
-                     rdfs:range mmo:MaterialProperty .
+                     rdfs:range mmo:MaterialProperty ;
+                     rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#hasWaterQuantity
 :hasWaterQuantity rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasComponentQuantity ;
                   rdfs:domain mat:Water ;
-                  rdfs:range :WaterQuantity .
+                  rdfs:range :WaterQuantity ;
+                  rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#isComponentMaterialOf
 :isComponentMaterialOf rdf:type owl:ObjectProperty ;
-                       owl:inverseOf :isMadeOfComponentMaterial .
+                       owl:inverseOf :isMadeOfComponentMaterial ;
+                       rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#isMadeOfComponentMaterial
 :isMadeOfComponentMaterial rdf:type owl:ObjectProperty ;
                            rdfs:domain mat:Concrete ;
-                           rdfs:range :ConcreteComponentMaterial .
+                           rdfs:range :ConcreteComponentMaterial ;
+                           rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#isMaterialPropertyOf
-:isMaterialPropertyOf rdf:type owl:ObjectProperty .
+:isMaterialPropertyOf rdf:type owl:ObjectProperty ;
+                      rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 #################################################################
@@ -128,7 +139,8 @@ om:hasUnit rdf:type owl:ObjectProperty ,
 :AdditionMaterial rdf:type owl:Class ;
                   rdfs:subClassOf :BinderMaterial ;
                   owl:disjointWith :Cement ;
-                  rdfs:label "addition" .
+                  rdfs:label "addition" ;
+                  rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#AdmixtureMaterial
@@ -136,7 +148,8 @@ om:hasUnit rdf:type owl:ObjectProperty ,
                    rdfs:subClassOf :ConcreteComponentMaterial ;
                    rdfs:comment "https://www.wikidata.org/wiki/Q831619"^^xsd:anyURI ,
                                 "Natural or manufactured chemical or additive added during concrete mixing to enhance specific properties of the fresh or hardened concrete." ;
-                   rdfs:label "admixture" .
+                   rdfs:label "admixture" ;
+                   rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#AggregateMaterial
@@ -144,26 +157,30 @@ om:hasUnit rdf:type owl:ObjectProperty ,
                    rdfs:subClassOf :ConcreteComponentMaterial ;
                    rdfs:comment "https://www.wikidata.org/wiki/Q866298"^^xsd:anyURI ,
                                 "Inert material with sufficient compressive strength and appropriate size distribution added as load to a composite." ;
-                   rdfs:label "aggregate"@en .
+                   rdfs:label "aggregate"@en ;
+                   rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#BinderMaterial
 :BinderMaterial rdf:type owl:Class ;
                 rdfs:subClassOf :ConcreteComponentMaterial ;
                 rdfs:comment "A material or substance that holds or draws other materials together to form a cohesive whole mechanically, chemically, by adhesion or cohesion. More narrowly, binders are liquid or dough-like substances that harden by a chemical or physical process and bind fibres, filler powder and other particles added into it."@en ;
-                rdfs:label "binder" .
+                rdfs:label "binder" ;
+                rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#BinderQuantity
 :BinderQuantity rdf:type owl:Class ;
-                rdfs:subClassOf :ComponentQuantity .
+                rdfs:subClassOf :ComponentQuantity ;
+                rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#Cement
 :Cement rdf:type owl:Class ;
         rdfs:subClassOf :BinderMaterial ;
         rdfs:comment "A chemical substance used for construction that sets, hardens, and adheres to other materials to bind them together."@en ;
-        rdfs:label "cement"@en .
+        rdfs:label "cement"@en ;
+        rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#CoarseAggregateMaterial
@@ -171,104 +188,121 @@ om:hasUnit rdf:type owl:ObjectProperty ,
                          rdfs:subClassOf :AggregateMaterial ;
                          owl:disjointWith :FineAggregateMaterial ;
                          rdfs:comment "Aggregate characterised by the size which does not allow it to pass through a certain threshold sieve size in the sieve particle size distribution analysis." ;
-                         rdfs:label "coarse aggregate" .
+                         rdfs:label "coarse aggregate" ;
+                         rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#CoarseAggregateQuantity
 :CoarseAggregateQuantity rdf:type owl:Class ;
-                         rdfs:subClassOf :ComponentQuantity .
+                         rdfs:subClassOf :ComponentQuantity ;
+                         rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#ComponentQuantity
 :ComponentQuantity rdf:type owl:Class ;
                    rdfs:subClassOf mmo:Property ;
                    owl:disjointWith mmo:MaterialProperty ;
-                   rdfs:label "concrete component quantity" .
+                   rdfs:label "concrete component quantity" ;
+                   rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#ConcreteComponentMaterial
 :ConcreteComponentMaterial rdf:type owl:Class ;
                            rdfs:subClassOf mat:Material ;
                            rdfs:comment "A consitituent of the fresh concrete mix, which usually encompasses water, aggregate (fine and coarse) and binder (cement and additions)." ;
-                           rdfs:label "concrete component"@en .
+                           rdfs:label "concrete component"@en ;
+                           rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#CorrosionResistance
 :CorrosionResistance rdf:type owl:Class ;
                      rdfs:subClassOf mmo:ChemicalProperty ;
                      owl:disjointWith mmo:Composition ;
-                     rdfs:label "corrosion resistance" .
+                     rdfs:label "corrosion resistance" ;
+                     rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#Creep
 :Creep rdf:type owl:Class ;
        rdfs:subClassOf mmo:MechanicalProperty ;
-       rdfs:label "creep"@en .
+       rdfs:label "creep"@en ;
+       rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#Emissivity
 :Emissivity rdf:type owl:Class ;
             rdfs:subClassOf mmo:ThermalProperty ;
-            rdfs:label "emissivity" .
+            rdfs:label "emissivity" ;
+            rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#Extrudability
 :Extrudability rdf:type owl:Class ;
                rdfs:subClassOf :ManufacturingProperty ;
-               rdfs:label "extrudability" .
+               rdfs:label "extrudability" ;
+               rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#FineAggregateMaterial
 :FineAggregateMaterial rdf:type owl:Class ;
                        rdfs:subClassOf :AggregateMaterial ;
                        rdfs:comment "Aggregate characterised by the size which allows it to pass through a certain threshold sieve size in the sieve particle size distribution analysis." ;
-                       rdfs:label "fine aggregate" .
+                       rdfs:label "fine aggregate" ;
+                       rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#FineAggregateQuantity
 :FineAggregateQuantity rdf:type owl:Class ;
-                       rdfs:subClassOf :ComponentQuantity .
+                       rdfs:subClassOf :ComponentQuantity ;
+                       rdfs:isDefinedBy <https://w3id.org/conprop#> .
 
 
 ###  https://w3id.org/conprop#Flowability
 :Flowability rdf:type owl:Class ;
              rdfs:subClassOf :ManufacturingProperty ;
-             rdfs:label "flowability" .
+             rdfs:label "flowability" ;
+             rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#HydrationHeat
 :HydrationHeat rdf:type owl:Class ;
                rdfs:subClassOf mmo:ThermalProperty ;
-               rdfs:label "cumulative unit hydration heat"@en .
+               rdfs:label "cumulative unit hydration heat"@en ;
+               rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#ManufacturingProperty
 :ManufacturingProperty rdf:type owl:Class ;
                        rdfs:subClassOf mmo:MaterialProperty ;
-                       rdfs:label "manufacturing property" .
+                       rdfs:label "manufacturing property" ;
+                       rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#OpenTime
 :OpenTime rdf:type owl:Class ;
           rdfs:subClassOf :ManufacturingProperty ;
-          rdfs:label "open time" .
+          rdfs:label "open time" ;
+          rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#Pumpability
 :Pumpability rdf:type owl:Class ;
              rdfs:subClassOf :ManufacturingProperty ;
-             rdfs:label "pumpability" .
+             rdfs:label "pumpability" ;
+             rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#WaterQuantity
 :WaterQuantity rdf:type owl:Class ;
-               rdfs:subClassOf :ComponentQuantity .
+               rdfs:subClassOf :ComponentQuantity ;
+               rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 
 ###  https://w3id.org/conprop#Workability
 :Workability rdf:type owl:Class ;
              rdfs:subClassOf :ManufacturingProperty ;
-             rdfs:label "workability" .
+             rdfs:label "workability" ;
+             rdfs:isDefinedBy <https://w3id.org/conprop#>.
 
 #################################################################
 #    General axioms
