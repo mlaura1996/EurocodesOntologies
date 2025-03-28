@@ -1,7 +1,8 @@
 PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> 
 PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> 
 PREFIX saref: <https://w3id.org/saref#> 
-PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX bso: <https://w3id.org/bso#>
+PREFIX cpo: <https://w3id.org/cpo#>
 PREFIX inst:  <https://random-url-to-your-data.com/data#> 
 
 DELETE{
@@ -9,17 +10,17 @@ DELETE{
 }
 INSERT{
     ?CoSH a mmo:SpecificHeat .
-    ?C conprop:hasMaterialProperty ?CoSH.
+    ?C bso:hasMaterialProperty ?CoSH.
 	?CoSH saref:hasValue ?CoSHv .
 }
 WHERE {
     ?C a mat:Concrete .
     ?CMD a mmo:MassDensity .
     
-    ?CAM a conprop:CoarseAggregateMaterial .
-    ?FAM a conprop:FineAggregateMaterial .
-    ?W a conprop:Water .
-    ?BM a conprop:BinderMaterial .
+    ?CAM a cpo:CoarseAggregateMaterial .
+    ?FAM a cpo:FineAggregateMaterial .
+    ?W a cpo:Water .
+    ?BM a cpo:BinderMaterial .
     
      
     ?CASH a mmo:SpecificHeat .
@@ -27,27 +28,27 @@ WHERE {
     ?WSH a mmo:SpecificHeat .
     ?BSH a mmo:SpecificHeat .
     
-    ?CAQ a conprop:CoarseAggregateQuantity .
-    ?FAQ a conprop:FineAggregateQuantity .
-    ?WQ a conprop:WaterQuantity .
-    ?BQ a conprop:BinderQuantity .
+    ?CAQ a cpo:CoarseAggregateQuantity .
+    ?FAQ a cpo:FineAggregateQuantity .
+    ?WQ a cpo:WaterQuantity .
+    ?BQ a cpo:BinderQuantity .
 	
-    ?C conprop:hasComponentQuantity ?CAQ .
-    ?C conprop:hasComponentQuantity ?FAQ .
-    ?C conprop:hasComponentQuantity ?WQ .
-    ?C conprop:hasComponentQuantity ?BQ .
+    ?C cpo:hasComponentQuantity ?CAQ .
+    ?C cpo:hasComponentQuantity ?FAQ .
+    ?C cpo:hasComponentQuantity ?WQ .
+    ?C cpo:hasComponentQuantity ?BQ .
     
-    ?C conprop:hasMaterialProperty ?CMD .
+    ?C bso:hasMaterialProperty ?CMD .
 	
-    ?C conprop:isMadeOfComponentMaterial ?CAM .
-    ?C conprop:isMadeOfComponentMaterial ?FAM .
-    ?C conprop:isMadeOfComponentMaterial ?W .
-    ?C conprop:isMadeOfComponentMaterial ?BM .
+    ?C cpo:isMadeOfComponentMaterial ?CAM .
+    ?C cpo:isMadeOfComponentMaterial ?FAM .
+    ?C cpo:isMadeOfComponentMaterial ?W .
+    ?C cpo:isMadeOfComponentMaterial ?BM .
 
-    ?CAM conprop:hasMaterialProperty ?CASH .
-    ?FAM conprop:hasMaterialProperty ?FASH .
-    ?W conprop:hasMaterialProperty ?WSH .
-    ?BM conprop:hasMaterialProperty ?BSH .
+    ?CAM bso:hasMaterialProperty ?CASH .
+    ?FAM bso:hasMaterialProperty ?FASH .
+    ?W bso:hasMaterialProperty ?WSH .
+    ?BM bso:hasMaterialProperty ?BSH .
 
     ?CAQ saref:hasValue ?CAQv .
     ?FAQ saref:hasValue ?FAQv .
@@ -72,12 +73,12 @@ WHERE {
     
     OPTIONAL{
         ?CoSH a mmo:SpecificHeat .
-    	?C conprop:hasMaterialProperty ?CoSH.
+    	?C bso:hasMaterialProperty ?CoSH.
     }
     
     OPTIONAL{
         ?CoSH a mmo:SpecificHeat .
-    	?C conprop:hasMaterialProperty ?CoSH .
+    	?C bso:hasMaterialProperty ?CoSH .
 	 	?CoSH saref:hasValue ?oldCoSHv .
     }
 }

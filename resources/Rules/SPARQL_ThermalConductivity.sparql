@@ -1,7 +1,8 @@
 PREFIX mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> 
 PREFIX mmo: <https://w3id.org/pmd/materials-mechanics-ontology/> 
 PREFIX saref: <https://w3id.org/saref#> 
-PREFIX conprop: <https://w3id.org/conprop#>
+PREFIX bso: <https://w3id.org/bso#>
+PREFIX cpo: <https://w3id.org/cpo#>
 PREFIX inst:  <https://random-url-to-your-data.com/data#> 
 
 DELETE{
@@ -9,37 +10,37 @@ DELETE{
 }
 INSERT{
     ?CoTC a mmo:ThermalConductivity .
-    ?C conprop:hasMaterialProperty ?CoTC .
+    ?C bso:hasMaterialProperty ?CoTC .
     ?CoTC saref:hasValue ?CoTCv .
 }
 WHERE {
     ?C a mat:Concrete .
    
-    ?CAM a conprop:CoarseAggregateMaterial .
-    ?FAM a conprop:FineAggregateMaterial .
-    ?W a conprop:Water .
-    ?BM a conprop:BinderMaterial .
+    ?CAM a cpo:CoarseAggregateMaterial .
+    ?FAM a cpo:FineAggregateMaterial .
+    ?W a mat:Water .
+    ?BM a cpo:BinderMaterial .
     
     ?CATC a mmo:ThermalConductivity .
     ?FATC a mmo:ThermalConductivity .
     ?WTC a mmo:ThermalConductivity .
     ?BTC a mmo:ThermalConductivity .
     
-    ?CAQ a conprop:CoarseAggregateQuantity .
-    ?FAQ a conprop:FineAggregateQuantity .
-    ?WQ a conprop:WaterQuantity .
-    ?BQ a conprop:BinderQuantity .
+    ?CAQ a cpo:CoarseAggregateQuantity .
+    ?FAQ a cpo:FineAggregateQuantity .
+    ?WQ a cpo:WaterQuantity .
+    ?BQ a cpo:BinderQuantity .
     
     ?CMD a mmo:MassDensity .
 
-    ?C conprop:isMadeOfComponentMaterial ?CAM, ?FAM, ?W, ?BM .
-    ?C conprop:hasComponentQuantity ?CAQ, ?FAQ, ?WQ, ?BQ .
-    ?C conprop:hasMaterialProperty ?CMD .
+    ?C cpo:isMadeOfComponentMaterial ?CAM, ?FAM, ?W, ?BM .
+    ?C cpo:hasComponentQuantity ?CAQ, ?FAQ, ?WQ, ?BQ .
+    ?C bso:hasMaterialProperty ?CMD .
 
-    ?CAM conprop:hasMaterialProperty ?CATC .
-    ?FAM conprop:hasMaterialProperty ?FATC .
-    ?W conprop:hasMaterialProperty ?WTC .
-    ?BM conprop:hasMaterialProperty ?BTC .
+    ?CAM bso:hasMaterialProperty ?CATC .
+    ?FAM bso:hasMaterialProperty ?FATC .
+    ?W bso:hasMaterialProperty ?WTC .
+    ?BM bso:hasMaterialProperty ?BTC .
 
     ?CAQ saref:hasValue ?CAQv .
     ?FAQ saref:hasValue ?FAQv .
@@ -64,12 +65,12 @@ WHERE {
     
     OPTIONAL{
         ?CoTC a mmo:ThermalConductivity .
-    	?C conprop:hasMaterialProperty ?CoTC .
+    	?C bso:hasMaterialProperty ?CoTC .
     }
     
     OPTIONAL{
         ?CoTC a mmo:ThermalConductivity .
-    	?C conprop:hasMaterialProperty ?CoTC .
+    	?C bso:hasMaterialProperty ?CoTC .
     	?CoTC saref:hasValue ?oldCoTCv 
     }
 }
