@@ -1,0 +1,772 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ec1990: <http://www.example.org/ontologies/EC1990#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ec1990: a owl:Ontology ;
+    cc:license "http://creativecommons.org/licenses/by/3.0/" ;
+    dcterms:conformsTo "UNE-EN 1990:2019" ;
+    dcterms:contributor "Agnieszka Jedrzejewska (Silesian Unviersity)",
+        "Carlos Ramonell (Politechnical University of Catalonia)",
+        "Maria Laura Leonardi (University of Minho)" ;
+    dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu)" ;
+    dcterms:date "2024-01-01"^^xsd:date ;
+    dcterms:description "Ontology containing the knowledge from Eurocode 1990: Basis of structural design" ;
+    dcterms:format "ttl" ;
+    dcterms:identifier "EC1990" ;
+    dcterms:language "en" ;
+    dcterms:modified "2024-01-01"^^xsd:date ;
+    dcterms:publisher "Asociación Española de Normalización (UNE)" ;
+    dcterms:rights "© UNE 2019 - All rights reserved" ;
+    dcterms:title "EC1990 - Eurocode 1990 Ontology" ;
+    vann:preferredNamespacePrefix "ec1990" ;
+    vann:preferredNamespaceUri "http://www.example.org/ontologies/EC1990#" ;
+    owl:versionInfo "1.0.0" ;
+    skos:hasTopConcept ec1990:Action,
+        ec1990:CombinationOfActions,
+        ec1990:ConstructionWorks,
+        ec1990:DesignSituation,
+        ec1990:EffectOfAction,
+        ec1990:LimitState .
+
+ec1990:AccelerationEffect a owl:Class ;
+    rdfs:label "Acceleration Effect"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 4.1.5(2)" ;
+    rdfs:comment "Effect involving acceleration of the structure or structural members."@en ;
+    rdfs:subClassOf ec1990:DynamicEffect .
+
+ec1990:AccidentalCombination a owl:Class ;
+    rdfs:label "Accidental Combination"@en,
+        "Combinación Accidental"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.3.3" ;
+    rdfs:comment "Combination of actions for accidental design situations."@en ;
+    rdfs:subClassOf ec1990:ULSCombinations ;
+    skos:scopeNote "Used for accidental design situations in ULS verifications" .
+
+ec1990:AxialForce a owl:Class ;
+    rdfs:label "Axial Force"@en,
+        "Fuerza Axial"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Internal force acting along the axis of structural members."@en ;
+    rdfs:subClassOf ec1990:InternalForce ;
+    skos:altLabel "N" .
+
+ec1990:BendingMoment a owl:Class ;
+    rdfs:label "Bending Moment"@en,
+        "Momento Flector"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Internal moment causing bending in structural members."@en ;
+    rdfs:subClassOf ec1990:InternalForce ;
+    skos:altLabel "M" .
+
+ec1990:Building a owl:Class ;
+    rdfs:label "Building"@en,
+        "Edificio"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.2" ;
+    rdfs:comment "Type of construction works for building purposes such as dwelling houses, office buildings, etc."@en ;
+    rdfs:subClassOf ec1990:ConstructionWorks ;
+    skos:example "dwelling house, office building, industrial building" .
+
+ec1990:CharacteristicCombination a owl:Class ;
+    rdfs:label "Characteristic Combination"@en,
+        "Combinación Característica"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.5.3(2)a" ;
+    rdfs:comment "Serviceability combination normally used for irreversible limit states."@en ;
+    rdfs:subClassOf ec1990:SLSCombinations ;
+    skos:scopeNote "Used for irreversible serviceability limit state verifications" .
+
+ec1990:CivilEngineeringWork a owl:Class ;
+    rdfs:label "Civil Engineering Work"@en,
+        "Obra de Ingeniería Civil"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.2" ;
+    rdfs:comment "Type of construction works for civil engineering purposes such as bridges, retaining walls, etc."@en ;
+    rdfs:subClassOf ec1990:ConstructionWorks ;
+    skos:example "bridge, retaining wall, tunnel" .
+
+ec1990:CombinationFactor a owl:DatatypeProperty ;
+    rdfs:label "Combination Factor"@en,
+        "Factor de Combinación"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.16" ;
+    rdfs:comment "Factor ψ₀ for combination value of a variable action used in ultimate limit state verifications."@en ;
+    rdfs:domain ec1990:VariableAction ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ₀" .
+
+ec1990:CreepEffect a owl:Class ;
+    rdfs:label "Creep Effect"@en,
+        "Efecto de Fluencia"@es ;
+    rdfs:comment "Long-term deformation effect due to sustained loading."@en ;
+    rdfs:subClassOf ec1990:TimeDependentEffect .
+
+ec1990:Deflection a owl:Class ;
+    rdfs:label "Deflection"@en,
+        "Flecha"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.6" ;
+    rdfs:comment "Vertical deflection of a structural member."@en ;
+    rdfs:subClassOf ec1990:LinearDeformation ;
+    skos:altLabel "w" .
+
+ec1990:DirectAction a owl:Class ;
+    rdfs:label "Direct Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.1 a)" ;
+    rdfs:comment "Set of forces (loads) applied to the structure."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    owl:disjointWith ec1990:IndirectAction .
+
+ec1990:Displacement a owl:Class ;
+    rdfs:label "Displacement"@en,
+        "Desplazamiento"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.6" ;
+    rdfs:comment "Horizontal displacement of a structure or structural member."@en ;
+    rdfs:subClassOf ec1990:LinearDeformation ;
+    skos:altLabel "u" .
+
+ec1990:EQU a owl:Class ;
+    rdfs:label "Static Equilibrium"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P a)" ;
+    rdfs:comment "Loss of static equilibrium of the structure or any part of it considered as a rigid body."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:ExplotionDesignSituation a owl:Class ;
+    rdfs:label "Explosion Design Situation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.5" ;
+    rdfs:comment "Accidental design situation involving explosion conditions."@en ;
+    rdfs:subClassOf ec1990:AccidentalDesignSituation .
+
+ec1990:FAT a owl:Class ;
+    rdfs:label "Fatigue Failure"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P d)" ;
+    rdfs:comment "Fatigue failure of the structure or structural members."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:FatigueEffect a owl:Class ;
+    rdfs:label "Fatigue Effect"@en,
+        "Efecto de Fatiga"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 3.1(5)" ;
+    rdfs:comment "Progressive damage effect due to repeated loading cycles."@en ;
+    rdfs:subClassOf ec1990:TimeDependentEffect .
+
+ec1990:FireDesignSituation a owl:Class ;
+    rdfs:label "Fire Design Situation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.6" ;
+    rdfs:comment "Accidental design situation involving fire conditions requiring specific design considerations."@en ;
+    rdfs:subClassOf ec1990:AccidentalDesignSituation .
+
+ec1990:FixedAction a owl:Class ;
+    rdfs:label "Fixed Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.8" ;
+    rdfs:comment "Action that has a fixed distribution and position over the structure or structural member such that the magnitude and direction of the action are determined unambiguously for the whole structure."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    owl:disjointWith ec1990:FreeAction .
+
+ec1990:FrequentCombination a owl:Class ;
+    rdfs:label "Frequent Combination"@en,
+        "Combinación Frecuente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.5.3(2)b" ;
+    rdfs:comment "Serviceability combination normally used for reversible limit states."@en ;
+    rdfs:subClassOf ec1990:SLSCombinations ;
+    skos:scopeNote "Used for reversible serviceability limit state verifications" .
+
+ec1990:FrequentFactor a owl:DatatypeProperty ;
+    rdfs:label "Frequent Factor"@en,
+        "Factor Frecuente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.17" ;
+    rdfs:comment "Factor ψ₁ for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value."@en ;
+    rdfs:domain ec1990:VariableAction ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ₁" .
+
+ec1990:FundamentalCombination a owl:Class ;
+    rdfs:label "Fundamental Combination"@en,
+        "Combinación Fundamental"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.3.2" ;
+    rdfs:comment "Combination of actions for persistent or transient design situations."@en ;
+    rdfs:subClassOf ec1990:ULSCombinations ;
+    skos:scopeNote "Used for persistent and transient design situations in ULS verifications" .
+
+ec1990:GEO a owl:Class ;
+    rdfs:label "Geotechnical Failure"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P c)" ;
+    rdfs:comment "Failure or excessive deformation of the ground where the strengths of soil or rock are significant in providing resistance."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:GeometricalData a owl:Class ;
+    rdfs:label "Geometrical Data"@en,
+        "Datos Geométricos"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 4.3" ;
+    rdfs:comment "Geometrical properties and dimensions of structural elements."@en .
+
+ec1990:GeotechnicalAction a owl:Class ;
+    rdfs:label "Geotechnical Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.7" ;
+    rdfs:comment "Action transmitted to the structure by the ground, fill or groundwater."@en ;
+    rdfs:subClassOf ec1990:Action .
+
+ec1990:HYD a owl:Class ;
+    rdfs:label "Hydraulic Failure"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P f)" ;
+    rdfs:comment "Hydraulic heave, internal erosion and piping in the ground caused by hydraulic gradients."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:ImpactDesignSituation a owl:Class ;
+    rdfs:label "Impact Design Situation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.5" ;
+    rdfs:comment "Accidental design situation involving impact conditions."@en ;
+    rdfs:subClassOf ec1990:AccidentalDesignSituation .
+
+ec1990:LocalizedFailureDesignSituation a owl:Class ;
+    rdfs:label "Localized Failure Design Situation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.5" ;
+    rdfs:comment "Accidental design situation involving local failure conditions."@en ;
+    rdfs:subClassOf ec1990:AccidentalDesignSituation .
+
+ec1990:MaterialModelPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Material Model Partial Factor"@en,
+        "Factor Parcial del Modelo del Material"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
+    rdfs:comment "Partial factor γₘ for material properties also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:domain ec1990:MaterialProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec1990:PartialFactor ;
+    skos:altLabel "γₘ" .
+
+ec1990:MaterialPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Material Partial Factor"@en,
+        "Factor Parcial del Material"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
+    rdfs:comment "Partial factor γₘ for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value."@en ;
+    rdfs:domain ec1990:MaterialProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec1990:PartialFactor ;
+    skos:altLabel "γₘ" .
+
+ec1990:NormalStress a owl:Class ;
+    rdfs:label "Normal Stress"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Stress acting perpendicular to a surface."@en ;
+    rdfs:subClassOf ec1990:Stress .
+
+ec1990:PermanentActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Permanent Action Partial Factor"@en,
+        "Factor Parcial de Acción Permanente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
+    rdfs:comment "Partial factor γG applied to permanent actions."@en ;
+    rdfs:domain ec1990:PermanentAction ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec1990:PartialFactor ;
+    skos:altLabel "γG" .
+
+ec1990:PersistentDesignSituation a owl:Class ;
+    rdfs:label "Persistent Design Situation"@en,
+        "Situación de Proyecto Persistente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.4" ;
+    rdfs:comment "Design situation that is relevant during a period of the same order as the design working life of the structure. Generally refers to conditions of normal use."@en ;
+    rdfs:subClassOf ec1990:DesignSituation ;
+    owl:disjointWith ec1990:AccidentalDesignSituation,
+        ec1990:SeismicDesignSituation,
+        ec1990:TransientDesignSituation .
+
+ec1990:PrincipalStress a owl:Class ;
+    rdfs:label "Principal Stress"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Maximum or minimum normal stress at a point."@en ;
+    rdfs:subClassOf ec1990:Stress .
+
+ec1990:QuasiPermanentCombination a owl:Class ;
+    rdfs:label "Quasi-Permanent Combination"@en,
+        "Combinación Cuasi-permanente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.5.3(2)c" ;
+    rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
+    rdfs:subClassOf ec1990:SLSCombinations ;
+    skos:scopeNote "Used for long-term effects and appearance considerations" .
+
+ec1990:QuasiPermanentFactor a owl:DatatypeProperty ;
+    rdfs:label "Quasi-Permanent Factor"@en,
+        "Factor Cuasi-permanente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.18" ;
+    rdfs:comment "Factor ψ₂ for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period."@en ;
+    rdfs:domain ec1990:VariableAction ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ₂" .
+
+ec1990:QuasiStaticAction a owl:Class ;
+    rdfs:label "Quasi-Static Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.13" ;
+    rdfs:comment "Dynamic action represented by an equivalent static action in a static model."@en ;
+    rdfs:subClassOf ec1990:DynamicAction .
+
+ec1990:Reaction a owl:Class ;
+    rdfs:label "Reaction"@en,
+        "Reacción"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Support reaction force or moment at structural supports."@en ;
+    rdfs:subClassOf ec1990:EffectOfAction .
+
+ec1990:ReversibleServiceabilityLimitState a owl:Class ;
+    rdfs:label "Reversible Serviceability Limit State"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14.2" ;
+    rdfs:comment "Serviceability limit states where no consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en ;
+    rdfs:subClassOf ec1990:ServiceabilityLimitState ;
+    owl:disjointWith ec1990:IrreversibleServiceabilityLimitState .
+
+ec1990:Rotation a owl:Class ;
+    rdfs:label "Rotation"@en,
+        "Rotación"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Angular rotation of a structure or structural member."@en ;
+    rdfs:subClassOf ec1990:AngularDeformation .
+
+ec1990:STR a owl:Class ;
+    rdfs:label "Structural Resistance"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P b)" ;
+    rdfs:comment "Internal failure or excessive deformation of the structure or structural members where the strength of construction materials governs."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:SeismicAction a owl:Class ;
+    rdfs:label "Seismic Action"@en,
+        "Acción Sísmica"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.6" ;
+    rdfs:comment "Action that arises due to earthquake ground motions."@en ;
+    rdfs:subClassOf ec1990:AccidentalAction ;
+    skos:altLabel "AE" .
+
+ec1990:SeismicCombination a owl:Class ;
+    rdfs:label "Seismic Combination"@en,
+        "Combinación Sísmica"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.3.4" ;
+    rdfs:comment "Combination of actions for seismic design situations."@en ;
+    rdfs:subClassOf ec1990:ULSCombinations ;
+    skos:scopeNote "Used for seismic design situations in ULS verifications" .
+
+ec1990:ShearForce a owl:Class ;
+    rdfs:label "Shear Force"@en,
+        "Fuerza Cortante"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Internal force acting perpendicular to the axis of structural members."@en ;
+    rdfs:subClassOf ec1990:InternalForce ;
+    skos:altLabel "V" .
+
+ec1990:ShearStress a owl:Class ;
+    rdfs:label "Shear Stress"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Stress acting parallel to a surface."@en ;
+    rdfs:subClassOf ec1990:Stress .
+
+ec1990:ShrinkageEffect a owl:Class ;
+    rdfs:label "Shrinkage Effect"@en,
+        "Efecto de Retracción"@es ;
+    rdfs:comment "Deformation effect due to material shrinkage over time."@en ;
+    rdfs:subClassOf ec1990:TimeDependentEffect .
+
+ec1990:StaticAction a owl:Class ;
+    rdfs:label "Static Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.11" ;
+    rdfs:comment "Action that does not cause significant acceleration of the structure or structural members."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    owl:disjointWith ec1990:DynamicAction .
+
+ec1990:Strain a owl:Class ;
+    rdfs:label "Strain"@en,
+        "Deformación Unitaria"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Deformation per unit length in structural members."@en ;
+    rdfs:subClassOf ec1990:MechanicalEffect .
+
+ec1990:StructuralSystem a owl:Class ;
+    rdfs:label "Structural System"@en,
+        "Sistema Estructural"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.9" ;
+    rdfs:comment "Load-bearing members of a building or civil engineering works and the way in which these members function together."@en .
+
+ec1990:TorsionalMoment a owl:Class ;
+    rdfs:label "Torsional Moment"@en,
+        "Momento Torsor"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Internal moment causing twisting in structural members."@en ;
+    rdfs:subClassOf ec1990:InternalForce ;
+    skos:altLabel "T" .
+
+ec1990:Twist a owl:Class ;
+    rdfs:label "Twist"@en,
+        "Torsión"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Angular deformation about the longitudinal axis."@en ;
+    rdfs:subClassOf ec1990:AngularDeformation .
+
+ec1990:UPL a owl:Class ;
+    rdfs:label "Uplift Failure"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.1(1)P e)" ;
+    rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en ;
+    rdfs:subClassOf ec1990:UltimateLimitState .
+
+ec1990:VariableActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Variable Action Partial Factor"@en,
+        "Factor Parcial de Acción Variable"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
+    rdfs:comment "Partial factor γQ applied to variable actions."@en ;
+    rdfs:domain ec1990:VariableAction ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec1990:PartialFactor ;
+    skos:altLabel "γQ" .
+
+ec1990:VibrationResponse a owl:Class ;
+    rdfs:label "Vibration Response"@en,
+        "Respuesta Vibratoria"@es ;
+    rdfs:comment "Dynamic response of structures to oscillatory actions, important for serviceability considerations."@en ;
+    rdfs:subClassOf ec1990:DynamicEffect .
+
+ec1990:appliesTo a owl:ObjectProperty ;
+    rdfs:label "applies to"@en,
+        "se aplica a"@es ;
+    rdfs:comment "Relates an action to the structural member or structure it acts upon."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range ec1990:StructuralMember .
+
+ec1990:causesEffect a owl:ObjectProperty ;
+    rdfs:label "causes effect"@en,
+        "causa efecto"@es ;
+    rdfs:comment "Relates a combination of actions to the effects it causes in the structure."@en ;
+    rdfs:domain ec1990:CombinationOfActions ;
+    rdfs:range ec1990:EffectOfAction .
+
+ec1990:containsAction a owl:ObjectProperty ;
+    rdfs:label "contains action"@en,
+        "contiene acción"@es ;
+    rdfs:comment "Relates a combination of actions to the individual actions it contains."@en ;
+    rdfs:domain ec1990:CombinationOfActions ;
+    rdfs:range ec1990:Action .
+
+ec1990:hasCharacteristicValue a owl:DatatypeProperty ;
+    rdfs:label "Characteristic Value"@en,
+        "Valor Característico"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.14" ;
+    rdfs:comment "Principal representative value of an action. In so far as a characteristic value can be fixed on statistical bases, it is chosen so as to correspond to a prescribed probability of not being exceeded on the unfavourable side during a reference period."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "Fk" .
+
+ec1990:hasDesignValue a owl:DatatypeProperty ;
+    rdfs:label "Design Value"@en,
+        "Valor de Cálculo"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.21" ;
+    rdfs:comment "Value obtained by multiplying the representative value by the partial factor γf."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "Fd" .
+
+ec1990:hasDesignWorkingLife a owl:ObjectProperty ;
+    rdfs:label "has design working life"@en ;
+    rdfs:comment "Relates a structure to its design working life."@en ;
+    rdfs:domain ec1990:Structure ;
+    rdfs:range ec1990:DesignWorkingLife .
+
+ec1990:hasRepresentativeValue a owl:DatatypeProperty ;
+    rdfs:label "Representative Value"@en,
+        "Valor Representativo"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.20" ;
+    rdfs:comment "Value used for the verification of a limit state. A representative value may be the characteristic value (Fk) or an accompanying value (ψFk)."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "Frep" .
+
+ec1990:hasResistance a owl:ObjectProperty ;
+    rdfs:label "has resistance"@en ;
+    rdfs:comment "Relates a structural member to its resistance capacity."@en ;
+    rdfs:domain ec1990:StructuralMember ;
+    rdfs:range ec1990:Resistance .
+
+ec1990:isDesignedFor a owl:ObjectProperty ;
+    rdfs:label "applies to"@en,
+        "se aplica a"@es ;
+    rdfs:comment "Relates an action to the structural member or structure it acts upon."@en ;
+    rdfs:domain ec1990:StructuralMember ;
+    rdfs:range ec1990:DesignSituation .
+
+ec1990:requiresVerficationOf a owl:ObjectProperty ;
+    rdfs:label "requires verification of"@en,
+        "requiere verificación de"@es ;
+    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
+    rdfs:domain ec1990:DesignSituation ;
+    rdfs:range ec1990:LimitState .
+
+ec1990:resultsIn a owl:ObjectProperty ;
+    rdfs:label "results in"@en,
+        "resulta en"@es ;
+    rdfs:comment "Relates an action to the effect it produces in the structure."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range ec1990:EffectOfAction .
+
+ec1990:verifiedBy a owl:ObjectProperty ;
+    rdfs:label "verified by"@en,
+        "verificado por"@es ;
+    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
+    rdfs:domain ec1990:LimitState ;
+    rdfs:range ec1990:CombinationOfActions .
+
+ec1990:AccidentalAction a owl:Class ;
+    rdfs:label "Accidental Action"@en,
+        "Acción Accidental"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.5" ;
+    rdfs:comment "Action, usually of short duration but of significant magnitude, that is unlikely to occur on a given structure during the design working life."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    skos:altLabel "A" ;
+    skos:example "explosions, impact from vehicles" .
+
+ec1990:DeformationEffect a owl:Class ;
+    rdfs:label "Deformation Effect"@en ;
+    rdfs:comment "Effect of actions in the form of deformations of the structure or structural members."@en ;
+    rdfs:subClassOf ec1990:EffectOfAction .
+
+ec1990:DesignWorkingLife a owl:Class ;
+    rdfs:label "Design Working Life"@en,
+        "Vida Útil de Proyecto"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.8" ;
+    rdfs:comment "Assumed period for which a structure or part of it is to be used for its intended purpose with anticipated maintenance but without major repair being necessary."@en .
+
+ec1990:FreeAction a owl:Class ;
+    rdfs:label "Free Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.9" ;
+    rdfs:comment "Action that may have various spatial distributions over the structure."@en ;
+    rdfs:subClassOf ec1990:Action .
+
+ec1990:IndirectAction a owl:Class ;
+    rdfs:label "Indirect Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.1 b)" ;
+    rdfs:comment "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes."@en ;
+    rdfs:subClassOf ec1990:Action .
+
+ec1990:IrreversibleServiceabilityLimitState a owl:Class ;
+    rdfs:label "Irreversible Serviceability Limit State"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14.1" ;
+    rdfs:comment "Serviceability limit states where some consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en ;
+    rdfs:subClassOf ec1990:ServiceabilityLimitState .
+
+ec1990:PermanentAction a owl:Class ;
+    rdfs:label "Permanent Action"@en,
+        "Acción Permanente"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.3" ;
+    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    skos:altLabel "G" ;
+    skos:example "self-weight, fixed equipment" .
+
+ec1990:Resistance a owl:Class ;
+    rdfs:label "Resistance"@en,
+        "Resistencia"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.15" ;
+    rdfs:comment "Capacity of a member or component, or a cross-section of a member or component of a structure, to withstand actions without mechanical failure."@en ;
+    skos:altLabel "R" ;
+    skos:example "bending resistance, buckling resistance, tension resistance" .
+
+ec1990:Structure a owl:Class ;
+    rdfs:label "Structure"@en,
+        "Estructura"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.6" ;
+    rdfs:comment "Organised combination of connected parts designed to carry loads and provide adequate rigidity."@en ;
+    rdfs:subClassOf ec1990:ConstructionWorks .
+
+ec1990:TransientDesignSituation a owl:Class ;
+    rdfs:label "Transient Design Situation"@en,
+        "Situación de Proyecto Transitoria"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.3" ;
+    rdfs:comment "Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair."@en ;
+    rdfs:subClassOf ec1990:DesignSituation ;
+    owl:disjointWith ec1990:AccidentalDesignSituation,
+        ec1990:SeismicDesignSituation ;
+    skos:example "construction phase, repair operations" .
+
+ec1990:DynamicAction a owl:Class ;
+    rdfs:label "Dynamic Action"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.12" ;
+    rdfs:comment "Action that causes significant acceleration of the structure or structural members."@en ;
+    rdfs:subClassOf ec1990:Action .
+
+ec1990:DynamicEffect a owl:Class ;
+    rdfs:label "Dynamic Effect"@en ;
+    rdfs:comment "Effect of actions involving dynamic response, acceleration, or vibration."@en ;
+    rdfs:subClassOf ec1990:EffectOfAction .
+
+ec1990:LinearDeformation a owl:Class ;
+    rdfs:label "Linear Deformation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Deformation involving linear displacement of points in the structure."@en ;
+    rdfs:subClassOf ec1990:Deformation ;
+    owl:disjointWith ec1990:AngularDeformation,
+        ec1990:VolumetricDeformation .
+
+ec1990:MaterialProperty a owl:Class ;
+    rdfs:label "Material Property"@en,
+        "Propiedad del Material"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 4.2" ;
+    rdfs:comment "Physical or mechanical property of construction materials."@en .
+
+ec1990:VolumetricDeformation a owl:Class ;
+    rdfs:label "Volumetric Deformation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Deformation involving change in volume of structural elements."@en ;
+    rdfs:subClassOf ec1990:Deformation .
+
+ec1990:AngularDeformation a owl:Class ;
+    rdfs:label "Angular Deformation"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Deformation involving rotation or angular change in the structure."@en ;
+    rdfs:subClassOf ec1990:Deformation ;
+    owl:disjointWith ec1990:VolumetricDeformation .
+
+ec1990:Deformation a owl:Class ;
+    rdfs:label "Deformation"@en,
+        "Deformación"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Change in shape or size of a structure or structural member due to actions."@en ;
+    rdfs:subClassOf ec1990:DeformationEffect .
+
+ec1990:MechanicalEffect a owl:Class ;
+    rdfs:label "Mechanical Effect"@en ;
+    rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
+    rdfs:subClassOf ec1990:EffectOfAction .
+
+ec1990:SeismicDesignSituation a owl:Class ;
+    rdfs:label "Seismic Design Situation"@en,
+        "Situación de Proyecto Sísmica"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.7" ;
+    rdfs:comment "Design situation involving exceptional conditions of the structure when subjected to a seismic event."@en ;
+    rdfs:subClassOf ec1990:DesignSituation .
+
+ec1990:ServiceabilityLimitState a owl:Class ;
+    rdfs:label "Serviceability Limit State"@en,
+        "Estado Límite de Servicio"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14" ;
+    rdfs:comment "States that correspond to conditions beyond which specified service requirements for a structure or structural member are no longer met."@en ;
+    rdfs:subClassOf ec1990:LimitState ;
+    skos:altLabel "SLS" .
+
+ec1990:Stress a owl:Class ;
+    rdfs:label "Stress"@en,
+        "Tensión"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Internal stress in structural members due to actions."@en ;
+    rdfs:subClassOf ec1990:MechanicalEffect .
+
+ec1990:StructuralMember a owl:Class ;
+    rdfs:label "Structural Member"@en,
+        "Elemento Estructural"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.7" ;
+    rdfs:comment "Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile."@en ;
+    skos:example "column, beam, slab, foundation pile" .
+
+ec1990:TimeDependentEffect a owl:Class ;
+    rdfs:label "Time-Dependent Effect"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 3.1(5)" ;
+    rdfs:comment "Effect of actions that varies with time due to material behavior or other time-related factors."@en ;
+    rdfs:subClassOf ec1990:EffectOfAction .
+
+ec1990:ULSCombinations a owl:Class ;
+    rdfs:label "Ultimate Limit State Combinations"@en,
+        "Combinaciones ELU"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.4.3" ;
+    rdfs:comment "Combinations of actions for verifying ultimate limit states."@en ;
+    rdfs:subClassOf ec1990:CombinationOfActions ;
+    owl:disjointWith ec1990:SLSCombinations .
+
+ec1990:ConstructionWorks a owl:Class ;
+    rdfs:label "Construction Works"@en,
+        "Obras de Construcción"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.1.1" ;
+    rdfs:comment "Everything that is constructed or results from construction operations. The term covers both building and civil engineering works comprising structural, non-structural and geotechnical elements."@en ;
+    skos:definition "Physical entity that results from construction operations" .
+
+ec1990:InternalForce a owl:Class ;
+    rdfs:label "Internal Force"@en,
+        "Fuerza Interna"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Effect of actions in the form of internal forces in structural members."@en ;
+    rdfs:subClassOf ec1990:MechanicalEffect ;
+    skos:altLabel "F" .
+
+ec1990:PartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Partial Factor"@en,
+        "Factor Parcial"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
+    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
+    rdfs:domain ec1990:Action ;
+    rdfs:range xsd:decimal ;
+    skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
+
+ec1990:SLSCombinations a owl:Class ;
+    rdfs:label "Serviceability Limit State Combinations"@en,
+        "Combinaciones ELS"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.5.3" ;
+    rdfs:comment "Combinations of actions for verifying serviceability limit states."@en ;
+    rdfs:subClassOf ec1990:CombinationOfActions .
+
+ec1990:VariableAction a owl:Class ;
+    rdfs:label "Variable Action"@en,
+        "Acción Variable"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.4" ;
+    rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
+    rdfs:subClassOf ec1990:Action ;
+    skos:altLabel "Q" ;
+    skos:example "imposed loads, wind, snow, thermal actions" .
+
+ec1990:LimitState a owl:Class ;
+    rdfs:label "Limit State"@en,
+        "Estado Límite"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.12" ;
+    rdfs:comment "States beyond which the structure no longer fulfils the relevant design criteria."@en ;
+    skos:definition "Critical structural state that must not be exceeded" ;
+    skos:editorialNote "Limit states define critical conditions that must not be exceeded to ensure structural safety and serviceability" .
+
+ec1990:AccidentalDesignSituation a owl:Class ;
+    rdfs:label "Accidental Design Situation"@en,
+        "Situación de Proyecto Accidental"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.5" ;
+    rdfs:comment "Design situation involving exceptional conditions of the structure or its exposure, including fire, explosion, impact or local failure."@en ;
+    rdfs:subClassOf ec1990:DesignSituation ;
+    owl:disjointWith ec1990:SeismicDesignSituation ;
+    skos:example "fire, explosion, impact, local failure" .
+
+ec1990:CombinationOfActions a owl:Class ;
+    rdfs:label "Combination of Actions"@en,
+        "Combinación de Acciones"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.22" ;
+    rdfs:comment "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions."@en ;
+    skos:definition "Set of design values for simultaneous verification of limit states" .
+
+ec1990:UltimateLimitState a owl:Class ;
+    rdfs:label "Ultimate Limit State"@en,
+        "Estado Límite Último"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.13" ;
+    rdfs:comment "States associated with collapse or with other similar forms of structural failure. They generally correspond to the maximum load-carrying resistance of a structure or structural member."@en ;
+    rdfs:subClassOf ec1990:LimitState ;
+    owl:disjointWith ec1990:ServiceabilityLimitState ;
+    skos:altLabel "ULS" .
+
+ec1990:DesignSituation a owl:Class ;
+    rdfs:label "Design Situation"@en,
+        "Situación de Proyecto"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.2" ;
+    rdfs:comment "Sets of physical conditions representing the real conditions occurring during a certain time interval for which the design will demonstrate that relevant limit states are not exceeded."@en .
+
+ec1990:EffectOfAction a owl:Class ;
+    rdfs:label "Effect of Action"@en,
+        "Efecto de las Acciones"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.2" ;
+    rdfs:comment "Effect of actions on structural members (e.g. internal force, moment, stress, strain) or on the whole structure (e.g. deflection, rotation)."@en ;
+    skos:altLabel "E" ;
+    skos:definition "Response of structure or structural members to applied actions" ;
+    skos:editorialNote "Effects of actions can be calculated through structural analysis and must be compared against resistance for verification" ;
+    skos:example "internal force, moment, stress, strain, deflection, rotation" .
+
+ec1990:Action a owl:Class ;
+    rdfs:label "Action"@en,
+        "Acción"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.1" ;
+    rdfs:comment "Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action)."@en ;
+    skos:altLabel "F" ;
+    skos:definition "Set of forces or imposed deformations applied to the structure" ;
+    skos:example "dead load, live load, wind load, thermal action" .
+
