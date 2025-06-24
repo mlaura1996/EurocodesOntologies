@@ -3,7 +3,7 @@ from rdflib.namespace import RDF, RDFS, OWL, VANN, DCTERMS, XSD, SKOS
 import os
 
 # Define the main namespace and save path
-ref = URIRef("http://www.example.org/ontologies/EC1990#")
+ref = URIRef("http://www.w3id.org/Eurocodes/EC1990#")
 save_folder = 'ontologies'
 save_filename = 'EC1990.ttl'
 
@@ -18,15 +18,17 @@ g = Graph()
 
 # Create namespaces
 EC1990 = Namespace(ref)
+BOT = Namespace('http://www.w3id.org/bot#')
 CC = Namespace('http://creativecommons.org/ns#')
 
 # Bind prefixes
-g.bind("ec1990", EC1990)
+g.bind("ec", EC1990)
 g.bind('rdf', RDF)
 g.bind('rdfs', RDFS)
 g.bind('owl', OWL)
 g.bind('xsd', XSD)
 g.bind('skos', SKOS)
+g.bind('bot', BOT)
 g.bind('cc', CC)
 
 # Add improved ontology header triples
@@ -34,16 +36,15 @@ g.add((ref, RDF.type, OWL.Ontology))
 g.add((ref, DCTERMS.creator, Literal('Carlos Ramonell Cazador (carlos.ramonell@upc.edu)')))
 g.add((ref, DCTERMS.date, Literal('2024/12/20', datatype=XSD.date)))
 g.add((ref, DCTERMS.modified, Literal('2024/12/20', datatype=XSD.date)))
-g.add((ref, DCTERMS.title, Literal('EC1990 - Eurocode 1990 Ontology')))
-g.add((ref, DCTERMS.description, Literal("Ontology containing the knowledge from Eurocode 1990: Basis of structural design")))
+g.add((ref, DCTERMS.title, Literal('EC - Eurocode Ontology')))
+g.add((ref, DCTERMS.description, Literal("Ontology containing the knowledge from Eurocodes")))
 g.add((ref, DCTERMS.format, Literal('ttl')))
-g.add((ref, DCTERMS.identifier, Literal('EC1990')))
 g.add((ref, DCTERMS.language, Literal('en')))
-g.add((ref, DCTERMS.conformsTo, Literal('UNE-EN 1990:2019')))
 g.add((ref, OWL.versionInfo, Literal('1.0.0')))
-g.add((ref, VANN.preferredNamespacePrefix, Literal('ec1990')))
+g.add((ref, VANN.preferredNamespacePrefix, Literal('ec')))
 g.add((ref, VANN.preferredNamespaceUri, Literal(ref)))
 g.add((ref, CC.license, Literal('http://creativecommons.org/licenses/by/3.0/')))
+g.add((ref, OWL.imports, Literal('http://www.w3id.org/bot')))
 
 ##########################################################
 #                       CORE CLASSES                    #
@@ -59,6 +60,7 @@ g.add((EC1990['ConstructionWorks'], SKOS.definition, Literal('Physical entity th
 
 g.add((EC1990['Building'], RDF.type, OWL.Class))
 g.add((EC1990['Building'], RDFS.subClassOf, EC1990.ConstructionWorks))
+g.add((EC1990['Building'], OWL.sameAs, BOT.Building))
 g.add((EC1990['Building'], RDFS.label, Literal('Building', lang='en')))
 g.add((EC1990['Building'], RDFS.label, Literal('Edificio', lang='es')))
 g.add((EC1990['Building'], RDFS.comment, Literal('Type of construction works for building purposes such as dwelling houses, office buildings, etc.', lang='en')))
@@ -74,11 +76,187 @@ g.add((EC1990['CivilEngineeringWork'], DCTERMS.source, Literal('UNE-EN 1990:2019
 g.add((EC1990['CivilEngineeringWork'], SKOS.example, Literal('bridge, retaining wall, tunnel')))
 
 g.add((EC1990['StructuralMember'], RDF.type, OWL.Class))
+g.add((EC1990['StructuralMember'], RDFS.subClassOf, BOT.Element))
 g.add((EC1990['StructuralMember'], RDFS.label, Literal('Structural Member', lang='en')))
 g.add((EC1990['StructuralMember'], RDFS.label, Literal('Elemento Estructural', lang='es')))
 g.add((EC1990['StructuralMember'], RDFS.comment, Literal('Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile.', lang='en')))
 g.add((EC1990['StructuralMember'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 1.5.1.7')))
 g.add((EC1990['StructuralMember'], SKOS.example, Literal('column, beam, slab, foundation pile')))
+
+g.add((EC1990['EurocodeSpace'], RDF.type, OWL.Class))
+g.add((EC1990['EurocodeSpace'], RDFS.subClassOf, BOT.Space))
+g.add((EC1990['EurocodeSpace'], RDFS.label, Literal('Eurocode Space', lang='en')))
+g.add((EC1990['EurocodeSpace'], RDFS.label, Literal('Espacio Eurocódigo', lang='es')))
+g.add((EC1990['EurocodeSpace'], RDFS.comment, Literal('A space classified according to EN 1991-1-1 usage categories', lang='en')))
+g.add((EC1990['EurocodeSpace'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+
+# Category A - Domestic and Residential
+g.add((EC1990['Residential'], RDF.type, OWL.Class))
+g.add((EC1990['Residential'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['Residential'], RDFS.label, Literal('Category A - Domestic and Residential', lang='en')))
+g.add((EC1990['Residential'], RDFS.label, Literal('Categoría A - Doméstico y Residencial', lang='es')))
+g.add((EC1990['Residential'], RDFS.comment, Literal('Areas for domestic and residential activities', lang='en')))
+g.add((EC1990['Residential'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['Residential'], SKOS.example, Literal('Rooms in residential buildings and houses; bedrooms and wards in hospitals; bedrooms in hotels and hostels; kitchens and toilets')))
+
+# Category B - Office Areas
+g.add((EC1990['OfficeArea'], RDF.type, OWL.Class))
+g.add((EC1990['OfficeArea'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['OfficeArea'], RDFS.label, Literal('Category B - Office Areas', lang='en')))
+g.add((EC1990['OfficeArea'], RDFS.label, Literal('Categoría B - Áreas de Oficina', lang='es')))
+g.add((EC1990['OfficeArea'], RDFS.comment, Literal('Office areas', lang='en')))
+g.add((EC1990['OfficeArea'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['OfficeArea'], SKOS.example, Literal('General office spaces')))
+
+# Category C - Congregation Areas (with subcategories)
+g.add((EC1990['CongregationArea'], RDF.type, OWL.Class))
+g.add((EC1990['CongregationArea'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['CongregationArea'], RDFS.label, Literal('Category C - Congregation Areas', lang='en')))
+g.add((EC1990['CongregationArea'], RDFS.label, Literal('Categoría C - Áreas de Congregación', lang='es')))
+g.add((EC1990['CongregationArea'], RDFS.comment, Literal('Areas where people may congregate (except areas under category A, B, and D)', lang='en')))
+g.add((EC1990['CongregationArea'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+
+# Category C1
+g.add((EC1990['AreaWithtables'], RDF.type, OWL.Class))
+g.add((EC1990['AreaWithtables'], RDFS.subClassOf, EC1990['CategoryC']))
+g.add((EC1990['AreaWithtables'], RDFS.label, Literal('Category C1 - Areas with tables', lang='en')))
+g.add((EC1990['AreaWithtables'], RDFS.label, Literal('Categoría C1 - Áreas con mesas', lang='es')))
+g.add((EC1990['AreaWithtables'], RDFS.comment, Literal('Areas with tables', lang='en')))
+g.add((EC1990['AreaWithtables'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['AreaWithtables'], SKOS.example, Literal('Areas in schools, cafés, restaurants, dining halls, reading rooms, receptions')))
+
+# Category C2
+g.add((EC1990['AreasWithFixedSeats'], RDF.type, OWL.Class))
+g.add((EC1990['AreasWithFixedSeats'], RDFS.subClassOf, EC1990['CategoryC']))
+g.add((EC1990['AreasWithFixedSeats'], RDFS.label, Literal('Category C2 - Areas with fixed seats', lang='en')))
+g.add((EC1990['AreasWithFixedSeats'], RDFS.label, Literal('Categoría C2 - Áreas con asientos fijos', lang='es')))
+g.add((EC1990['AreasWithFixedSeats'], RDFS.comment, Literal('Areas with fixed seats', lang='en')))
+g.add((EC1990['AreasWithFixedSeats'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['AreasWithFixedSeats'], SKOS.example, Literal('Areas in churches, theatres or cinemas, conference rooms, lecture halls, assembly halls, waiting rooms, railway waiting rooms')))
+
+# Category C3
+g.add((EC1990['AreasWithoutObstacle'], RDF.type, OWL.Class))
+g.add((EC1990['AreasWithoutObstacle'], RDFS.subClassOf, EC1990['CategoryC']))
+g.add((EC1990['AreasWithoutObstacle'], RDFS.label, Literal('Category C3 - Areas without obstacles', lang='en')))
+g.add((EC1990['AreasWithoutObstacle'], RDFS.label, Literal('Categoría C3 - Áreas sin obstáculos', lang='es')))
+g.add((EC1990['AreasWithoutObstacle'], RDFS.comment, Literal('Areas without obstacles for moving people', lang='en')))
+g.add((EC1990['AreasWithoutObstacle'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['AreasWithoutObstacle'], SKOS.example, Literal('Areas in museums, exhibition rooms, etc. and access areas in public and administration buildings, hotels, hospitals, railway station forecourts')))
+
+# Category C4
+g.add((EC1990['PhysicalActivitiesAreas'], RDF.type, OWL.Class))
+g.add((EC1990['PhysicalActivitiesAreas'], RDFS.subClassOf, EC1990['CategoryC']))
+g.add((EC1990['PhysicalActivitiesAreas'], RDFS.label, Literal('Category C4 - Physical activities areas', lang='en')))
+g.add((EC1990['PhysicalActivitiesAreas'], RDFS.label, Literal('Categoría C4 - Áreas de actividades físicas', lang='es')))
+g.add((EC1990['PhysicalActivitiesAreas'], RDFS.comment, Literal('Areas with possible physical activities', lang='en')))
+g.add((EC1990['PhysicalActivitiesAreas'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['PhysicalActivitiesAreas'], SKOS.example, Literal('Dance halls, gymnastic rooms, stages')))
+
+# Category C5
+g.add((EC1990['LargeCrowdsAreas'], RDF.type, OWL.Class))
+g.add((EC1990['LargeCrowdsAreas'], RDFS.subClassOf, EC1990['CategoryC']))
+g.add((EC1990['LargeCrowdsAreas'], RDFS.label, Literal('Category C5 - Large crowds areas', lang='en')))
+g.add((EC1990['LargeCrowdsAreas'], RDFS.label, Literal('Categoría C5 - Áreas de grandes multitudes', lang='es')))
+g.add((EC1990['LargeCrowdsAreas'], RDFS.comment, Literal('Areas susceptible to large crowds', lang='en')))
+g.add((EC1990['LargeCrowdsAreas'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['LargeCrowdsAreas'], SKOS.example, Literal('Buildings for public events like concert halls, sports halls including stands, terraces and access areas and railway platforms')))
+
+# Category D - Shopping Areas
+g.add((EC1990['ShoppingAreas'], RDF.type, OWL.Class))
+g.add((EC1990['ShoppingAreas'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['ShoppingAreas'], RDFS.label, Literal('Category D - Shopping Areas', lang='en')))
+g.add((EC1990['ShoppingAreas'], RDFS.label, Literal('Categoría D - Áreas Comerciales', lang='es')))
+g.add((EC1990['ShoppingAreas'], RDFS.comment, Literal('Shopping areas', lang='en')))
+g.add((EC1990['ShoppingAreas'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+
+# Category D1
+g.add((EC1990['GeneralRetailShops'], RDF.type, OWL.Class))
+g.add((EC1990['GeneralRetailShops'], RDFS.subClassOf, EC1990['CategoryD']))
+g.add((EC1990['GeneralRetailShops'], RDFS.label, Literal('Category D1 - General retail shops', lang='en')))
+g.add((EC1990['GeneralRetailShops'], RDFS.label, Literal('Categoría D1 - Tiendas minoristas generales', lang='es')))
+g.add((EC1990['GeneralRetailShops'], RDFS.comment, Literal('Areas in general retail shops', lang='en')))
+g.add((EC1990['GeneralRetailShops'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['GeneralRetailShops'], SKOS.example, Literal('General retail shops')))
+
+# Category D2
+g.add((EC1990['DepartmentStore'], RDF.type, OWL.Class))
+g.add((EC1990['DepartmentStore'], RDFS.subClassOf, EC1990['CategoryD']))
+g.add((EC1990['DepartmentStore'], RDFS.label, Literal('Category D2 - Department stores', lang='en')))
+g.add((EC1990['DepartmentStore'], RDFS.label, Literal('Categoría D2 - Grandes almacenes', lang='es')))
+g.add((EC1990['DepartmentStore'], RDFS.comment, Literal('Areas in department stores', lang='en')))
+g.add((EC1990['DepartmentStore'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['DepartmentStore'], SKOS.example, Literal('Department stores')))
+
+# Category E - Storage and Industrial
+g.add((EC1990['IndustrialandStorage'], RDF.type, OWL.Class))
+g.add((EC1990['IndustrialandStorage'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['IndustrialandStorage'], RDFS.label, Literal('Category E - Storage and Industrial', lang='en')))
+g.add((EC1990['IndustrialandStorage'], RDFS.label, Literal('Categoría E - Almacenamiento e Industrial', lang='es')))
+g.add((EC1990['IndustrialandStorage'], RDFS.comment, Literal('Storage and industrial areas', lang='en')))
+g.add((EC1990['IndustrialandStorage'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.3')))
+
+# Category E1
+g.add((EC1990['StorageAreas'], RDF.type, OWL.Class))
+g.add((EC1990['StorageAreas'], RDFS.subClassOf, EC1990['CategoryE']))
+g.add((EC1990['StorageAreas'], RDFS.label, Literal('Category E1 - Storage areas', lang='en')))
+g.add((EC1990['StorageAreas'], RDFS.label, Literal('Categoría E1 - Áreas de almacenamiento', lang='es')))
+g.add((EC1990['StorageAreas'], RDFS.comment, Literal('Areas susceptible to accumulation of goods, including access areas', lang='en')))
+g.add((EC1990['StorageAreas'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.3')))
+g.add((EC1990['StorageAreas'], SKOS.example, Literal('Areas for storage use including storage of books and other documents')))
+
+# Category E2
+g.add((EC1990['IndustrialUse'], RDF.type, OWL.Class))
+g.add((EC1990['IndustrialUse'], RDFS.subClassOf, EC1990['CategoryE']))
+g.add((EC1990['IndustrialUse'], RDFS.label, Literal('Category E2 - Industrial use', lang='en')))
+g.add((EC1990['IndustrialUse'], RDFS.label, Literal('Categoría E2 - Uso industrial', lang='es')))
+g.add((EC1990['IndustrialUse'], RDFS.comment, Literal('Industrial use areas', lang='en')))
+g.add((EC1990['IndustrialUse'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.3')))
+g.add((EC1990['IndustrialUse'], SKOS.example, Literal('Industrial facilities')))
+
+# Category F - Light Vehicle Traffic
+g.add((EC1990['LightVehicleTraffic'], RDF.type, OWL.Class))
+g.add((EC1990['LightVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['LightVehicleTraffic'], RDFS.label, Literal('Category F - Light Vehicle Traffic', lang='en')))
+g.add((EC1990['LightVehicleTraffic'], RDFS.label, Literal('Categoría F - Tráfico de Vehículos Ligeros', lang='es')))
+g.add((EC1990['LightVehicleTraffic'], RDFS.comment, Literal('Traffic and parking areas for light vehicles (≤ 30 kN gross vehicle weight and ≤ 8 seats not including driver)', lang='en')))
+g.add((EC1990['LightVehicleTraffic'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.7')))
+g.add((EC1990['LightVehicleTraffic'], SKOS.example, Literal('Garages; parking areas, parking halls')))
+
+# Category G - Medium Vehicle Traffic
+g.add((EC1990['MediumVehicleTraffic'], RDF.type, OWL.Class))
+g.add((EC1990['MediumVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['MediumVehicleTraffic'], RDFS.label, Literal('Category G - Medium Vehicle Traffic', lang='en')))
+g.add((EC1990['MediumVehicleTraffic'], RDFS.label, Literal('Categoría G - Tráfico de Vehículos Medianos', lang='es')))
+g.add((EC1990['MediumVehicleTraffic'], RDFS.comment, Literal('Traffic and parking areas for medium vehicles (>30 kN, ≤ 160 kN gross vehicle weight, on 2 axles)', lang='en')))
+g.add((EC1990['MediumVehicleTraffic'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.7')))
+g.add((EC1990['MediumVehicleTraffic'], SKOS.example, Literal('Access routes; delivery zones; zones accessible to fire engines (≤ 160 kN gross vehicle weight)')))
+
+# Category H - Roofs
+g.add((EC1990['Roof'], RDF.type, OWL.Class))
+g.add((EC1990['Roof'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['Roof'], RDFS.label, Literal('Category H - Roofs', lang='en')))
+g.add((EC1990['Roof'], RDFS.label, Literal('Categoría H - Cubiertas', lang='es')))
+g.add((EC1990['Roof'], RDFS.comment, Literal('Roofs not accessible except for normal maintenance and repair', lang='en')))
+g.add((EC1990['Roof'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.9')))
+g.add((EC1990['Roof'], SKOS.example, Literal('Roofs accessible only for maintenance')))
+
+# Category I - Accessible Roofs
+g.add((EC1990['AccessibleRoofs'], RDF.type, OWL.Class))
+g.add((EC1990['AccessibleRoofs'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['AccessibleRoofs'], RDFS.label, Literal('Category I - Accessible Roofs', lang='en')))
+g.add((EC1990['AccessibleRoofs'], RDFS.label, Literal('Categoría I - Cubiertas Accesibles', lang='es')))
+g.add((EC1990['AccessibleRoofs'], RDFS.comment, Literal('Roofs accessible with occupancy according to categories A to G', lang='en')))
+g.add((EC1990['AccessibleRoofs'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.9')))
+g.add((EC1990['AccessibleRoofs'], SKOS.example, Literal('Roofs used as terraces, gardens, or other occupied spaces')))
+
+# Category K - Helicopter Landing Areas
+g.add((EC1990['HelicopterLandingAreas'], RDF.type, OWL.Class))
+g.add((EC1990['HelicopterLandingAreas'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['HelicopterLandingAreas'], RDFS.label, Literal('Category K - Helicopter Landing Areas', lang='en')))
+g.add((EC1990['HelicopterLandingAreas'], RDFS.label, Literal('Categoría K - Áreas de Aterrizaje de Helicópteros', lang='es')))
+g.add((EC1990['HelicopterLandingAreas'], RDFS.comment, Literal('Roofs accessible for special services, such as helicopter landing areas', lang='en')))
+g.add((EC1990['HelicopterLandingAreas'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.9')))
+g.add((EC1990['HelicopterLandingAreas'], SKOS.example, Literal('Helicopter landing pads on roofs')))
 
 # Structure-related classes
 g.add((EC1990['Structure'], RDF.type, OWL.Class))
