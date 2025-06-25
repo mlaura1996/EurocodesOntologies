@@ -109,15 +109,7 @@ ec:BridgeStructure a owl:Class ;
     rdfs:subClassOf ec:Structure ;
     skos:example "beam bridge, arch bridge, suspension bridge" .
 
-ec:Building a owl:Class ;
-    rdfs:label "Building"@en,
-        "Edificio"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.1.2" ;
-    rdfs:comment "Type of construction works for building purposes such as dwelling houses, office buildings, etc."@en ;
-    rdfs:subClassOf ec:ConstructionWork ;
-    owl:sameAs bot:Building ;
-    skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." ;
-    skos:example "dwelling house, office building, industrial building" .
+ec:BuiResidentialBuildinglding dcterms:source "EN 1990:2002, Section 1.5.1.2" .
 
 ec:BuildingStructure a owl:Class ;
     rdfs:label "Building Structure"@en,
@@ -214,6 +206,12 @@ ec:FAT a owl:Class ;
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P d)" ;
     rdfs:comment "Fatigue failure of the structure or structural members."@en ;
     rdfs:subClassOf ec:UltimateLimitState .
+
+ec:FatigueAction a owl:Class ;
+    rdfs:label "Fatigue Action"@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.7" ;
+    rdfs:comment "Repeated or fluctuating mechanical action applied over time, which may cause failure even if the individual stress cycles are below the material's static strength."@en ;
+    rdfs:subClassOf ec:Action .
 
 ec:FatigueEffect a owl:Class ;
     rdfs:label "Fatigue Effect"@en,
@@ -464,6 +462,13 @@ ec:Residential a owl:Class ;
     rdfs:comment "Areas for domestic and residential activities"@en ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Rooms in residential buildings and houses, bedrooms and wards in hospitals, bedrooms in hotels and hostels, kitchens and toilets" .
+
+ec:ResidentialBuilding a owl:Class ;
+    rdfs:label "Residential Building"@en,
+        "."@es ;
+    rdfs:comment "Building intended primarily for the accommodation and permanent or temporary residence of individuals or households."@en ;
+    rdfs:subClassOf ec:Building ;
+    skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." .
 
 ec:ReversibleServiceabilityLimitState a owl:Class ;
     rdfs:label "Reversible Serviceability Limit State"@en ;
@@ -753,6 +758,16 @@ ec:AccidentalAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:altLabel "A" ;
     skos:example "explosions, impact from vehicles" .
+
+ec:Building a owl:Class ;
+    rdfs:label "Building"@en,
+        "Edificio"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.1.2" ;
+    rdfs:comment "Type of construction works for building purposes such as dwelling houses, office buildings, etc."@en ;
+    rdfs:subClassOf ec:ConstructionWork ;
+    owl:sameAs bot:Building ;
+    skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." ;
+    skos:example "dwelling house, office building, industrial building" .
 
 ec:DeformationEffect a owl:Class ;
     rdfs:label "Deformation Effect"@en ;

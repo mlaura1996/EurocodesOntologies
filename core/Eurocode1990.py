@@ -69,6 +69,14 @@ g.add((EC1990['Building'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.
 g.add((EC1990['Building'], SKOS.definition, Literal('Type of construction works for building purposes such as dwelling houses, office buildings, etc.')))
 g.add((EC1990['Building'], SKOS.example, Literal('dwelling house, office building, industrial building')))
 
+g.add((EC1990['ResidentialBuilding'], RDF.type, OWL.Class))
+g.add((EC1990['ResidentialBuilding'], RDFS.subClassOf, EC1990.Building))
+g.add((EC1990['ResidentialBuilding'], RDFS.label, Literal('Residential Building', lang='en')))
+g.add((EC1990['ResidentialBuilding'], RDFS.label, Literal('.', lang='es')))
+g.add((EC1990['ResidentialBuilding'], RDFS.comment, Literal('Building intended primarily for the accommodation and permanent or temporary residence of individuals or households.', lang='en')))
+g.add((EC1990['BuiResidentialBuildinglding'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.2')))
+g.add((EC1990['ResidentialBuilding'], SKOS.definition, Literal('Type of construction works for building purposes such as dwelling houses, office buildings, etc.')))
+
 g.add((EC1990['CivilEngineeringWork'], RDF.type, OWL.Class))
 g.add((EC1990['CivilEngineeringWork'], RDFS.subClassOf, EC1990.ConstructionWork))
 g.add((EC1990['CivilEngineeringWork'], RDFS.label, Literal('Civil Engineering Work', lang='en')))
@@ -569,12 +577,17 @@ g.add((EC1990['QuasiStaticAction'], RDFS.label, Literal('Quasi-Static Action', l
 g.add((EC1990['QuasiStaticAction'], RDFS.comment, Literal('Dynamic action represented by an equivalent static action in a static model.', lang='en')))
 g.add((EC1990['QuasiStaticAction'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.13')))
 
-# Geotechnical Action
 g.add((EC1990['GeotechnicalAction'], RDF.type, OWL.Class))
 g.add((EC1990['GeotechnicalAction'], RDFS.subClassOf, EC1990.Action))
 g.add((EC1990['GeotechnicalAction'], RDFS.label, Literal('Geotechnical Action', lang='en')))
 g.add((EC1990['GeotechnicalAction'], RDFS.comment, Literal('Action transmitted to the structure by the ground, fill or groundwater.', lang='en')))
 g.add((EC1990['GeotechnicalAction'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.7')))
+
+g.add((EC1990['FatigueAction'], RDF.type, OWL.Class))
+g.add((EC1990['FatigueAction'], RDFS.subClassOf, EC1990.Action))
+g.add((EC1990['FatigueAction'], RDFS.label, Literal('Fatigue Action', lang='en')))
+g.add((EC1990['FatigueAction'], RDFS.comment, Literal('Repeated or fluctuating mechanical action applied over time, which may cause failure even if the individual stress cycles are below the material\'s static strength.', lang='en')))
+g.add((EC1990['FatigueAction'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.7')))
 
 # Action classification by nature
 g.add((EC1990['ImposedLoad'], RDF.type, OWL.Class))
