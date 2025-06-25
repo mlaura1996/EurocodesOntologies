@@ -22,7 +22,6 @@ ec: a owl:Ontology ;
     dcterms:title "ECO - Eurocode Core Ontology" ;
     vann:preferredNamespacePrefix "ec" ;
     vann:preferredNamespaceUri "http://www.w3id.org/Eurocodes/EC1990#" ;
-    owl:imports <https://www.w3id.org/bot> ;
     owl:versionInfo "1.0.0" ;
     skos:hasTopConcept ec:Action,
         ec:CombinationOfActions,
@@ -45,12 +44,12 @@ ec:AccessibleRoofs a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Roofs used as terraces, gardens, or other occupied spaces" .
 
-ec:AccidentalCombination a owl:Class ;
+ec:AccidentalCombination a owl:NamedIndividual,
+        ec:ULSCombination ;
     rdfs:label "Accidental Combination"@en,
         "Combinación Accidental"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.3" ;
     rdfs:comment "Combination of actions for accidental design situations."@en ;
-    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for accidental design situations in ULS verifications" .
 
 ec:AgriculturalStructure a owl:Class ;
@@ -119,12 +118,12 @@ ec:BuildingStructure a owl:Class ;
     rdfs:subClassOf ec:Structure ;
     skos:example "masonry building, steel frame building, timber-framed house" .
 
-ec:CharacteristicCombination a owl:Class ;
+ec:CharacteristicCombination a owl:NamedIndividual,
+        ec:SLSCombination ;
     rdfs:label "Characteristic Combination"@en,
         "Combinación Característica"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)a" ;
     rdfs:comment "Serviceability combination normally used for irreversible limit states."@en ;
-    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for irreversible serviceability limit state verifications" .
 
 ec:CivilEngineeringStructure a owl:Class ;
@@ -189,23 +188,23 @@ ec:Displacement a owl:Class ;
     rdfs:subClassOf ec:LinearDeformation ;
     skos:altLabel "u" .
 
-ec:EQU a owl:Class ;
+ec:EQU a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Static Equilibrium"@en ;
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P a)" ;
-    rdfs:comment "Loss of static equilibrium of the structure or any part of it considered as a rigid body."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Loss of static equilibrium of the structure or any part of it considered as a rigid body."@en .
 
-ec:ExplosionDesignSituation a owl:Class ;
+ec:ExplosionDesignSituation a owl:NamedIndividual,
+        ec:AccidentalDesignSituation ;
     rdfs:label "Explosion Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
-    rdfs:comment "Accidental design situation involving explosion conditions."@en ;
-    rdfs:subClassOf ec:AccidentalDesignSituation .
+    rdfs:comment "Accidental design situation involving explosion conditions."@en .
 
-ec:FAT a owl:Class ;
+ec:FAT a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Fatigue Failure"@en ;
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P d)" ;
-    rdfs:comment "Fatigue failure of the structure or structural members."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Fatigue failure of the structure or structural members."@en .
 
 ec:FatigueAction a owl:Class ;
     rdfs:label "Fatigue Action"@en ;
@@ -220,11 +219,11 @@ ec:FatigueEffect a owl:Class ;
     rdfs:comment "Progressive damage effect due to repeated loading cycles."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
 
-ec:FireDesignSituation a owl:Class ;
+ec:FireDesignSituation a owl:NamedIndividual,
+        ec:AccidentalDesignSituation ;
     rdfs:label "Fire Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.5 & 6" ;
-    rdfs:comment "Accidental design situation involving fire conditions requiring specific design considerations."@en ;
-    rdfs:subClassOf ec:AccidentalDesignSituation .
+    rdfs:comment "Accidental design situation involving fire conditions requiring specific design considerations."@en .
 
 ec:FixedAction a owl:Class ;
     rdfs:label "Fixed Action"@en ;
@@ -234,12 +233,12 @@ ec:FixedAction a owl:Class ;
     owl:disjointWith ec:FreeAction ;
     skos:example "Stored goods in a defined storage area with no alternative placement" .
 
-ec:FrequentCombination a owl:Class ;
+ec:FrequentCombination a owl:NamedIndividual,
+        ec:SLSCombination ;
     rdfs:label "Frequent Combination"@en,
         "Combinación Frecuente"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)b" ;
     rdfs:comment "Serviceability combination normally used for reversible limit states."@en ;
-    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for reversible serviceability limit state verifications" .
 
 ec:FrequentFactor a owl:DatatypeProperty ;
@@ -251,19 +250,19 @@ ec:FrequentFactor a owl:DatatypeProperty ;
     rdfs:range xsd:decimal ;
     skos:altLabel "ψ_1" .
 
-ec:FundamentalCombination a owl:Class ;
+ec:FundamentalCombination a owl:NamedIndividual,
+        ec:ULSCombination ;
     rdfs:label "Fundamental Combination"@en,
         "Combinación Fundamental"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
     rdfs:comment "Combination of actions for persistent or transient design situations."@en ;
-    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for persistent and transient design situations in ULS verifications" .
 
-ec:GEO a owl:Class ;
+ec:GEO a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Geotechnical Failure"@en ;
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P c)" ;
-    rdfs:comment "Failure or excessive deformation of the ground where the strengths of soil or rock are significant in providing resistance."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Failure or excessive deformation of the ground where the strengths of soil or rock are significant in providing resistance."@en .
 
 ec:GeneralRetailShops a owl:Class ;
     rdfs:label "Category D1 - General retail shops"@en,
@@ -279,11 +278,11 @@ ec:GeotechnicalAction a owl:Class ;
     rdfs:comment "Action transmitted to the structure by the ground, fill or groundwater."@en ;
     rdfs:subClassOf ec:Action .
 
-ec:HYD a owl:Class ;
+ec:HYD a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Hydraulic Failure"@en ;
     dcterms:source "EN 1990:2002/A1:2005, Section 6.4.1(1)P f)" ;
-    rdfs:comment "Hydraulic heave, internal erosion and piping in the ground caused by hydraulic gradients."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Hydraulic heave, internal erosion and piping in the ground caused by hydraulic gradients."@en .
 
 ec:HelicopterLandingAreas a owl:Class ;
     rdfs:label "Category K - Helicopter Landing Areas"@en,
@@ -293,11 +292,11 @@ ec:HelicopterLandingAreas a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Helicopter landing pads on roofs" .
 
-ec:ImpactDesignSituation a owl:Class ;
+ec:ImpactDesignSituation a owl:NamedIndividual,
+        ec:AccidentalDesignSituation ;
     rdfs:label "Impact Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
-    rdfs:comment "Accidental design situation involving impact conditions."@en ;
-    rdfs:subClassOf ec:AccidentalDesignSituation .
+    rdfs:comment "Accidental design situation involving impact conditions."@en .
 
 ec:ImposedLoad a owl:Class ;
     rdfs:label "Imposed load"@en ;
@@ -312,6 +311,12 @@ ec:IndustrialUse a owl:Class ;
     rdfs:comment "Industrial use areas"@en ;
     rdfs:subClassOf ec:IndustrialandStorage ;
     skos:example "Industrial facilities" .
+
+ec:IrreversibleServiceabilityLimitState a owl:NamedIndividual,
+        ec:ServiceabilityLimitState ;
+    rdfs:label "Irreversible Serviceability Limit State"@en ;
+    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14.1" ;
+    rdfs:comment "Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en .
 
 ec:LargeCrowdsAreas a owl:Class ;
     rdfs:label "Category C5 - Large crowds areas"@en,
@@ -329,11 +334,11 @@ ec:LightVehicleTraffic a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Garages, parking areas, parking halls" .
 
-ec:LocalizedFailureDesignSituation a owl:Class ;
+ec:LocalizedFailureDesignSituation a owl:NamedIndividual,
+        ec:AccidentalDesignSituation ;
     rdfs:label "Localized Failure Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
-    rdfs:comment "Accidental design situation involving local failure conditions."@en ;
-    rdfs:subClassOf ec:AccidentalDesignSituation .
+    rdfs:comment "Accidental design situation involving local failure conditions."@en .
 
 ec:MaterialModelPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Material-Model Partial Factor"@en,
@@ -394,15 +399,12 @@ ec:PermanentActionPartialFactor a owl:DatatypeProperty ;
     rdfs:subPropertyOf ec:PartialFactor ;
     skos:altLabel "γ_G" .
 
-ec:PersistentDesignSituation a owl:Class ;
+ec:PersistentDesignSituation a owl:NamedIndividual,
+        ec:DesignSituation ;
     rdfs:label "Persistent Design Situation"@en,
         "Situación de Proyecto Persistente"@es ;
     dcterms:source "EN 1990:2002, Section 1.5.2.4" ;
-    rdfs:comment "Design situation that is relevant during a period of the same order as the design working life of the structure. Generally refers to conditions of normal use."@en ;
-    rdfs:subClassOf ec:DesignSituation ;
-    owl:disjointWith ec:AccidentalDesignSituation,
-        ec:SeismicDesignSituation,
-        ec:TransientDesignSituation .
+    rdfs:comment "Design situation that is relevant during a period of the same order as the design working life of the structure. Generally refers to conditions of normal use."@en .
 
 ec:PhysicalActivitiesAreas a owl:Class ;
     rdfs:label "Category C4 - Physical activities areas"@en,
@@ -417,12 +419,12 @@ ec:PrincipalStress a owl:Class ;
     rdfs:comment "Maximum or minimum normal stress at a point."@en ;
     rdfs:subClassOf ec:Stress .
 
-ec:QuasiPermanentCombination a owl:Class ;
+ec:QuasiPermanentCombination a owl:NamedIndividual,
+        ec:SLSCombination ;
     rdfs:label "Quasi-Permanent Combination"@en,
         "Combinación Cuasi-permanente"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)c" ;
     rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
-    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for long-term effects and appearance considerations" .
 
 ec:QuasiPermanentFactor a owl:DatatypeProperty ;
@@ -470,12 +472,11 @@ ec:ResidentialBuilding a owl:Class ;
     rdfs:subClassOf ec:Building ;
     skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." .
 
-ec:ReversibleServiceabilityLimitState a owl:Class ;
+ec:ReversibleServiceabilityLimitState a owl:NamedIndividual,
+        ec:ServiceabilityLimitState ;
     rdfs:label "Reversible Serviceability Limit State"@en ;
     dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14.2" ;
-    rdfs:comment "Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en ;
-    rdfs:subClassOf ec:ServiceabilityLimitState ;
-    owl:disjointWith ec:IrreversibleServiceabilityLimitState .
+    rdfs:comment "Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en .
 
 ec:Roof a owl:Class ;
     rdfs:label "Category H - Roofs"@en,
@@ -492,11 +493,11 @@ ec:Rotation a owl:Class ;
     rdfs:comment "Angular rotation of a structure or structural member."@en ;
     rdfs:subClassOf ec:AngularDeformation .
 
-ec:STR a owl:Class ;
+ec:STR a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Structural Resistance"@en ;
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P b)" ;
-    rdfs:comment "Internal failure or excessive deformation of the structure or structural members where the strength of construction materials governs."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Internal failure or excessive deformation of the structure or structural members where the strength of construction materials governs."@en .
 
 ec:SeismicAction a owl:Class ;
     rdfs:label "Seismic Action"@en,
@@ -506,13 +507,20 @@ ec:SeismicAction a owl:Class ;
     rdfs:subClassOf ec:AccidentalAction ;
     skos:altLabel "A_E" .
 
-ec:SeismicCombination a owl:Class ;
+ec:SeismicCombination a owl:NamedIndividual,
+        ec:ULSCombination ;
     rdfs:label "Seismic Combination"@en,
         "Combinación Sísmica"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.4" ;
     rdfs:comment "Combination of actions for seismic design situations."@en ;
-    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for seismic design situations in ULS verifications" .
+
+ec:SeismicDesignSituation a owl:NamedIndividual,
+        ec:DesignSituation ;
+    rdfs:label "Seismic Design Situation"@en,
+        "Situación de Proyecto Sísmica"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.2.7" ;
+    rdfs:comment "Design situation involving exceptional conditions of the structure when subjected to a seismic event."@en .
 
 ec:ShearForce a owl:Class ;
     rdfs:label "Shear Force"@en,
@@ -583,17 +591,25 @@ ec:TorsionalMoment a owl:Class ;
     rdfs:subClassOf ec:InternalForce ;
     skos:altLabel "T" .
 
+ec:TransientDesignSituation a owl:NamedIndividual,
+        ec:DesignSituation ;
+    rdfs:label "Transient Design Situation"@en,
+        "Situación de Proyecto Transitoria"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.2.3" ;
+    rdfs:comment "Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair."@en ;
+    skos:example "construction phase, repair operations" .
+
 ec:Twist a owl:Class ;
     rdfs:label "Twist"@en,
         "Torsión"@es ;
     rdfs:comment "Angular deformation about the longitudinal axis."@en ;
     rdfs:subClassOf ec:AngularDeformation .
 
-ec:UPL a owl:Class ;
+ec:UPL a owl:NamedIndividual,
+        ec:UltimateLimitState ;
     rdfs:label "Uplift Failure"@en ;
     dcterms:source "EN 1990:2002/A1:2005, Section 6.4.1(1)P e)" ;
-    rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en ;
-    rdfs:subClassOf ec:UltimateLimitState .
+    rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en .
 
 ec:VariableActionPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Variable Action Partial Factor"@en,
@@ -799,12 +815,6 @@ ec:IndirectAction a owl:Class ;
     rdfs:comment "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes."@en ;
     rdfs:subClassOf ec:Action .
 
-ec:IrreversibleServiceabilityLimitState a owl:Class ;
-    rdfs:label "Irreversible Serviceability Limit State"@en ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.2.14.1" ;
-    rdfs:comment "Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed."@en ;
-    rdfs:subClassOf ec:ServiceabilityLimitState .
-
 ec:PermanentAction a owl:Class ;
     rdfs:label "Permanent Action"@en,
         "Acción Permanente"@es ;
@@ -821,16 +831,6 @@ ec:Resistance a owl:Class ;
     rdfs:comment "Capacity of a member or component, or a cross-section of a member or component of a structure, to withstand actions without mechanical failure."@en ;
     skos:altLabel "R" ;
     skos:example "bending resistance, buckling resistance, tension resistance" .
-
-ec:TransientDesignSituation a owl:Class ;
-    rdfs:label "Transient Design Situation"@en,
-        "Situación de Proyecto Transitoria"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.2.3" ;
-    rdfs:comment "Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair."@en ;
-    rdfs:subClassOf ec:DesignSituation ;
-    owl:disjointWith ec:AccidentalDesignSituation,
-        ec:SeismicDesignSituation ;
-    skos:example "construction phase, repair operations" .
 
 ec:DynamicAction a owl:Class ;
     rdfs:label "Dynamic Action"@en ;
@@ -907,13 +907,6 @@ ec:MechanicalEffect a owl:Class ;
     rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
-ec:SeismicDesignSituation a owl:Class ;
-    rdfs:label "Seismic Design Situation"@en,
-        "Situación de Proyecto Sísmica"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.2.7" ;
-    rdfs:comment "Design situation involving exceptional conditions of the structure when subjected to a seismic event."@en ;
-    rdfs:subClassOf ec:DesignSituation .
-
 ec:ServiceabilityLimitState a owl:Class ;
     rdfs:label "Serviceability Limit State"@en,
         "Estado Límite de Servicio"@es ;
@@ -942,6 +935,14 @@ ec:ULSCombination a owl:Class ;
     rdfs:comment "Combination of actions for verifying ultimate limit states."@en ;
     rdfs:subClassOf ec:CombinationOfActions ;
     owl:disjointWith ec:SLSCombination .
+
+ec:AccidentalDesignSituation a owl:Class ;
+    rdfs:label "Accidental Design Situation"@en,
+        "Situación de Proyecto Accidental"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
+    rdfs:comment "Design situation involving exceptional conditions of the structure or its exposure, including fire, explosion, impact or local failure."@en ;
+    rdfs:subClassOf ec:DesignSituation ;
+    skos:example "fire, explosion, impact, local failure" .
 
 ec:ConstructionWork a owl:Class ;
     rdfs:label "Construction Works"@en,
@@ -989,15 +990,6 @@ ec:LimitState a owl:Class ;
     rdfs:comment "State beyond which the structure no longer fulfils the relevant design criteria."@en ;
     skos:definition "State beyond which the structure no longer fulfils the relevant design criteria." ;
     skos:editorialNote "Limit states define critical conditions that must not be exceeded to ensure structural safety and serviceability" .
-
-ec:AccidentalDesignSituation a owl:Class ;
-    rdfs:label "Accidental Design Situation"@en,
-        "Situación de Proyecto Accidental"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
-    rdfs:comment "Design situation involving exceptional conditions of the structure or its exposure, including fire, explosion, impact or local failure."@en ;
-    rdfs:subClassOf ec:DesignSituation ;
-    owl:disjointWith ec:SeismicDesignSituation ;
-    skos:example "fire, explosion, impact, local failure" .
 
 ec:UltimateLimitState a owl:Class ;
     rdfs:label "Ultimate Limit State"@en,
