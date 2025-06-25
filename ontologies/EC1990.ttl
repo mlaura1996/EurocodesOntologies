@@ -11,7 +11,7 @@
 ec: a owl:Ontology ;
     cc:license "http://creativecommons.org/licenses/by/3.0/" ;
     dcterms:contributor "Agnieszka Jedrzejewska (Silesian Unviersity)",
-        "Carlos Ramonell (Politechnical University of Catalonia)",
+        "Carlos Ramonell (Politechnic University of Catalonia)",
         "Maria Laura Leonardi (University of Minho)" ;
     dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu)" ;
     dcterms:date "2024/12/20"^^xsd:date ;
@@ -269,6 +269,12 @@ ec:ImpactDesignSituation a owl:Class ;
     rdfs:comment "Accidental design situation involving impact conditions."@en ;
     rdfs:subClassOf ec:AccidentalDesignSituation .
 
+ec:ImposedLoad a owl:Class ;
+    rdfs:label "Imposed load"@en ;
+    dcterms:source "EN 1991-1-1:2002" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
+
 ec:IndustrialUse a owl:Class ;
     rdfs:label "Category E2 - Industrial use"@en,
         "Categoría E2 - Uso industrial"@es ;
@@ -474,6 +480,12 @@ ec:ShrinkageEffect a owl:Class ;
     rdfs:comment "Deformation effect due to material shrinkage over time."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
 
+ec:SnowLoad a owl:Class ;
+    rdfs:label "Snow load"@en ;
+    dcterms:source "EN 1991-1-3:2003" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
+
 ec:StaticAction a owl:Class ;
     rdfs:label "Static Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.11" ;
@@ -495,6 +507,12 @@ ec:Strain a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
     rdfs:comment "Deformation per unit length in structural members."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
+
+ec:ThemalAction a owl:Class ;
+    rdfs:label "Termal action"@en ;
+    dcterms:source "EN 1991-1-5:2003" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
 
 ec:TorsionalMoment a owl:Class ;
     rdfs:label "Torsional Moment"@en,
@@ -531,6 +549,12 @@ ec:VibrationResponse a owl:Class ;
         "Respuesta Vibratoria"@es ;
     rdfs:comment "Dynamic response of structures to oscillatory actions, important for serviceability considerations."@en ;
     rdfs:subClassOf ec:DynamicEffect .
+
+ec:WindAction a owl:Class ;
+    rdfs:label "Wind action"@en ;
+    dcterms:source "EN 1991-1-4:2005" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
 
 ec:appliesTo a owl:ObjectProperty ;
     rdfs:label "applies to"@en,
@@ -632,6 +656,13 @@ ec:hasSystem a owl:ObjectProperty ;
     rdfs:domain ec:Structure ;
     rdfs:range ec:StructuralSystem .
 
+ec:imposesCombination a owl:ObjectProperty ;
+    rdfs:label "verified for"@en,
+        "verificado por"@es ;
+    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
+    rdfs:domain ec:DesignSituation ;
+    rdfs:range ec:CombinationOfActions .
+
 ec:isDesignedFor a owl:ObjectProperty ;
     rdfs:label "is designed for"@en,
         "se aplica a"@es ;
@@ -652,8 +683,8 @@ ec:requiresVerficationOf a owl:ObjectProperty ;
     rdfs:domain ec:DesignSituation ;
     rdfs:range ec:LimitState .
 
-ec:verifiedBy a owl:ObjectProperty ;
-    rdfs:label "verified by"@en,
+ec:verifiedFor a owl:ObjectProperty ;
+    rdfs:label "verified for"@en,
         "verificado por"@es ;
     rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
     rdfs:domain ec:LimitState ;
@@ -880,15 +911,6 @@ ec:SLSCombination a owl:Class ;
     rdfs:comment "Combinations of actions for verifying serviceability limit states."@en ;
     rdfs:subClassOf ec:CombinationOfActions .
 
-ec:VariableAction a owl:Class ;
-    rdfs:label "Variable Action"@en,
-        "Acción Variable"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.4" ;
-    rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
-    rdfs:subClassOf ec:Action ;
-    skos:altLabel "Q" ;
-    skos:example "imposed loads, wind, snow, thermal actions" .
-
 ec:CongregationArea a owl:Class ;
     rdfs:label "Category C - Congregation Areas"@en,
         "Categoría C - Áreas de Congregación"@es ;
@@ -913,13 +935,6 @@ ec:AccidentalDesignSituation a owl:Class ;
     owl:disjointWith ec:SeismicDesignSituation ;
     skos:example "fire, explosion, impact, local failure" .
 
-ec:CombinationOfActions a owl:Class ;
-    rdfs:label "Combination of Actions"@en,
-        "Combinación de Acciones"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.22" ;
-    rdfs:comment "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions."@en ;
-    skos:definition "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions." .
-
 ec:UltimateLimitState a owl:Class ;
     rdfs:label "Ultimate Limit State"@en,
         "Estado Límite Último"@es ;
@@ -929,11 +944,12 @@ ec:UltimateLimitState a owl:Class ;
     owl:disjointWith ec:ServiceabilityLimitState ;
     skos:altLabel "ULS" .
 
-ec:DesignSituation a owl:Class ;
-    rdfs:label "Design Situation"@en,
-        "Situación de Proyecto"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.2.2" ;
-    rdfs:comment "Sets of physical conditions representing the real conditions occurring during a certain time interval for which the design will demonstrate that relevant limit states are not exceeded."@en .
+ec:CombinationOfActions a owl:Class ;
+    rdfs:label "Combination of Actions"@en,
+        "Combinación de Acciones"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.22" ;
+    rdfs:comment "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions."@en ;
+    skos:definition "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions." .
 
 ec:EffectOfAction a owl:Class ;
     rdfs:label "Effect of Action"@en,
@@ -952,6 +968,21 @@ ec:StructuralMember a owl:Class ;
     rdfs:comment "Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile."@en ;
     rdfs:subClassOf bot:Element ;
     skos:example "column, beam, slab, foundation pile" .
+
+ec:DesignSituation a owl:Class ;
+    rdfs:label "Design Situation"@en,
+        "Situación de Proyecto"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.2.2" ;
+    rdfs:comment "Sets of physical conditions representing the real conditions occurring during a certain time interval for which the design will demonstrate that relevant limit states are not exceeded."@en .
+
+ec:VariableAction a owl:Class ;
+    rdfs:label "Variable Action"@en,
+        "Acción Variable"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.4" ;
+    rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
+    rdfs:subClassOf ec:Action ;
+    skos:altLabel "Q" ;
+    skos:example "imposed loads, wind, snow, thermal actions" .
 
 ec:EurocodeSpace a owl:Class ;
     rdfs:label "Eurocode Space"@en,

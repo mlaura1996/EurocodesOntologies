@@ -519,6 +519,31 @@ g.add((EC1990['GeotechnicalAction'], RDFS.label, Literal('Geotechnical Action', 
 g.add((EC1990['GeotechnicalAction'], RDFS.comment, Literal('Action transmitted to the structure by the ground, fill or groundwater.', lang='en')))
 g.add((EC1990['GeotechnicalAction'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.7')))
 
+# Action classification by nature
+g.add((EC1990['ImposedLoad'], RDF.type, OWL.Class))
+g.add((EC1990['ImposedLoad'], RDFS.subClassOf, EC1990.VariableAction))
+g.add((EC1990['ImposedLoad'], RDFS.label, Literal('Imposed load', lang='en')))
+g.add((EC1990['ImposedLoad'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['ImposedLoad'], DCTERMS.source, Literal('EN 1991-1-1:2002')))
+
+g.add((EC1990['SnowLoad'], RDF.type, OWL.Class))
+g.add((EC1990['SnowLoad'], RDFS.subClassOf, EC1990.VariableAction))
+g.add((EC1990['SnowLoad'], RDFS.label, Literal('Snow load', lang='en')))
+g.add((EC1990['SnowLoad'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['SnowLoad'], DCTERMS.source, Literal('EN 1991-1-3:2003')))
+
+g.add((EC1990['WindAction'], RDF.type, OWL.Class))
+g.add((EC1990['WindAction'], RDFS.subClassOf, EC1990.VariableAction))
+g.add((EC1990['WindAction'], RDFS.label, Literal('Wind action', lang='en')))
+g.add((EC1990['WindAction'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['WindAction'], DCTERMS.source, Literal('EN 1991-1-4:2005')))
+
+g.add((EC1990['ThemalAction'], RDF.type, OWL.Class))
+g.add((EC1990['ThemalAction'], RDFS.subClassOf, EC1990.VariableAction))
+g.add((EC1990['ThemalAction'], RDFS.label, Literal('Termal action', lang='en')))
+g.add((EC1990['ThemalAction'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['ThemalAction'], DCTERMS.source, Literal('EN 1991-1-5:2003')))
+
 ##########################################################
 #                 COMBINATIONS OF ACTIONS               #
 ##########################################################
@@ -858,12 +883,19 @@ g.add((EC1990['requiresVerficationOf'], RDFS.comment, Literal('Relates a limit s
 g.add((EC1990['requiresVerficationOf'], RDFS.domain, EC1990.DesignSituation))
 g.add((EC1990['requiresVerficationOf'], RDFS.range, EC1990.LimitState))
 
-g.add((EC1990['verifiedBy'], RDF.type, OWL.ObjectProperty))
-g.add((EC1990['verifiedBy'], RDFS.label, Literal('verified by', lang='en')))
-g.add((EC1990['verifiedBy'], RDFS.label, Literal('verificado por', lang='es')))
-g.add((EC1990['verifiedBy'], RDFS.comment, Literal('Relates a limit state to the combination of actions used for its verification.', lang='en')))
-g.add((EC1990['verifiedBy'], RDFS.domain, EC1990.LimitState))
-g.add((EC1990['verifiedBy'], RDFS.range, EC1990.CombinationOfActions))
+g.add((EC1990['verifiedFor'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['verifiedFor'], RDFS.label, Literal('verified for', lang='en')))
+g.add((EC1990['verifiedFor'], RDFS.label, Literal('verificado por', lang='es')))
+g.add((EC1990['verifiedFor'], RDFS.comment, Literal('Relates a limit state to the combination of actions used for its verification.', lang='en')))
+g.add((EC1990['verifiedFor'], RDFS.domain, EC1990.LimitState))
+g.add((EC1990['verifiedFor'], RDFS.range, EC1990.CombinationOfActions))
+
+g.add((EC1990['imposesCombination'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['imposesCombination'], RDFS.label, Literal('imposes combiation', lang='en')))
+g.add((EC1990['imposesCombination'], RDFS.label, Literal('...', lang='es')))
+g.add((EC1990['imposesCombination'], RDFS.comment, Literal('Relates a design situation to the relevant combination.', lang='en')))
+g.add((EC1990['imposesCombination'], RDFS.domain, EC1990.DesignSituation))
+g.add((EC1990['imposesCombination'], RDFS.range, EC1990.CombinationOfActions))
 
 g.add((EC1990['hasResistance'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['hasResistance'], RDFS.label, Literal('has resistance', lang='en')))
@@ -1097,7 +1129,7 @@ g.add((ref, SKOS.hasTopConcept, EC1990.ConstructionWork))
 # Add provenance information
 g.add((ref, DCTERMS.contributor, Literal('Agnieszka Jedrzejewska (Silesian Unviersity)')))
 g.add((ref, DCTERMS.contributor, Literal('Maria Laura Leonardi (University of Minho)')))
-g.add((ref, DCTERMS.contributor, Literal('Carlos Ramonell (Politechnical University of Catalonia)')))
+g.add((ref, DCTERMS.contributor, Literal('Carlos Ramonell (Politechnic University of Catalonia)')))
 
 ##########################################################
 #               SEMANTIC RELATIONSHIPS                  #
