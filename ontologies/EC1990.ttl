@@ -53,6 +53,14 @@ ec:AccidentalCombination a owl:Class ;
     rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for accidental design situations in ULS verifications" .
 
+ec:AgriculturalStructure a owl:Class ;
+    rdfs:label "Agricultural Structure"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "A building or construction primarily designed and used for farming-related activities."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "barn, greenhouse, animal shelter" .
+
 ec:AreaWithTables a owl:Class ;
     rdfs:label "Category C1 - Areas with tables"@en,
         "Categoría C1 - Áreas con mesas"@es ;
@@ -93,6 +101,14 @@ ec:BendingMoment a owl:Class ;
     rdfs:subClassOf ec:InternalForce ;
     skos:altLabel "M" .
 
+ec:BridgeStructure a owl:Class ;
+    rdfs:label "Bridge Structure"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "Engineered construction designed to span physical obstacles such as rivers, valleys, roads, or railways, providing a safe passage for vehicles, pedestrians, or utilities."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "beam bridge, arch bridge, suspension bridge" .
+
 ec:Building a owl:Class ;
     rdfs:label "Building"@en,
         "Edificio"@es ;
@@ -103,6 +119,14 @@ ec:Building a owl:Class ;
     skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." ;
     skos:example "dwelling house, office building, industrial building" .
 
+ec:BuildingStructure a owl:Class ;
+    rdfs:label "Building Structure"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "Load-bearing framework or system designed to support and transfer all applied loads safely to the foundation and ultimately to the ground."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "masonry building, steel frame building, timber-framed house" .
+
 ec:CharacteristicCombination a owl:Class ;
     rdfs:label "Characteristic Combination"@en,
         "Combinación Característica"@es ;
@@ -110,6 +134,14 @@ ec:CharacteristicCombination a owl:Class ;
     rdfs:comment "Serviceability combination normally used for irreversible limit states."@en ;
     rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for irreversible serviceability limit state verifications" .
+
+ec:CivilEngineeringStructure a owl:Class ;
+    rdfs:label "Civil Engineering Structure"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "Constructed system composed of interconnected physical elements designed, analyzed, and built to withstand environmental and operational loads, enabling the provision of essential services such as transport, shelter, water management, or energy distribution."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "dam, tunnel, airport, retaining wall, power station, road" .
 
 ec:CivilEngineeringWork a owl:Class ;
     rdfs:label "Civil Engineering Work"@en,
@@ -333,6 +365,14 @@ ec:MediumVehicleTraffic a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Access routes, delivery zones, zones accessible to fire engines (≤ 160 kN gross vehicle weight)" .
 
+ec:MonumentalBuldingStructure a owl:Class ;
+    rdfs:label "Monumental Building Structure"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "Large-scale, architecturally significant structure designed to serve as a landmark, memorial, or symbol of cultural, historical, or civic importance."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "national parliment building, museum of significant importance, major cathedral" .
+
 ec:NormalStress a owl:Class ;
     rdfs:label "Normal Stress"@en ;
     rdfs:comment "Stress acting in the direction normal to a surface."@en ;
@@ -408,6 +448,14 @@ ec:Reaction a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
     rdfs:comment "Support reaction force or moment at structural supports."@en ;
     rdfs:subClassOf ec:EffectOfAction .
+
+ec:ReplacableStructuralElements a owl:Class ;
+    rdfs:label "Structure with replaceable elements"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "structure designed such that certain primary or secondary structural components can be removed, replaced, or upgraded during its service life without compromising the overall stability, integrity, or usability of the structure."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "modular steel bridge with replaceable girders, industrial building with precast concrete roof panels" .
 
 ec:Residential a owl:Class ;
     rdfs:label "Category A - Domestic and Residential"@en,
@@ -507,6 +555,14 @@ ec:Strain a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
     rdfs:comment "Deformation per unit length in structural members."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
+
+ec:TemporaryStructure a owl:Class ;
+    rdfs:label "Temporary Structure"@en,
+        "E."@es ;
+    dcterms:source "EN 1990:2002, Table 2.1" ;
+    rdfs:comment "Structre that is intended to be used for a limited period of time, typically to support, protect, or provide access during the execution of permanent works, or to serve a short-term purpose."@en ;
+    rdfs:subClassOf ec:Structure ;
+    skos:example "formwork system, steel scaffolding, temoprary bridge" .
 
 ec:ThermalAction a owl:Class ;
     rdfs:label "Thermal action"@en ;
@@ -858,13 +914,6 @@ ec:Stress a owl:Class ;
     rdfs:comment "Internal stress in structural members due to actions."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
 
-ec:Structure a owl:Class ;
-    rdfs:label "Structure"@en,
-        "Estructura"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.1.6" ;
-    rdfs:comment "Organised combination of connected parts designed to carry loads and provide adequate rigidity."@en ;
-    skos:example "Residential building, reatining wall, suspension bridge, underground tunnel" .
-
 ec:TimeDependentEffect a owl:Class ;
     rdfs:label "Time-Dependent Effect"@en ;
     dcterms:source "EN 1990:2002, Section 3.1(5)" ;
@@ -990,6 +1039,13 @@ ec:EurocodeSpace a owl:Class ;
     dcterms:source "EN 1991-1-1:2002 Table 6.1" ;
     rdfs:comment "A space classified according to EN 1991-1-1 usage categories"@en ;
     rdfs:subClassOf bot:Space .
+
+ec:Structure a owl:Class ;
+    rdfs:label "Structure"@en,
+        "Estructura"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.1.6" ;
+    rdfs:comment "Organised combination of connected parts designed to carry loads and provide adequate rigidity."@en ;
+    skos:example "Residential building, reatining wall, suspension bridge, underground tunnel" .
 
 ec:Action a owl:Class ;
     rdfs:label "Action"@en,
