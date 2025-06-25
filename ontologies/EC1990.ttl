@@ -19,8 +19,6 @@ ec: a owl:Ontology ;
     dcterms:format "ttl" ;
     dcterms:language "en" ;
     dcterms:modified "2024/12/20"^^xsd:date ;
-    dcterms:publisher "Asociación Española de Normalización (UNE)" ;
-    dcterms:rights "© UNE 2019 - All rights reserved" ;
     dcterms:title "EC - Eurocode Ontology" ;
     vann:preferredNamespacePrefix "ec" ;
     vann:preferredNamespaceUri "http://www.w3id.org/Eurocodes/EC1990#" ;
@@ -124,11 +122,11 @@ ec:CivilEngineeringWork a owl:Class ;
 ec:CombinationFactor a owl:DatatypeProperty ;
     rdfs:label "Combination Factor"@en,
         "Factor de Combinación"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.16" ;
-    rdfs:comment "Factor ψ₀ for combination value of a variable action used in ultimate limit state verifications."@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.16" ;
+    rdfs:comment "Factor for combination value of a variable action used in ultimate limit state verifications."@en ;
     rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "ψ₀" .
+    skos:altLabel "ψ_0" .
 
 ec:CreepEffect a owl:Class ;
     rdfs:label "Creep Effect"@en,
@@ -217,11 +215,11 @@ ec:FrequentCombination a owl:Class ;
 ec:FrequentFactor a owl:DatatypeProperty ;
     rdfs:label "Frequent Factor"@en,
         "Factor Frecuente"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.17" ;
-    rdfs:comment "Factor ψ₁ for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value."@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.17" ;
+    rdfs:comment "Factor for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value."@en ;
     rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "ψ₁" .
+    skos:altLabel "ψ_1" .
 
 ec:FundamentalCombination a owl:Class ;
     rdfs:label "Fundamental Combination"@en,
@@ -305,21 +303,21 @@ ec:MaterialModelPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Material-Model Partial Factor"@en,
         "Factor Parcial del Modelo del Material"@es ;
     dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
-    rdfs:comment "Partial factor γₘ for material properties also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:comment "Partial factor for material properties also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:MaterialProperty ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γₘ" .
+    skos:altLabel "γ_M" .
 
 ec:MaterialPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Material Partial Factor"@en,
         "Factor Parcial del Material"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
-    rdfs:comment "Partial factor γₘ for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value."@en ;
+    dcterms:source "EN 1990:2002, Section 6.3.3" ;
+    rdfs:comment "Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value."@en ;
     rdfs:domain ec:MaterialProperty ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γₘ" .
+    skos:altLabel "γ_m" .
 
 ec:MediumVehicleTraffic a owl:Class ;
     rdfs:label "Category G - Medium Vehicle Traffic"@en,
@@ -345,12 +343,12 @@ ec:OfficeArea a owl:Class ;
 ec:PermanentActionPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Permanent Action Partial Factor"@en,
         "Factor Parcial de Acción Permanente"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
-    rdfs:comment "Partial factor γG applied to permanent actions."@en ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Partial factor applied to permanent actions."@en ;
     rdfs:domain ec:PermanentAction ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γG" .
+    skos:altLabel "γ_G" .
 
 ec:PersistentDesignSituation a owl:Class ;
     rdfs:label "Persistent Design Situation"@en,
@@ -386,11 +384,11 @@ ec:QuasiPermanentCombination a owl:Class ;
 ec:QuasiPermanentFactor a owl:DatatypeProperty ;
     rdfs:label "Quasi-Permanent Factor"@en,
         "Factor Cuasi-permanente"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.18" ;
-    rdfs:comment "Factor ψ₂ for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period."@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.18" ;
+    rdfs:comment "Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period."@en ;
     rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "ψ₂" .
+    skos:altLabel "ψ_2" .
 
 ec:QuasiStaticAction a owl:Class ;
     rdfs:label "Quasi-Static Action"@en ;
@@ -521,12 +519,12 @@ ec:UPL a owl:Class ;
 ec:VariableActionPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Variable Action Partial Factor"@en,
         "Factor Parcial de Acción Variable"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
-    rdfs:comment "Partial factor γQ applied to variable actions."@en ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Partial factor applied to variable actions."@en ;
     rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γQ" .
+    skos:altLabel "γ_Q" .
 
 ec:VibrationResponse a owl:Class ;
     rdfs:label "Vibration Response"@en,
@@ -565,20 +563,20 @@ ec:containsStructuralMember a owl:ObjectProperty ;
 ec:hasCharacteristicValue a owl:DatatypeProperty ;
     rdfs:label "Characteristic Value"@en,
         "Valor Característico"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.14" ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.14" ;
     rdfs:comment "Principal representative value of an action. In so far as a characteristic value can be fixed on statistical bases, it is chosen so as to correspond to a prescribed probability of not being exceeded on the unfavourable side during a reference period."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "Fk" .
+    skos:altLabel "F_k" .
 
 ec:hasDesignValue a owl:DatatypeProperty ;
     rdfs:label "Design Value"@en,
         "Valor de Cálculo"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.21" ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.21" ;
     rdfs:comment "Value obtained by multiplying the representative value by the partial factor γf."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "Fd" .
+    skos:altLabel "F_d" .
 
 ec:hasDesignWorkingLife a owl:ObjectProperty ;
     rdfs:label "has design working life"@en ;
@@ -601,11 +599,12 @@ ec:hasMaterialProperty a owl:ObjectProperty ;
 ec:hasRepresentativeValue a owl:DatatypeProperty ;
     rdfs:label "Representative Value"@en,
         "Valor Representativo"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 1.5.3.20" ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.20" ;
     rdfs:comment "Value used for the verification of a limit state. A representative value may be the characteristic value (Fk) or an accompanying value (ψFk)."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "Frep" .
+    skos:altLabel "F_rep",
+        "γ_f" .
 
 ec:hasResistance a owl:ObjectProperty ;
     rdfs:label "has resistance"@en ;
@@ -868,7 +867,7 @@ ec:InternalForce a owl:Class ;
 ec:PartialFactor a owl:DatatypeProperty ;
     rdfs:label "Partial Factor"@en,
         "Factor Parcial"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 6.3.1" ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
     rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
