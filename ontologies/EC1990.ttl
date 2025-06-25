@@ -14,12 +14,12 @@ ec: a owl:Ontology ;
         "Carlos Ramonell (Politechnic University of Catalonia)",
         "Maria Laura Leonardi (University of Minho)" ;
     dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu)" ;
-    dcterms:date "2024/12/20"^^xsd:date ;
+    dcterms:date "2024-12-20"^^xsd:date ;
     dcterms:description "Core ontology formalising knowledge from Eurocode 0 for automated structural design and verification" ;
     dcterms:format "ttl" ;
     dcterms:language "en" ;
-    dcterms:modified "2024/12/20"^^xsd:date ;
-    dcterms:title "EC - Eurocode Ontology" ;
+    dcterms:modified "2024-12-20"^^xsd:date ;
+    dcterms:title "ECO - Eurocode Core Ontology" ;
     vann:preferredNamespacePrefix "ec" ;
     vann:preferredNamespaceUri "http://www.w3id.org/Eurocodes/EC1990#" ;
     owl:imports <https://www.w3id.org/bot> ;
@@ -508,8 +508,8 @@ ec:Strain a owl:Class ;
     rdfs:comment "Deformation per unit length in structural members."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
 
-ec:ThemalAction a owl:Class ;
-    rdfs:label "Termal action"@en ;
+ec:ThermalAction a owl:Class ;
+    rdfs:label "Thermal action"@en ;
     dcterms:source "EN 1991-1-5:2003" ;
     rdfs:comment "."@en ;
     rdfs:subClassOf ec:VariableAction .
@@ -627,8 +627,7 @@ ec:hasRepresentativeValue a owl:DatatypeProperty ;
     rdfs:comment "Value used for the verification of a limit state. A representative value may be the characteristic value (Fk) or an accompanying value (ψFk)."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "F_rep",
-        "γ_f" .
+    skos:altLabel "F_rep" .
 
 ec:hasResistance a owl:ObjectProperty ;
     rdfs:label "has resistance"@en ;
@@ -657,9 +656,9 @@ ec:hasSystem a owl:ObjectProperty ;
     rdfs:range ec:StructuralSystem .
 
 ec:imposesCombination a owl:ObjectProperty ;
-    rdfs:label "verified for"@en,
-        "verificado por"@es ;
-    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
+    rdfs:label "imposes combination"@en,
+        "..."@es ;
+    rdfs:comment "Relates a design situation to the relevant combination."@en ;
     rdfs:domain ec:DesignSituation ;
     rdfs:range ec:CombinationOfActions .
 
@@ -868,7 +867,7 @@ ec:Structure a owl:Class ;
 
 ec:TimeDependentEffect a owl:Class ;
     rdfs:label "Time-Dependent Effect"@en ;
-    dcterms:source "UNE-EN 1990:2019, Section 3.1(5)" ;
+    dcterms:source "EN 1990:2002, Section 3.1(5)" ;
     rdfs:comment "Effect of actions that varies with time due to material behavior or other time-related factors."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
@@ -902,6 +901,7 @@ ec:PartialFactor a owl:DatatypeProperty ;
     rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
+    skos:altLabel "γ_f" ;
     skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
 
 ec:SLSCombination a owl:Class ;
