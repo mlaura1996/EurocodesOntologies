@@ -74,7 +74,7 @@ g.add((EC1990['ResidentialBuilding'], RDFS.subClassOf, EC1990.Building))
 g.add((EC1990['ResidentialBuilding'], RDFS.label, Literal('Residential Building', lang='en')))
 g.add((EC1990['ResidentialBuilding'], RDFS.label, Literal('.', lang='es')))
 g.add((EC1990['ResidentialBuilding'], RDFS.comment, Literal('Building intended primarily for the accommodation and permanent or temporary residence of individuals or households.', lang='en')))
-g.add((EC1990['BuiResidentialBuildinglding'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.2')))
+g.add((EC1990['ResidentialBuilding'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.2')))
 g.add((EC1990['ResidentialBuilding'], SKOS.definition, Literal('Type of construction works for building purposes such as dwelling houses, office buildings, etc.')))
 
 g.add((EC1990['CivilEngineeringWork'], RDF.type, OWL.Class))
@@ -590,6 +590,18 @@ g.add((EC1990['FatigueAction'], RDFS.comment, Literal('Repeated or fluctuating m
 g.add((EC1990['FatigueAction'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.7')))
 
 # Action classification by nature
+g.add((EC1990['SelfWeight'], RDF.type, OWL.Class))
+g.add((EC1990['SelfWeight'], RDFS.subClassOf, EC1990.PermanentAction))
+g.add((EC1990['SelfWeight'], RDFS.label, Literal('Self-weight', lang='en')))
+g.add((EC1990['SelfWeight'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['SelfWeight'], DCTERMS.source, Literal('EN 1991-1-1:2002')))
+
+g.add((EC1990['DeadLoad'], RDF.type, OWL.Class))
+g.add((EC1990['DeadLoad'], RDFS.subClassOf, EC1990.PermanentAction))
+g.add((EC1990['DeadLoad'], RDFS.label, Literal('Dead load', lang='en')))
+g.add((EC1990['DeadLoad'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['DeadLoad'], DCTERMS.source, Literal('EN 1991-1-1:2002')))
+
 g.add((EC1990['ImposedLoad'], RDF.type, OWL.Class))
 g.add((EC1990['ImposedLoad'], RDFS.subClassOf, EC1990.VariableAction))
 g.add((EC1990['ImposedLoad'], RDFS.label, Literal('Imposed load', lang='en')))
@@ -888,17 +900,41 @@ g.add((EC1990['Material'], RDFS.label, Literal('Material', lang='es')))
 g.add((EC1990['Material'], RDFS.comment, Literal('Indication of the principal structural material.', lang='en')))
 g.add((EC1990['Material'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.3')))
 
+g.add((EC1990['Concrete'], RDF.type, OWL.Class))
+g.add((EC1990['Concrete'], RDFS.subClassOf, EC1990.Material))
+g.add((EC1990['Concrete'], RDFS.label, Literal('Concrete', lang='en')))
+g.add((EC1990['Concrete'], RDFS.label, Literal('.', lang='es')))
+g.add((EC1990['Concrete'], RDFS.comment, Literal('.', lang='en')))
+g.add((EC1990['Concrete'], DCTERMS.source, Literal('EN 1992')))
+
 g.add((EC1990['MaterialProperty'], RDF.type, OWL.Class))
 g.add((EC1990['MaterialProperty'], RDFS.label, Literal('Material Property', lang='en')))
 g.add((EC1990['MaterialProperty'], RDFS.label, Literal('Propiedad del Material', lang='es')))
 g.add((EC1990['MaterialProperty'], RDFS.comment, Literal('Physical or mechanical property of construction materials.', lang='en')))
 g.add((EC1990['MaterialProperty'], DCTERMS.source, Literal('EN 1990:2002, Section 4.2')))
 
+g.add((EC1990['Density'], RDF.type, OWL.Class))
+g.add((EC1990['Density'], RDFS.subClassOf, EC1990.MaterialProperty))
+g.add((EC1990['Density'], RDFS.label, Literal('Density', lang='en')))
+g.add((EC1990['Density'], RDFS.label, Literal('.', lang='es')))
+g.add((EC1990['Density'], RDFS.comment, Literal('.', lang='en')))
+
 g.add((EC1990['GeometricalProperty'], RDF.type, OWL.Class))
 g.add((EC1990['GeometricalProperty'], RDFS.label, Literal('Geometrical Data', lang='en')))
 g.add((EC1990['GeometricalProperty'], RDFS.label, Literal('Datos Geométricos', lang='es')))
 g.add((EC1990['GeometricalProperty'], RDFS.comment, Literal('Geometrical properties and dimensions of structural elements.', lang='en')))
 g.add((EC1990['GeometricalProperty'], DCTERMS.source, Literal('EN 1990:2002, Section 4.3')))
+
+g.add((EC1990['Thickness'], RDF.type, OWL.Class))
+g.add((EC1990['Thickness'], RDFS.subClassOf, EC1990.GeometricalProperty))
+g.add((EC1990['Thickness'], RDFS.label, Literal('Thickness', lang='en')))
+g.add((EC1990['Thickness'], RDFS.label, Literal('.', lang='es')))
+g.add((EC1990['Thickness'], RDFS.comment, Literal('.', lang='en')))
+
+g.add((EC1990['Depth'], RDF.type, OWL.Class))
+g.add((EC1990['Depth'], RDFS.label, Literal('Thickness', lang='en')))
+g.add((EC1990['Depth'], RDFS.label, Literal('.', lang='es')))
+g.add((EC1990['Depth'], RDFS.comment, Literal('.', lang='en')))
 
 g.add((EC1990['Resistance'], RDF.type, OWL.Class))
 g.add((EC1990['Resistance'], RDFS.label, Literal('Resistance', lang='en')))
@@ -1023,6 +1059,12 @@ g.add((EC1990['hasStructure'], RDFS.label, Literal('has structure', lang='en')))
 g.add((EC1990['hasStructure'], RDFS.comment, Literal('Relates a contrution work with the structure.', lang='en')))
 g.add((EC1990['hasStructure'], RDFS.domain, EC1990.ConstructionWork))
 g.add((EC1990['hasStructure'], RDFS.range, EC1990.Structure))
+
+g.add((EC1990['belongsTo'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['belongsTo'], RDFS.label, Literal('belongs to', lang='en')))
+g.add((EC1990['belongsTo'], RDFS.comment, Literal('Relates a structural element with the zone of which it is a part.', lang='en')))
+g.add((EC1990['belongsTo'], RDFS.domain, EC1990.StructuralElement))
+g.add((EC1990['belongsTo'], RDFS.range, BOT.Zone))
 
 ##########################################################
 #                 DATA PROPERTIES                       #

@@ -108,8 +108,6 @@ ec:BridgeStructure a owl:Class ;
     rdfs:subClassOf ec:Structure ;
     skos:example "beam bridge, arch bridge, suspension bridge" .
 
-ec:BuiResidentialBuildinglding dcterms:source "EN 1990:2002, Section 1.5.1.2" .
-
 ec:BuildingStructure a owl:Class ;
     rdfs:label "Building Structure"@en,
         "."@es ;
@@ -156,6 +154,12 @@ ec:CreepEffect a owl:Class ;
         "Efecto de Fluencia"@es ;
     rdfs:comment "Long-term deformation effect due to sustained loading."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
+
+ec:DeadLoad a owl:Class ;
+    rdfs:label "Dead load"@en ;
+    dcterms:source "EN 1991-1-1:2002" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:PermanentAction .
 
 ec:Deflection a owl:Class ;
     rdfs:label "Deflection"@en,
@@ -468,6 +472,7 @@ ec:Residential a owl:Class ;
 ec:ResidentialBuilding a owl:Class ;
     rdfs:label "Residential Building"@en,
         "."@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.1.2" ;
     rdfs:comment "Building intended primarily for the accommodation and permanent or temporary residence of individuals or households."@en ;
     rdfs:subClassOf ec:Building ;
     skos:definition "Type of construction works for building purposes such as dwelling houses, office buildings, etc." .
@@ -521,6 +526,12 @@ ec:SeismicDesignSituation a owl:NamedIndividual,
         "Situación de Proyecto Sísmica"@es ;
     dcterms:source "EN 1990:2002, Section 1.5.2.7" ;
     rdfs:comment "Design situation involving exceptional conditions of the structure when subjected to a seismic event."@en .
+
+ec:SelfWeight a owl:Class ;
+    rdfs:label "Self-weight"@en ;
+    dcterms:source "EN 1991-1-1:2002" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:PermanentAction .
 
 ec:ShearForce a owl:Class ;
     rdfs:label "Shear Force"@en,
@@ -639,6 +650,12 @@ ec:appliesTo a owl:ObjectProperty ;
     rdfs:comment "Relates an action to the structural member or structure it acts upon."@en ;
     rdfs:domain ec:Action ;
     rdfs:range ec:StructuralMember .
+
+ec:belongsTo a owl:ObjectProperty ;
+    rdfs:label "belongs to"@en ;
+    rdfs:comment "Relates a structural element with the space of which it is a part."@en ;
+    rdfs:domain ec:StructuralElement ;
+    rdfs:range bot:Space .
 
 ec:causesEffect a owl:ObjectProperty ;
     rdfs:label "causes effect"@en,
@@ -815,15 +832,6 @@ ec:IndirectAction a owl:Class ;
     rdfs:comment "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes."@en ;
     rdfs:subClassOf ec:Action .
 
-ec:PermanentAction a owl:Class ;
-    rdfs:label "Permanent Action"@en,
-        "Acción Permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
-    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
-    rdfs:subClassOf ec:Action ;
-    skos:altLabel "G" ;
-    skos:example "self-weight, fixed equipment" .
-
 ec:Resistance a owl:Class ;
     rdfs:label "Resistance"@en,
         "Resistencia"@es ;
@@ -906,6 +914,15 @@ ec:MechanicalEffect a owl:Class ;
     rdfs:label "Mechanical Effect"@en ;
     rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
     rdfs:subClassOf ec:EffectOfAction .
+
+ec:PermanentAction a owl:Class ;
+    rdfs:label "Permanent Action"@en,
+        "Acción Permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
+    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
+    rdfs:subClassOf ec:Action ;
+    skos:altLabel "G" ;
+    skos:example "self-weight, fixed equipment" .
 
 ec:ServiceabilityLimitState a owl:Class ;
     rdfs:label "Serviceability Limit State"@en,
