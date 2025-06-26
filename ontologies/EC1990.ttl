@@ -149,6 +149,13 @@ ec:CombinationFactor a owl:DatatypeProperty ;
     rdfs:range xsd:decimal ;
     skos:altLabel "ψ_0" .
 
+ec:Concrete a owl:Class ;
+    rdfs:label "Concrete"@en,
+        "."@es ;
+    dcterms:source "EN 1992" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:Material .
+
 ec:CreepEffect a owl:Class ;
     rdfs:label "Creep Effect"@en,
         "Efecto de Fluencia"@es ;
@@ -168,6 +175,12 @@ ec:Deflection a owl:Class ;
     rdfs:comment "Vertical deflction of a structural member."@en ;
     rdfs:subClassOf ec:LinearDeformation ;
     skos:altLabel "w" .
+
+ec:Density a owl:Class ;
+    rdfs:label "Density"@en,
+        "."@es ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:MaterialProperty .
 
 ec:DepartmentStore a owl:Class ;
     rdfs:label "Category D2 - Department stores"@en,
@@ -222,6 +235,15 @@ ec:FatigueEffect a owl:Class ;
     dcterms:source "EN 1990:2002, Section 3.1(5)" ;
     rdfs:comment "Progressive damage effect due to repeated loading cycles."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
+
+ec:FavourablePermanentActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Favourable Permanent Action Partial Factor"@en,
+        "Factor Parcial de Acción Permanente Favorable"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.2.3(P)" ;
+    rdfs:comment "Partial factor applied to permanent actions accounting for favourable effect of the action."@en ;
+    rdfs:domain ec:PermanentAction ;
+    rdfs:subPropertyOf ec:PermanentActionPartialFactor ;
+    skos:altLabel "γ_G,sup" .
 
 ec:FireDesignSituation a owl:NamedIndividual,
         ec:AccidentalDesignSituation ;
@@ -344,25 +366,15 @@ ec:LocalizedFailureDesignSituation a owl:NamedIndividual,
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
     rdfs:comment "Accidental design situation involving local failure conditions."@en .
 
-ec:MaterialModelPartialFactor a owl:DatatypeProperty ;
+ec:MaterialPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Material-Model Partial Factor"@en,
         "Factor Parcial del Modelo del Material"@es ;
     dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
-    rdfs:comment "Partial factor for material properties also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:comment "Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:MaterialProperty ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
     skos:altLabel "γ_M" .
-
-ec:MaterialPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Material Partial Factor"@en,
-        "Factor Parcial del Material"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.3" ;
-    rdfs:comment "Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value."@en ;
-    rdfs:domain ec:MaterialProperty ;
-    rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γ_m" .
 
 ec:MediumVehicleTraffic a owl:Class ;
     rdfs:label "Category G - Medium Vehicle Traffic"@en,
@@ -392,16 +404,6 @@ ec:OfficeArea a owl:Class ;
     rdfs:comment "Office areas"@en ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "General office spaces" .
-
-ec:PermanentActionPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Permanent Action Partial Factor"@en,
-        "Factor Parcial de Acción Permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Partial factor applied to permanent actions."@en ;
-    rdfs:domain ec:PermanentAction ;
-    rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γ_G" .
 
 ec:PersistentDesignSituation a owl:NamedIndividual,
         ec:DesignSituation ;
@@ -594,6 +596,12 @@ ec:ThermalAction a owl:Class ;
     rdfs:comment "."@en ;
     rdfs:subClassOf ec:VariableAction .
 
+ec:Thickness a owl:Class ;
+    rdfs:label "Thickness"@en,
+        "."@es ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:GeometricalProperty .
+
 ec:TorsionalMoment a owl:Class ;
     rdfs:label "Torsional Moment"@en,
         "Momento Torsor"@es ;
@@ -622,11 +630,20 @@ ec:UPL a owl:NamedIndividual,
     dcterms:source "EN 1990:2002/A1:2005, Section 6.4.1(1)P e)" ;
     rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en .
 
+ec:UnfavourablePermanentActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Unavourable Permanent Action Partial Factor"@en,
+        "Factor Parcial de Acción Permanente Desfavorable"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.2.3(P)" ;
+    rdfs:comment "Partial factor applied to permanent actions accounting for unfavourable effect of the action."@en ;
+    rdfs:domain ec:PermanentAction ;
+    rdfs:subPropertyOf ec:PermanentActionPartialFactor ;
+    skos:altLabel "γ_G,sup" .
+
 ec:VariableActionPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Variable Action Partial Factor"@en,
         "Factor Parcial de Acción Variable"@es ;
     dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Partial factor applied to variable actions."@en ;
+    rdfs:comment "Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
@@ -653,9 +670,9 @@ ec:appliesTo a owl:ObjectProperty ;
 
 ec:belongsTo a owl:ObjectProperty ;
     rdfs:label "belongs to"@en ;
-    rdfs:comment "Relates a structural element with the space of which it is a part."@en ;
+    rdfs:comment "Relates a structural element with the zone of which it is a part."@en ;
     rdfs:domain ec:StructuralElement ;
-    rdfs:range bot:Space .
+    rdfs:range bot:Zone .
 
 ec:causesEffect a owl:ObjectProperty ;
     rdfs:label "causes effect"@en,
@@ -820,12 +837,6 @@ ec:FreeAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:example "Imposed floor load on individual rooms of a multi-storey building" .
 
-ec:GeometricalProperty a owl:Class ;
-    rdfs:label "Geometrical Data"@en,
-        "Datos Geométricos"@es ;
-    dcterms:source "EN 1990:2002, Section 4.3" ;
-    rdfs:comment "Geometrical properties and dimensions of structural elements."@en .
-
 ec:IndirectAction a owl:Class ;
     rdfs:label "Indirect Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.1 b)" ;
@@ -851,6 +862,12 @@ ec:DynamicEffect a owl:Class ;
     rdfs:comment "Effect of actions involving dynamic response, acceleration, or vibration."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
+ec:GeometricalProperty a owl:Class ;
+    rdfs:label "Geometrical Data"@en,
+        "Datos Geométricos"@es ;
+    dcterms:source "EN 1990:2002, Section 4.3" ;
+    rdfs:comment "Geometrical properties and dimensions of structural elements."@en .
+
 ec:IndustrialandStorage a owl:Class ;
     rdfs:label "Category E - Storage and Industrial"@en,
         "Categoría E - Almacenamiento e Industrial"@es ;
@@ -865,11 +882,15 @@ ec:LinearDeformation a owl:Class ;
     owl:disjointWith ec:AngularDeformation,
         ec:VolumetricDeformation .
 
-ec:Material a owl:Class ;
-    rdfs:label "Material"@en,
-        "Material"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.1.3" ;
-    rdfs:comment "Indication of the principal structural material."@en .
+ec:PermanentActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Permanent Action Partial Factor"@en,
+        "Factor Parcial de Acción Permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:domain ec:PermanentAction ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec:PartialFactor ;
+    skos:altLabel "γ_G" .
 
 ec:ShoppingAreas a owl:Class ;
     rdfs:label "Category D - Shopping Areas"@en,
@@ -904,6 +925,12 @@ ec:Deformation a owl:Class ;
     rdfs:comment "Change in shape or size of a structure or structural member due to actions."@en ;
     rdfs:subClassOf ec:DeformationEffect .
 
+ec:Material a owl:Class ;
+    rdfs:label "Material"@en,
+        "Material"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.1.3" ;
+    rdfs:comment "Indication of the principal structural material."@en .
+
 ec:MaterialProperty a owl:Class ;
     rdfs:label "Material Property"@en,
         "Propiedad del Material"@es ;
@@ -915,14 +942,15 @@ ec:MechanicalEffect a owl:Class ;
     rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
-ec:PermanentAction a owl:Class ;
-    rdfs:label "Permanent Action"@en,
-        "Acción Permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
-    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
-    rdfs:subClassOf ec:Action ;
-    skos:altLabel "G" ;
-    skos:example "self-weight, fixed equipment" .
+ec:PartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Partial Factor"@en,
+        "Factor Parcial"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
+    rdfs:domain ec:Action ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "γ_f" ;
+    skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
 
 ec:ServiceabilityLimitState a owl:Class ;
     rdfs:label "Serviceability Limit State"@en,
@@ -976,16 +1004,6 @@ ec:InternalForce a owl:Class ;
     rdfs:comment "Effect of actions in the form of internal forces in structural members."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
 
-ec:PartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Partial Factor"@en,
-        "Factor Parcial"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
-    rdfs:domain ec:Action ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "γ_f" ;
-    skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
-
 ec:SLSCombination a owl:Class ;
     rdfs:label "Serviceability Limit State Combination"@en,
         "Combinaciones ELS"@es ;
@@ -1007,6 +1025,15 @@ ec:LimitState a owl:Class ;
     rdfs:comment "State beyond which the structure no longer fulfils the relevant design criteria."@en ;
     skos:definition "State beyond which the structure no longer fulfils the relevant design criteria." ;
     skos:editorialNote "Limit states define critical conditions that must not be exceeded to ensure structural safety and serviceability" .
+
+ec:PermanentAction a owl:Class ;
+    rdfs:label "Permanent Action"@en,
+        "Acción Permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
+    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
+    rdfs:subClassOf ec:Action ;
+    skos:altLabel "G" ;
+    skos:example "self-weight, fixed equipment" .
 
 ec:UltimateLimitState a owl:Class ;
     rdfs:label "Ultimate Limit State"@en,
