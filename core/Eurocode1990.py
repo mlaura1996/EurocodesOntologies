@@ -277,7 +277,7 @@ g.add((EC1990['Structure'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1
 g.add((EC1990['Structure'], SKOS.example, Literal('Residential building, reatining wall, suspension bridge, underground tunnel')))
 
 # Classification of structures accordin to the design service life
-g.add((EC1990['TemporaryStructure'], RDF.type, OWL.Class))
+g.add((EC1990['TemporaryStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['TemporaryStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['TemporaryStructure'], RDFS.label, Literal('Temporary Structure', lang='en')))
 g.add((EC1990['TemporaryStructure'], RDFS.label, Literal('E.', lang='es')))
@@ -285,7 +285,7 @@ g.add((EC1990['TemporaryStructure'], RDFS.comment, Literal('Structre that is int
 g.add((EC1990['TemporaryStructure'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['TemporaryStructure'], SKOS.example, Literal('formwork system, steel scaffolding, temoprary bridge')))
 
-g.add((EC1990['ReplacableStructuralElements'], RDF.type, OWL.Class))
+g.add((EC1990['ReplacableStructuralElements'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['ReplacableStructuralElements'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['ReplacableStructuralElements'], RDFS.label, Literal('Structure with replaceable elements', lang='en')))
 g.add((EC1990['ReplacableStructuralElements'], RDFS.label, Literal('.', lang='es')))
@@ -293,7 +293,7 @@ g.add((EC1990['ReplacableStructuralElements'], RDFS.comment, Literal('structure 
 g.add((EC1990['ReplacableStructuralElements'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['ReplacableStructuralElements'], SKOS.example, Literal('modular steel bridge with replaceable girders, industrial building with precast concrete roof panels')))
 
-g.add((EC1990['AgriculturalStructure'], RDF.type, OWL.Class))
+g.add((EC1990['AgriculturalStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['AgriculturalStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['AgriculturalStructure'], RDFS.label, Literal('Agricultural Structure', lang='en')))
 g.add((EC1990['AgriculturalStructure'], RDFS.label, Literal('.', lang='es')))
@@ -301,7 +301,7 @@ g.add((EC1990['AgriculturalStructure'], RDFS.comment, Literal('A building or con
 g.add((EC1990['AgriculturalStructure'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['AgriculturalStructure'], SKOS.example, Literal('barn, greenhouse, animal shelter')))
 
-g.add((EC1990['BuildingStructure'], RDF.type, OWL.Class))
+g.add((EC1990['BuildingStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['BuildingStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['BuildingStructure'], RDFS.label, Literal('Building Structure', lang='en')))
 g.add((EC1990['BuildingStructure'], RDFS.label, Literal('.', lang='es')))
@@ -309,7 +309,7 @@ g.add((EC1990['BuildingStructure'], RDFS.comment, Literal('Load-bearing framewor
 g.add((EC1990['BuildingStructure'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['BuildingStructure'], SKOS.example, Literal('masonry building, steel frame building, timber-framed house')))
 
-g.add((EC1990['BridgeStructure'], RDF.type, OWL.Class))
+g.add((EC1990['BridgeStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['BridgeStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['BridgeStructure'], RDFS.label, Literal('Bridge Structure', lang='en')))
 g.add((EC1990['BridgeStructure'], RDFS.label, Literal('.', lang='es')))
@@ -317,7 +317,7 @@ g.add((EC1990['BridgeStructure'], RDFS.comment, Literal('Engineered construction
 g.add((EC1990['BridgeStructure'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['BridgeStructure'], SKOS.example, Literal('beam bridge, arch bridge, suspension bridge')))
 
-g.add((EC1990['MonumentalBuldingStructure'], RDF.type, OWL.Class))
+g.add((EC1990['MonumentalBuldingStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['MonumentalBuldingStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['MonumentalBuldingStructure'], RDFS.label, Literal('Monumental Building Structure', lang='en')))
 g.add((EC1990['MonumentalBuldingStructure'], RDFS.label, Literal('.', lang='es')))
@@ -325,7 +325,7 @@ g.add((EC1990['MonumentalBuldingStructure'], RDFS.comment, Literal('Large-scale,
 g.add((EC1990['MonumentalBuldingStructure'], DCTERMS.source, Literal('EN 1990:2002, Table 2.1')))
 g.add((EC1990['MonumentalBuldingStructure'], SKOS.example, Literal('national parliment building, museum of significant importance, major cathedral')))
 
-g.add((EC1990['CivilEngineeringStructure'], RDF.type, OWL.Class))
+g.add((EC1990['CivilEngineeringStructure'], RDF.type, OWL.Class)) #-> named individual
 g.add((EC1990['CivilEngineeringStructure'], RDFS.subClassOf, EC1990['Structure']))
 g.add((EC1990['CivilEngineeringStructure'], RDFS.label, Literal('Civil Engineering Structure', lang='en')))
 g.add((EC1990['CivilEngineeringStructure'], RDFS.label, Literal('.', lang='es')))
@@ -977,7 +977,7 @@ g.add((EC1990['Resistance'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.
 g.add((EC1990['Resistance'], SKOS.example, Literal('bending resistance, buckling resistance, tension resistance')))
 g.add((EC1990['Resistance'], SKOS.altLabel, Literal('R')))
 
-g.add((EC1990['DesignWorkingLife'], RDF.type, OWL.Class))
+g.add((EC1990['DesignWorkingLife'], RDF.type, OWL.Class)) #remove as a class
 g.add((EC1990['DesignWorkingLife'], RDFS.label, Literal('Design Working Life', lang='en')))
 g.add((EC1990['DesignWorkingLife'], RDFS.label, Literal('Vida Útil de Proyecto', lang='es')))
 g.add((EC1990['DesignWorkingLife'], RDFS.comment, Literal('Assumed period for which a structure or part of it is to be used for its intended purpose with anticipated maintenance but without major repair being necessary.', lang='en')))
@@ -1066,7 +1066,7 @@ g.add((EC1990['hasSystem'], RDFS.comment, Literal('Relates a structure with its 
 g.add((EC1990['hasSystem'], RDFS.domain, EC1990.Structure))
 g.add((EC1990['hasSystem'], RDFS.range, EC1990.StructuralSystem))
 
-g.add((EC1990['hasDesignWorkingLife'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['hasDesignWorkingLife'], RDF.type, OWL.ObjectProperty)) #change to data property of Structure class
 g.add((EC1990['hasDesignWorkingLife'], RDFS.label, Literal('has design working life', lang='en')))
 g.add((EC1990['hasDesignWorkingLife'], RDFS.comment, Literal('Relates a structure to its design working life.', lang='en')))
 g.add((EC1990['hasDesignWorkingLife'], RDFS.domain, EC1990.Structure))
