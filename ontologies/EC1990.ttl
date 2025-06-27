@@ -140,8 +140,6 @@ ec:CivilEngineeringWork a owl:Class ;
     rdfs:subClassOf ec:ConstructionWork ;
     skos:example "bridge, retaining wall, tunnel" .
 
-ec:CombinationFactor rdfs:range xsd:decimal .
-
 ec:Concrete a owl:Class ;
     rdfs:label "Concrete"@en,
         "."@es ;
@@ -265,8 +263,6 @@ ec:FrequentCombination a owl:Class ;
     rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for reversible serviceability limit state verifications" .
 
-ec:FrequentFactor rdfs:range xsd:decimal .
-
 ec:FundamentalCombination a owl:Class ;
     rdfs:label "Fundamental Combination"@en,
         "Combinación Fundamental"@es ;
@@ -358,8 +354,6 @@ ec:LocalizedFailureDesignSituation a owl:NamedIndividual,
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
     rdfs:comment "Accidental design situation involving local failure conditions."@en .
 
-ec:MaterialPartialFactor rdfs:range xsd:decimal .
-
 ec:MediumVehicleTraffic a owl:Class ;
     rdfs:label "Category G - Medium Vehicle Traffic"@en,
         "Categoría G - Tráfico de Vehículos Medianos"@es ;
@@ -389,8 +383,6 @@ ec:OfficeArea a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "General office spaces" .
 
-ec:PermanentActionPartialFactor rdfs:range xsd:decimal .
-
 ec:PersistentDesignSituation a owl:NamedIndividual,
         ec:DesignSituation ;
     rdfs:label "Persistent Design Situation"@en,
@@ -418,8 +410,6 @@ ec:QuasiPermanentCombination a owl:Class ;
     rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
     rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for long-term effects and appearance considerations" .
-
-ec:QuasiPermanentFactor rdfs:range xsd:decimal .
 
 ec:QuasiStaticAction a owl:Class ;
     rdfs:label "Quasi-Static Action"@en ;
@@ -597,8 +587,6 @@ ec:UPL a owl:NamedIndividual,
     dcterms:source "EN 1990:2002/A1:2005, Section 6.4.1(1)P e)" ;
     rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en .
 
-ec:VariableActionPartialFactor rdfs:range xsd:decimal .
-
 ec:VibrationResponse a owl:Class ;
     rdfs:label "Vibration Response"@en,
         "Respuesta Vibratoria"@es ;
@@ -709,6 +697,7 @@ ec:hasPermanentActionPartialFactor a owl:DatatypeProperty ;
     dcterms:source "EN 1990:2002, Section 6.3.1" ;
     rdfs:comment "Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:PermanentAction ;
+    rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
     skos:altLabel "γ_G" .
 
@@ -727,6 +716,7 @@ ec:hasReductionFactor a owl:DatatypeProperty ;
     dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
     rdfs:comment "Reduction factor for unfavourable permanent action."@en ;
     rdfs:domain ec:PermanentAction ;
+    rdfs:range xsd:decimal ;
     skos:altLabel "ξ" .
 
 ec:hasResistance a owl:ObjectProperty ;
@@ -761,6 +751,7 @@ ec:hasVariableActionPartialFactor a owl:DatatypeProperty ;
     dcterms:source "EN 1990:2002, Section 6.3.1" ;
     rdfs:comment "Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:VariableAction ;
+    rdfs:range xsd:decimal ;
     rdfs:subPropertyOf ec:PartialFactor ;
     skos:altLabel "γ_Q" .
 
@@ -969,8 +960,6 @@ ec:MechanicalEffect a owl:Class ;
     rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
-ec:PartialFactor skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
-
 ec:ServiceabilityLimitState a owl:Class ;
     rdfs:label "Serviceability Limit State"@en,
         "Estado Límite de Servicio"@es ;
@@ -1120,6 +1109,7 @@ ec:VariableAction a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.4" ;
     rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
     rdfs:subClassOf ec:Action ;
+    owl:disjointWith ec:PermanenteAction ;
     skos:altLabel "Q" ;
     skos:example "imposed loads, wind, snow, thermal actions" .
 

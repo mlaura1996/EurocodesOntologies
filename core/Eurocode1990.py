@@ -1120,12 +1120,13 @@ g.add((EC1990['hasPartialFactor'], RDFS.domain, EC1990.Action))
 g.add((EC1990['hasPartialFactor'], RDFS.range, XSD.decimal))
 
 g.add((EC1990['hasPermanentActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.subPropertyOf, EC1990.PartialFactor))
+g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.label, Literal('Permanent Action Partial Factor', lang='en')))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.label, Literal('Factor Parcial de Acción Permanente', lang='es')))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.comment, Literal('Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations.', lang='en')))
 g.add((EC1990['hasPermanentActionPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.domain, EC1990.PermanentAction))
+g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasPermanentActionPartialFactor'], SKOS.altLabel, Literal('γ_G')))
 
 g.add((EC1990['hasReductionFactor'], RDF.type, OWL.DatatypeProperty))
@@ -1134,6 +1135,7 @@ g.add((EC1990['hasReductionFactor'], RDFS.label, Literal('.', lang='es')))
 g.add((EC1990['hasReductionFactor'], RDFS.comment, Literal('Reduction factor for unfavourable permanent action.', lang='en')))
 g.add((EC1990['hasReductionFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.4.3.2')))
 g.add((EC1990['hasReductionFactor'], RDFS.domain, EC1990.PermanentAction))
+g.add((EC1990['hasReductionFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasReductionFactor'], SKOS.altLabel, Literal('ξ')))
 
 g.add((EC1990['hasVariableActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
@@ -1143,6 +1145,7 @@ g.add((EC1990['hasVariableActionPartialFactor'], RDFS.label, Literal('Factor Par
 g.add((EC1990['hasVariableActionPartialFactor'], RDFS.comment, Literal('Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations.', lang='en')))
 g.add((EC1990['hasVariableActionPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
 g.add((EC1990['hasVariableActionPartialFactor'], RDFS.domain, EC1990.VariableAction))
+g.add((EC1990['hasVariableActionPartialFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasVariableActionPartialFactor'], SKOS.altLabel, Literal('γ_Q')))
 
 g.add((EC1990['hasMaterialPartialFactor'], RDF.type, OWL.DatatypeProperty))
@@ -1190,6 +1193,9 @@ g.add((EC1990['hasQuasiPermanentFactor'], SKOS.altLabel, Literal('ψ_2')))
 # Design and Representative actions are mutually exclusive
 g.add((EC1990['DesignAction'], OWL.disjointWith, EC1990.RepresentativeAction))
 
+# Variable and Permanent actions are mutually exclusive
+g.add((EC1990['VariableAction'], OWL.disjointWith, EC1990.PermanenteAction))
+
 # Direct and indirect actions are mutually exclusive
 g.add((EC1990['DirectAction'], OWL.disjointWith, EC1990.IndirectAction))
 
@@ -1232,14 +1238,8 @@ g.add((EC1990['AngularDeformation'], OWL.disjointWith, EC1990.VolumetricDeformat
 # Note: These would be better expressed as SHACL shapes or OWL restrictions
 
 # Add range restrictions for partial factors (typically > 1.0 for safety)
-g.add((EC1990['PermanentActionPartialFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['VariableActionPartialFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['MaterialPartialFactor'], RDFS.range, XSD.decimal))
 
 # Add range restrictions for combination factors (typically ≤ 1.0)
-g.add((EC1990['CombinationFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['FrequentFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['QuasiPermanentFactor'], RDFS.range, XSD.decimal))
 
 ##########################################################
 #                 ADDITIONAL METADATA                   #
@@ -1274,7 +1274,7 @@ g.add((EC1990['FrequentCombination'], SKOS.scopeNote, Literal('Used for reversib
 g.add((EC1990['QuasiPermanentCombination'], SKOS.scopeNote, Literal('Used for long-term effects and appearance considerations')))
 
 # Add editorial notes for complex concepts
-g.add((EC1990['PartialFactor'], SKOS.editorialNote, Literal('Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations')))
+# g.add((EC1990['PartialFactor'], SKOS.editorialNote, Literal('Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations')))
 g.add((EC1990['LimitState'], SKOS.editorialNote, Literal('Limit states define critical conditions that must not be exceeded to ensure structural safety and serviceability')))
 g.add((EC1990['EffectOfAction'], SKOS.editorialNote, Literal('Effects of actions can be calculated through structural analysis and must be compared against resistance for verification')))
 
