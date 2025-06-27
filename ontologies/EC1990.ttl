@@ -44,12 +44,12 @@ ec:AccessibleRoofs a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Roofs used as terraces, gardens, or other occupied spaces" .
 
-ec:AccidentalCombination a owl:NamedIndividual,
-        ec:ULSCombination ;
+ec:AccidentalCombination a owl:Class ;
     rdfs:label "Accidental Combination"@en,
         "Combinación Accidental"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.3" ;
     rdfs:comment "Combination of actions for accidental design situations."@en ;
+    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for accidental design situations in ULS verifications" .
 
 ec:AgriculturalStructure a owl:Class ;
@@ -116,12 +116,12 @@ ec:BuildingStructure a owl:Class ;
     rdfs:subClassOf ec:Structure ;
     skos:example "masonry building, steel frame building, timber-framed house" .
 
-ec:CharacteristicCombination a owl:NamedIndividual,
-        ec:SLSCombination ;
+ec:CharacteristicCombination a owl:Class ;
     rdfs:label "Characteristic Combination"@en,
         "Combinación Característica"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)a" ;
     rdfs:comment "Serviceability combination normally used for irreversible limit states."@en ;
+    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for irreversible serviceability limit state verifications" .
 
 ec:CivilEngineeringStructure a owl:Class ;
@@ -140,14 +140,7 @@ ec:CivilEngineeringWork a owl:Class ;
     rdfs:subClassOf ec:ConstructionWork ;
     skos:example "bridge, retaining wall, tunnel" .
 
-ec:CombinationFactor a owl:DatatypeProperty ;
-    rdfs:label "Combination Factor"@en,
-        "Factor de Combinación"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.16" ;
-    rdfs:comment "Factor for combination value of a variable action used in ultimate limit state verifications."@en ;
-    rdfs:domain ec:VariableAction ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "ψ_0" .
+ec:CombinationFactor rdfs:range xsd:decimal .
 
 ec:Concrete a owl:Class ;
     rdfs:label "Concrete"@en,
@@ -189,6 +182,13 @@ ec:DepartmentStore a owl:Class ;
     rdfs:comment "Areas in department stores"@en ;
     rdfs:subClassOf ec:ShoppingAreas ;
     skos:example "Department stores" .
+
+ec:DesignAction a owl:Class ;
+    rdfs:label "Design Action"@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.21" ;
+    rdfs:comment "Value ofan action used for limit state verification. A design valueo is btained by multiplying the representative value by the partial factor."@en ;
+    rdfs:subClassOf ec:Action ;
+    owl:disjointWith ec:RepresentativeAction .
 
 ec:DirectAction a owl:Class ;
     rdfs:label "Direct Action"@en ;
@@ -236,14 +236,12 @@ ec:FatigueEffect a owl:Class ;
     rdfs:comment "Progressive damage effect due to repeated loading cycles."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
 
-ec:FavourablePermanentActionPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Favourable Permanent Action Partial Factor"@en,
-        "Factor Parcial de Acción Permanente Favorable"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.2.3(P)" ;
-    rdfs:comment "Partial factor applied to permanent actions accounting for favourable effect of the action."@en ;
-    rdfs:domain ec:PermanentAction ;
-    rdfs:subPropertyOf ec:PermanentActionPartialFactor ;
-    skos:altLabel "γ_G,sup" .
+ec:FavourableAction a owl:Class ;
+    rdfs:label "Favourable Action"@en ;
+    dcterms:source "EN 1990:2002, Section 6.3.2(3)P" ;
+    rdfs:comment "Action that reduces the effect of other actions on a structure, or otherwise contributes to structural safety."@en ;
+    rdfs:subClassOf ec:Action ;
+    owl:disjointWith ec:UnfavourableAction .
 
 ec:FireDesignSituation a owl:NamedIndividual,
         ec:AccidentalDesignSituation ;
@@ -259,29 +257,22 @@ ec:FixedAction a owl:Class ;
     owl:disjointWith ec:FreeAction ;
     skos:example "Stored goods in a defined storage area with no alternative placement" .
 
-ec:FrequentCombination a owl:NamedIndividual,
-        ec:SLSCombination ;
+ec:FrequentCombination a owl:Class ;
     rdfs:label "Frequent Combination"@en,
         "Combinación Frecuente"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)b" ;
     rdfs:comment "Serviceability combination normally used for reversible limit states."@en ;
+    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for reversible serviceability limit state verifications" .
 
-ec:FrequentFactor a owl:DatatypeProperty ;
-    rdfs:label "Frequent Factor"@en,
-        "Factor Frecuente"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.17" ;
-    rdfs:comment "Factor for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value."@en ;
-    rdfs:domain ec:VariableAction ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "ψ_1" .
+ec:FrequentFactor rdfs:range xsd:decimal .
 
-ec:FundamentalCombination a owl:NamedIndividual,
-        ec:ULSCombination ;
+ec:FundamentalCombination a owl:Class ;
     rdfs:label "Fundamental Combination"@en,
         "Combinación Fundamental"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
     rdfs:comment "Combination of actions for persistent or transient design situations."@en ;
+    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for persistent and transient design situations in ULS verifications" .
 
 ec:GEO a owl:NamedIndividual,
@@ -324,12 +315,6 @@ ec:ImpactDesignSituation a owl:NamedIndividual,
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
     rdfs:comment "Accidental design situation involving impact conditions."@en .
 
-ec:ImposedLoad a owl:Class ;
-    rdfs:label "Imposed load"@en ;
-    dcterms:source "EN 1991-1-1:2002" ;
-    rdfs:comment "."@en ;
-    rdfs:subClassOf ec:VariableAction .
-
 ec:IndustrialUse a owl:Class ;
     rdfs:label "Category E2 - Industrial use"@en,
         "Categoría E2 - Uso industrial"@es ;
@@ -352,6 +337,13 @@ ec:LargeCrowdsAreas a owl:Class ;
     rdfs:subClassOf ec:CongregationArea ;
     skos:example "Buildings for public events like concert halls, sports halls including stands, terraces and access areas and railway platforms" .
 
+ec:LeadingVariableAction a owl:Class ;
+    rdfs:label "Leading variable action"@en ;
+    dcterms:source "EN 1990:2003 Section 6.4.3.2(2)" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction ;
+    owl:disjointWith ec:AccompanyingVariableAction .
+
 ec:LightVehicleTraffic a owl:Class ;
     rdfs:label "Category F - Light Vehicle Traffic"@en,
         "Categoría F - Tráfico de Vehículos Ligeros"@es ;
@@ -366,15 +358,7 @@ ec:LocalizedFailureDesignSituation a owl:NamedIndividual,
     dcterms:source "EN 1990:2002, Section 1.5.2.5" ;
     rdfs:comment "Accidental design situation involving local failure conditions."@en .
 
-ec:MaterialPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Material-Model Partial Factor"@en,
-        "Factor Parcial del Modelo del Material"@es ;
-    dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
-    rdfs:comment "Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations."@en ;
-    rdfs:domain ec:MaterialProperty ;
-    rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γ_M" .
+ec:MaterialPartialFactor rdfs:range xsd:decimal .
 
 ec:MediumVehicleTraffic a owl:Class ;
     rdfs:label "Category G - Medium Vehicle Traffic"@en,
@@ -405,6 +389,8 @@ ec:OfficeArea a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "General office spaces" .
 
+ec:PermanentActionPartialFactor rdfs:range xsd:decimal .
+
 ec:PersistentDesignSituation a owl:NamedIndividual,
         ec:DesignSituation ;
     rdfs:label "Persistent Design Situation"@en,
@@ -425,22 +411,15 @@ ec:PrincipalStress a owl:Class ;
     rdfs:comment "Maximum or minimum normal stress at a point."@en ;
     rdfs:subClassOf ec:Stress .
 
-ec:QuasiPermanentCombination a owl:NamedIndividual,
-        ec:SLSCombination ;
+ec:QuasiPermanentCombination a owl:Class ;
     rdfs:label "Quasi-Permanent Combination"@en,
         "Combinación Cuasi-permanente"@es ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)c" ;
     rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
+    rdfs:subClassOf ec:SLSCombination ;
     skos:scopeNote "Used for long-term effects and appearance considerations" .
 
-ec:QuasiPermanentFactor a owl:DatatypeProperty ;
-    rdfs:label "Quasi-Permanent Factor"@en,
-        "Factor Cuasi-permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.18" ;
-    rdfs:comment "Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period."@en ;
-    rdfs:domain ec:VariableAction ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "ψ_2" .
+ec:QuasiPermanentFactor rdfs:range xsd:decimal .
 
 ec:QuasiStaticAction a owl:Class ;
     rdfs:label "Quasi-Static Action"@en ;
@@ -514,12 +493,12 @@ ec:SeismicAction a owl:Class ;
     rdfs:subClassOf ec:AccidentalAction ;
     skos:altLabel "A_E" .
 
-ec:SeismicCombination a owl:NamedIndividual,
-        ec:ULSCombination ;
+ec:SeismicCombination a owl:Class ;
     rdfs:label "Seismic Combination"@en,
         "Combinación Sísmica"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.4" ;
     rdfs:comment "Combination of actions for seismic design situations."@en ;
+    rdfs:subClassOf ec:ULSCombination ;
     skos:scopeNote "Used for seismic design situations in ULS verifications" .
 
 ec:SeismicDesignSituation a owl:NamedIndividual,
@@ -554,12 +533,6 @@ ec:ShrinkageEffect a owl:Class ;
     rdfs:comment "Deformation effect due to material shrinkage over time."@en ;
     rdfs:subClassOf ec:TimeDependentEffect .
 
-ec:SnowLoad a owl:Class ;
-    rdfs:label "Snow load"@en ;
-    dcterms:source "EN 1991-1-3:2003" ;
-    rdfs:comment "."@en ;
-    rdfs:subClassOf ec:VariableAction .
-
 ec:StaticAction a owl:Class ;
     rdfs:label "Static Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.11" ;
@@ -589,12 +562,6 @@ ec:TemporaryStructure a owl:Class ;
     rdfs:comment "Structre that is intended to be used for a limited period of time, typically to support, protect, or provide access during the execution of permanent works, or to serve a short-term purpose."@en ;
     rdfs:subClassOf ec:Structure ;
     skos:example "formwork system, steel scaffolding, temoprary bridge" .
-
-ec:ThermalAction a owl:Class ;
-    rdfs:label "Thermal action"@en ;
-    dcterms:source "EN 1991-1-5:2003" ;
-    rdfs:comment "."@en ;
-    rdfs:subClassOf ec:VariableAction .
 
 ec:Thickness a owl:Class ;
     rdfs:label "Thickness"@en,
@@ -630,24 +597,7 @@ ec:UPL a owl:NamedIndividual,
     dcterms:source "EN 1990:2002/A1:2005, Section 6.4.1(1)P e)" ;
     rdfs:comment "Loss of equilibrium of the structure or the ground due to uplift by water pressure (buoyancy) or other vertical actions."@en .
 
-ec:UnfavourablePermanentActionPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Unavourable Permanent Action Partial Factor"@en,
-        "Factor Parcial de Acción Permanente Desfavorable"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.2.3(P)" ;
-    rdfs:comment "Partial factor applied to permanent actions accounting for unfavourable effect of the action."@en ;
-    rdfs:domain ec:PermanentAction ;
-    rdfs:subPropertyOf ec:PermanentActionPartialFactor ;
-    skos:altLabel "γ_G,sup" .
-
-ec:VariableActionPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Variable Action Partial Factor"@en,
-        "Factor Parcial de Acción Variable"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations."@en ;
-    rdfs:domain ec:VariableAction ;
-    rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γ_Q" .
+ec:VariableActionPartialFactor rdfs:range xsd:decimal .
 
 ec:VibrationResponse a owl:Class ;
     rdfs:label "Vibration Response"@en,
@@ -659,7 +609,10 @@ ec:WindAction a owl:Class ;
     rdfs:label "Wind action"@en ;
     dcterms:source "EN 1991-1-4:2005" ;
     rdfs:comment "."@en ;
-    rdfs:subClassOf ec:VariableAction .
+    rdfs:subClassOf ec:VariableAction ;
+    owl:disjointWith ec:ImposedLoad,
+        ec:SnowLoad,
+        ec:ThermalAction .
 
 ec:appliesTo a owl:ObjectProperty ;
     rdfs:label "applies to"@en,
@@ -671,7 +624,7 @@ ec:appliesTo a owl:ObjectProperty ;
 ec:belongsTo a owl:ObjectProperty ;
     rdfs:label "belongs to"@en ;
     rdfs:comment "Relates a structural element with the zone of which it is a part."@en ;
-    rdfs:domain ec:StructuralElement ;
+    rdfs:domain ec:StructuralMember ;
     rdfs:range bot:Zone .
 
 ec:causesEffect a owl:ObjectProperty ;
@@ -695,23 +648,14 @@ ec:containsStructuralMember a owl:ObjectProperty ;
     rdfs:range ec:StructuralMember ;
     rdfs:subPropertyOf bot:hasElement .
 
-ec:hasCharacteristicValue a owl:DatatypeProperty ;
-    rdfs:label "Characteristic Value"@en,
-        "Valor Característico"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.14" ;
-    rdfs:comment "Principal representative value of an action. In so far as a characteristic value can be fixed on statistical bases, it is chosen so as to correspond to a prescribed probability of not being exceeded on the unfavourable side during a reference period."@en ;
-    rdfs:domain ec:Action ;
+ec:hasCombinationFactor a owl:DatatypeProperty ;
+    rdfs:label "has combination factor"@en,
+        "Factor de Combinación"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.16" ;
+    rdfs:comment "Factor for combination value of a variable action used in ultimate limit state verifications."@en ;
+    rdfs:domain ec:VariableAction ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "F_k" .
-
-ec:hasDesignValue a owl:DatatypeProperty ;
-    rdfs:label "Design Value"@en,
-        "Valor de Cálculo"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.21" ;
-    rdfs:comment "Value obtained by multiplying the representative value by the partial factor γf."@en ;
-    rdfs:domain ec:Action ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "F_d" .
+    skos:altLabel "ψ_0" .
 
 ec:hasDesignWorkingLife a owl:ObjectProperty ;
     rdfs:label "has design working life"@en ;
@@ -719,11 +663,30 @@ ec:hasDesignWorkingLife a owl:ObjectProperty ;
     rdfs:domain ec:Structure ;
     rdfs:range ec:DesignWorkingLife .
 
+ec:hasFrequentFactor a owl:DatatypeProperty ;
+    rdfs:label "has frequent factor"@en,
+        "Factor Frecuente"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.17" ;
+    rdfs:comment "Factor for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value."@en ;
+    rdfs:domain ec:VariableAction ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ_1" .
+
 ec:hasGeometricalProperty a owl:ObjectProperty ;
     rdfs:label "has geometrical property"@en ;
     rdfs:comment "Relates a structural member with its geometrical properties."@en ;
     rdfs:domain ec:StructuralMember ;
     rdfs:range ec:GeometricalProperty .
+
+ec:hasMaterialPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "has material partial factor"@en,
+        "Factor Parcial del Modelo del Material"@es ;
+    dcterms:source "UNE-EN 1990:2019, Section 6.3.3" ;
+    rdfs:comment "Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:domain ec:MaterialProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ec:PartialFactor ;
+    skos:altLabel "γ_M" .
 
 ec:hasMaterialProperty a owl:ObjectProperty ;
     rdfs:label "has Property"@en ;
@@ -731,14 +694,40 @@ ec:hasMaterialProperty a owl:ObjectProperty ;
     rdfs:domain ec:Material ;
     rdfs:range ec:MaterialProperty .
 
-ec:hasRepresentativeValue a owl:DatatypeProperty ;
-    rdfs:label "Representative Value"@en,
-        "Valor Representativo"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.20" ;
-    rdfs:comment "Value used for the verification of a limit state. A representative value may be the characteristic value (Fk) or an accompanying value (ψFk)."@en ;
+ec:hasPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Partial Factor"@en,
+        "Factor Parcial"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
     rdfs:domain ec:Action ;
     rdfs:range xsd:decimal ;
-    skos:altLabel "F_rep" .
+    skos:altLabel "γ_f" .
+
+ec:hasPermanentActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Permanent Action Partial Factor"@en,
+        "Factor Parcial de Acción Permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:domain ec:PermanentAction ;
+    rdfs:subPropertyOf ec:PartialFactor ;
+    skos:altLabel "γ_G" .
+
+ec:hasQuasiPermanentFactor a owl:DatatypeProperty ;
+    rdfs:label "has quasi-permanent factor"@en,
+        "Factor Cuasi-permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.18" ;
+    rdfs:comment "Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period."@en ;
+    rdfs:domain ec:VariableAction ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ_2" .
+
+ec:hasReductionFactor a owl:DatatypeProperty ;
+    rdfs:label "has reduction factor"@en,
+        "."@es ;
+    dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
+    rdfs:comment "Reduction factor for unfavourable permanent action."@en ;
+    rdfs:domain ec:PermanentAction ;
+    skos:altLabel "ξ" .
 
 ec:hasResistance a owl:ObjectProperty ;
     rdfs:label "has resistance"@en ;
@@ -766,6 +755,15 @@ ec:hasSystem a owl:ObjectProperty ;
     rdfs:domain ec:Structure ;
     rdfs:range ec:StructuralSystem .
 
+ec:hasVariableActionPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "has variable action partial factor"@en,
+        "Factor Parcial de Acción Variable"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations."@en ;
+    rdfs:domain ec:VariableAction ;
+    rdfs:subPropertyOf ec:PartialFactor ;
+    skos:altLabel "γ_Q" .
+
 ec:imposesCombination a owl:ObjectProperty ;
     rdfs:label "imposes combination"@en,
         "..."@es ;
@@ -785,6 +783,12 @@ ec:isMadeOf a owl:ObjectProperty ;
     rdfs:comment "Relates a structural member to the material which it is made of."@en ;
     rdfs:domain ec:StructuralMember ;
     rdfs:range ec:Material .
+
+ec:isVerifiedUnder a owl:ObjectProperty ;
+    rdfs:label "is verified under"@en ;
+    rdfs:comment "Relates a structural element with the combination of action used for verifcation of elevant Limit State."@en ;
+    rdfs:domain ec:StructuralMember ;
+    rdfs:range ec:CombinationOfActions .
 
 ec:requiresVerficationOf a owl:ObjectProperty ;
     rdfs:label "requires verification of"@en,
@@ -808,6 +812,12 @@ ec:AccidentalAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:altLabel "A" ;
     skos:example "explosions, impact from vehicles" .
+
+ec:AccompanyingVariableAction a owl:Class ;
+    rdfs:label "Accompanying variable action"@en ;
+    dcterms:source "EN 1990:2003 Section 6.4.3.2(2)" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
 
 ec:Building a owl:Class ;
     rdfs:label "Building"@en,
@@ -837,10 +847,24 @@ ec:FreeAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:example "Imposed floor load on individual rooms of a multi-storey building" .
 
+ec:ImposedLoad a owl:Class ;
+    rdfs:label "Imposed load"@en ;
+    dcterms:source "EN 1991-1-1:2002" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction ;
+    owl:disjointWith ec:SnowLoad,
+        ec:ThermalAction .
+
 ec:IndirectAction a owl:Class ;
     rdfs:label "Indirect Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.1 b)" ;
     rdfs:comment "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes."@en ;
+    rdfs:subClassOf ec:Action .
+
+ec:RepresentativeAction a owl:Class ;
+    rdfs:label "Representative Action"@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.20" ;
+    rdfs:comment "Value ofan action used for limit state verification. A representative value may be the characteristic value or an accompanying value."@en ;
     rdfs:subClassOf ec:Action .
 
 ec:Resistance a owl:Class ;
@@ -850,6 +874,12 @@ ec:Resistance a owl:Class ;
     rdfs:comment "Capacity of a member or component, or a cross-section of a member or component of a structure, to withstand actions without mechanical failure."@en ;
     skos:altLabel "R" ;
     skos:example "bending resistance, buckling resistance, tension resistance" .
+
+ec:UnfavourableAction a owl:Class ;
+    rdfs:label "UnfavourableAction Action"@en ;
+    dcterms:source "EN 1990:2002, Section 6.3.2(3)P" ;
+    rdfs:comment "An action that increases the effect of other actions on a structure, or otherwise reduces structural safety."@en ;
+    rdfs:subClassOf ec:Action .
 
 ec:DynamicAction a owl:Class ;
     rdfs:label "Dynamic Action"@en ;
@@ -882,22 +912,19 @@ ec:LinearDeformation a owl:Class ;
     owl:disjointWith ec:AngularDeformation,
         ec:VolumetricDeformation .
 
-ec:PermanentActionPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Permanent Action Partial Factor"@en,
-        "Factor Parcial de Acción Permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations."@en ;
-    rdfs:domain ec:PermanentAction ;
-    rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
-    skos:altLabel "γ_G" .
-
 ec:ShoppingAreas a owl:Class ;
     rdfs:label "Category D - Shopping Areas"@en,
         "Categoría D - Áreas Comerciales"@es ;
     dcterms:source "EN 1991-1-1:2002 Table 6.1" ;
     rdfs:comment "Shopping areas"@en ;
     rdfs:subClassOf ec:EurocodeSpace .
+
+ec:SnowLoad a owl:Class ;
+    rdfs:label "Snow load"@en ;
+    dcterms:source "EN 1991-1-3:2003" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction ;
+    owl:disjointWith ec:ThermalAction .
 
 ec:StructuralSystem a owl:Class ;
     rdfs:label "Structural System"@en,
@@ -942,15 +969,7 @@ ec:MechanicalEffect a owl:Class ;
     rdfs:comment "Effect of actions in the form of forces, stresses, or strains in structural members."@en ;
     rdfs:subClassOf ec:EffectOfAction .
 
-ec:PartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Partial Factor"@en,
-        "Factor Parcial"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
-    rdfs:domain ec:Action ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "γ_f" ;
-    skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
+ec:PartialFactor skos:editorialNote "Partial factors account for various sources of uncertainty including statistical uncertainty, model uncertainty, and dimensional variations" .
 
 ec:ServiceabilityLimitState a owl:Class ;
     rdfs:label "Serviceability Limit State"@en,
@@ -966,6 +985,12 @@ ec:Stress a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
     rdfs:comment "Internal stress in structural members due to actions."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
+
+ec:ThermalAction a owl:Class ;
+    rdfs:label "Thermal action"@en ;
+    dcterms:source "EN 1991-1-5:2003" ;
+    rdfs:comment "."@en ;
+    rdfs:subClassOf ec:VariableAction .
 
 ec:TimeDependentEffect a owl:Class ;
     rdfs:label "Time-Dependent Effect"@en ;
@@ -1004,6 +1029,15 @@ ec:InternalForce a owl:Class ;
     rdfs:comment "Effect of actions in the form of internal forces in structural members."@en ;
     rdfs:subClassOf ec:MechanicalEffect .
 
+ec:PermanentAction a owl:Class ;
+    rdfs:label "Permanent Action"@en,
+        "Acción Permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
+    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
+    rdfs:subClassOf ec:Action ;
+    skos:altLabel "G" ;
+    skos:example "self-weight, fixed equipment" .
+
 ec:SLSCombination a owl:Class ;
     rdfs:label "Serviceability Limit State Combination"@en,
         "Combinaciones ELS"@es ;
@@ -1026,15 +1060,6 @@ ec:LimitState a owl:Class ;
     skos:definition "State beyond which the structure no longer fulfils the relevant design criteria." ;
     skos:editorialNote "Limit states define critical conditions that must not be exceeded to ensure structural safety and serviceability" .
 
-ec:PermanentAction a owl:Class ;
-    rdfs:label "Permanent Action"@en,
-        "Acción Permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.3" ;
-    rdfs:comment "Action that is likely to act throughout a given reference period and for which the variation in magnitude with time is negligible, or for which the variation is always in the same direction (monotonic) until the action attains a certain limit value."@en ;
-    rdfs:subClassOf ec:Action ;
-    skos:altLabel "G" ;
-    skos:example "self-weight, fixed equipment" .
-
 ec:UltimateLimitState a owl:Class ;
     rdfs:label "Ultimate Limit State"@en,
         "Estado Límite Último"@es ;
@@ -1043,13 +1068,6 @@ ec:UltimateLimitState a owl:Class ;
     rdfs:subClassOf ec:LimitState ;
     owl:disjointWith ec:ServiceabilityLimitState ;
     skos:altLabel "ULS" .
-
-ec:CombinationOfActions a owl:Class ;
-    rdfs:label "Combination of Actions"@en,
-        "Combinación de Acciones"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.22" ;
-    rdfs:comment "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions."@en ;
-    skos:definition "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions." .
 
 ec:EffectOfAction a owl:Class ;
     rdfs:label "Effect of Action"@en,
@@ -1061,13 +1079,12 @@ ec:EffectOfAction a owl:Class ;
     skos:editorialNote "Effects of actions can be calculated through structural analysis and must be compared against resistance for verification" ;
     skos:example "internal force, moment, stress, strain, deflection, rotation" .
 
-ec:StructuralMember a owl:Class ;
-    rdfs:label "Structural Member"@en,
-        "Elemento Estructural"@es ;
-    dcterms:source "EN 1990:200, Section 1.5.1.7" ;
-    rdfs:comment "Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile."@en ;
-    rdfs:subClassOf bot:Element ;
-    skos:example "column, beam, slab, foundation pile" .
+ec:CombinationOfActions a owl:Class ;
+    rdfs:label "Combination of Actions"@en,
+        "Combinación de Acciones"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.22" ;
+    rdfs:comment "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions."@en ;
+    skos:definition "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions." .
 
 ec:DesignSituation a owl:Class ;
     rdfs:label "Design Situation"@en,
@@ -1075,14 +1092,13 @@ ec:DesignSituation a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.2.2" ;
     rdfs:comment "Sets of physical conditions representing the real conditions occurring during a certain time interval for which the design will demonstrate that relevant limit states are not exceeded."@en .
 
-ec:VariableAction a owl:Class ;
-    rdfs:label "Variable Action"@en,
-        "Acción Variable"@es ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.4" ;
-    rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
-    rdfs:subClassOf ec:Action ;
-    skos:altLabel "Q" ;
-    skos:example "imposed loads, wind, snow, thermal actions" .
+ec:StructuralMember a owl:Class ;
+    rdfs:label "Structural Member"@en,
+        "Elemento Estructural"@es ;
+    dcterms:source "EN 1990:200, Section 1.5.1.7" ;
+    rdfs:comment "Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile."@en ;
+    rdfs:subClassOf bot:Element ;
+    skos:example "column, beam, slab, foundation pile" .
 
 ec:EurocodeSpace a owl:Class ;
     rdfs:label "Eurocode Space"@en,
@@ -1098,12 +1114,21 @@ ec:Structure a owl:Class ;
     rdfs:comment "Organised combination of connected parts designed to carry loads and provide adequate rigidity."@en ;
     skos:example "Residential building, reatining wall, suspension bridge, underground tunnel" .
 
+ec:VariableAction a owl:Class ;
+    rdfs:label "Variable Action"@en,
+        "Acción Variable"@es ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.4" ;
+    rdfs:comment "Action for which the variation in magnitude with time is neither negligible nor monotonic."@en ;
+    rdfs:subClassOf ec:Action ;
+    skos:altLabel "Q" ;
+    skos:example "imposed loads, wind, snow, thermal actions" .
+
 ec:Action a owl:Class ;
     rdfs:label "Action"@en,
         "Acción"@es ;
     dcterms:source "EN 1990:2002, Section 1.5.3.1" ;
     rdfs:comment "Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action)."@en ;
     skos:altLabel "F" ;
-    skos:definition "Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action)." ;
+    skos:definition "Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action). The value of the action is a characteristic value." ;
     skos:example "dead load, imopsed load, wind load, thermal action" .
 
