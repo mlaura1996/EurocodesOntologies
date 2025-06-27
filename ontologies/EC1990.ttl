@@ -44,14 +44,6 @@ ec:AccessibleRoofs a owl:Class ;
     rdfs:subClassOf ec:EurocodeSpace ;
     skos:example "Roofs used as terraces, gardens, or other occupied spaces" .
 
-ec:AccidentalCombination a owl:Class ;
-    rdfs:label "Accidental Combination"@en,
-        "Combinación Accidental"@es ;
-    dcterms:source "EN 1990:2002, Section 6.4.3.3" ;
-    rdfs:comment "Combination of actions for accidental design situations."@en ;
-    rdfs:subClassOf ec:ULSCombination ;
-    skos:scopeNote "Used for accidental design situations in ULS verifications" .
-
 ec:AgriculturalStructure a owl:Class ;
     rdfs:label "Agricultural Structure"@en,
         "."@es ;
@@ -122,6 +114,8 @@ ec:CharacteristicCombination a owl:Class ;
     dcterms:source "EN 1990:2002, Section 6.5.3(2)a" ;
     rdfs:comment "Serviceability combination normally used for irreversible limit states."@en ;
     rdfs:subClassOf ec:SLSCombination ;
+    owl:disjointWith ec:FrequentCombination,
+        ec:QuasiPermanentCombination ;
     skos:scopeNote "Used for irreversible serviceability limit state verifications" .
 
 ec:CivilEngineeringStructure a owl:Class ;
@@ -255,20 +249,14 @@ ec:FixedAction a owl:Class ;
     owl:disjointWith ec:FreeAction ;
     skos:example "Stored goods in a defined storage area with no alternative placement" .
 
-ec:FrequentCombination a owl:Class ;
-    rdfs:label "Frequent Combination"@en,
-        "Combinación Frecuente"@es ;
-    dcterms:source "EN 1990:2002, Section 6.5.3(2)b" ;
-    rdfs:comment "Serviceability combination normally used for reversible limit states."@en ;
-    rdfs:subClassOf ec:SLSCombination ;
-    skos:scopeNote "Used for reversible serviceability limit state verifications" .
-
 ec:FundamentalCombination a owl:Class ;
     rdfs:label "Fundamental Combination"@en,
         "Combinación Fundamental"@es ;
     dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
     rdfs:comment "Combination of actions for persistent or transient design situations."@en ;
     rdfs:subClassOf ec:ULSCombination ;
+    owl:disjointWith ec:AccidentalCombination,
+        ec:SeismicCombination ;
     skos:scopeNote "Used for persistent and transient design situations in ULS verifications" .
 
 ec:GEO a owl:NamedIndividual,
@@ -403,14 +391,6 @@ ec:PrincipalStress a owl:Class ;
     rdfs:comment "Maximum or minimum normal stress at a point."@en ;
     rdfs:subClassOf ec:Stress .
 
-ec:QuasiPermanentCombination a owl:Class ;
-    rdfs:label "Quasi-Permanent Combination"@en,
-        "Combinación Cuasi-permanente"@es ;
-    dcterms:source "EN 1990:2002, Section 6.5.3(2)c" ;
-    rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
-    rdfs:subClassOf ec:SLSCombination ;
-    skos:scopeNote "Used for long-term effects and appearance considerations" .
-
 ec:QuasiStaticAction a owl:Class ;
     rdfs:label "Quasi-Static Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.13" ;
@@ -482,14 +462,6 @@ ec:SeismicAction a owl:Class ;
     rdfs:comment "Action that arises due to earthquake ground motions."@en ;
     rdfs:subClassOf ec:AccidentalAction ;
     skos:altLabel "A_E" .
-
-ec:SeismicCombination a owl:Class ;
-    rdfs:label "Seismic Combination"@en,
-        "Combinación Sísmica"@es ;
-    dcterms:source "EN 1990:2002, Section 6.4.3.4" ;
-    rdfs:comment "Combination of actions for seismic design situations."@en ;
-    rdfs:subClassOf ec:ULSCombination ;
-    skos:scopeNote "Used for seismic design situations in ULS verifications" .
 
 ec:SeismicDesignSituation a owl:NamedIndividual,
         ec:DesignSituation ;
@@ -682,15 +654,6 @@ ec:hasMaterialProperty a owl:ObjectProperty ;
     rdfs:domain ec:Material ;
     rdfs:range ec:MaterialProperty .
 
-ec:hasPartialFactor a owl:DatatypeProperty ;
-    rdfs:label "Partial Factor"@en,
-        "Factor Parcial"@es ;
-    dcterms:source "EN 1990:2002, Section 6.3.1" ;
-    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
-    rdfs:domain ec:Action ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "γ_f" .
-
 ec:hasPermanentActionPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Permanent Action Partial Factor"@en,
         "Factor Parcial de Acción Permanente"@es ;
@@ -698,7 +661,7 @@ ec:hasPermanentActionPartialFactor a owl:DatatypeProperty ;
     rdfs:comment "Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations."@en ;
     rdfs:domain ec:PermanentAction ;
     rdfs:range xsd:decimal ;
-    rdfs:subPropertyOf ec:PartialFactor ;
+    rdfs:subPropertyOf ec:hasPartialFactor ;
     skos:altLabel "γ_G" .
 
 ec:hasQuasiPermanentFactor a owl:DatatypeProperty ;
@@ -852,6 +815,15 @@ ec:IndirectAction a owl:Class ;
     rdfs:comment "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes."@en ;
     rdfs:subClassOf ec:Action .
 
+ec:QuasiPermanentCombination a owl:Class ;
+    rdfs:label "Quasi-Permanent Combination"@en,
+        "Combinación Cuasi-permanente"@es ;
+    dcterms:source "EN 1990:2002, Section 6.5.3(2)c" ;
+    rdfs:comment "Serviceability combination normally used for long-term effects and the appearance of the structure."@en ;
+    rdfs:subClassOf ec:SLSCombination ;
+    owl:disjointWith ec:FrequentCombination ;
+    skos:scopeNote "Used for long-term effects and appearance considerations" .
+
 ec:RepresentativeAction a owl:Class ;
     rdfs:label "Representative Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.20" ;
@@ -866,11 +838,37 @@ ec:Resistance a owl:Class ;
     skos:altLabel "R" ;
     skos:example "bending resistance, buckling resistance, tension resistance" .
 
+ec:SeismicCombination a owl:Class ;
+    rdfs:label "Seismic Combination"@en,
+        "Combinación Sísmica"@es ;
+    dcterms:source "EN 1990:2002, Section 6.4.3.4" ;
+    rdfs:comment "Combination of actions for seismic design situations."@en ;
+    rdfs:subClassOf ec:ULSCombination ;
+    owl:disjointWith ec:AccidentalCombination ;
+    skos:scopeNote "Used for seismic design situations in ULS verifications" .
+
 ec:UnfavourableAction a owl:Class ;
     rdfs:label "UnfavourableAction Action"@en ;
     dcterms:source "EN 1990:2002, Section 6.3.2(3)P" ;
     rdfs:comment "An action that increases the effect of other actions on a structure, or otherwise reduces structural safety."@en ;
     rdfs:subClassOf ec:Action .
+
+ec:hasPartialFactor a owl:DatatypeProperty ;
+    rdfs:label "Partial Factor"@en,
+        "Factor Parcial"@es ;
+    dcterms:source "EN 1990:2002, Section 6.3.1" ;
+    rdfs:comment "Safety factor applied to actions or material properties to account for uncertainties."@en ;
+    rdfs:domain ec:Action ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "γ_f" .
+
+ec:AccidentalCombination a owl:Class ;
+    rdfs:label "Accidental Combination"@en,
+        "Combinación Accidental"@es ;
+    dcterms:source "EN 1990:2002, Section 6.4.3.3" ;
+    rdfs:comment "Combination of actions for accidental design situations."@en ;
+    rdfs:subClassOf ec:ULSCombination ;
+    skos:scopeNote "Used for accidental design situations in ULS verifications" .
 
 ec:DynamicAction a owl:Class ;
     rdfs:label "Dynamic Action"@en ;
@@ -882,6 +880,14 @@ ec:DynamicEffect a owl:Class ;
     rdfs:label "Dynamic Effect"@en ;
     rdfs:comment "Effect of actions involving dynamic response, acceleration, or vibration."@en ;
     rdfs:subClassOf ec:EffectOfAction .
+
+ec:FrequentCombination a owl:Class ;
+    rdfs:label "Frequent Combination"@en,
+        "Combinación Frecuente"@es ;
+    dcterms:source "EN 1990:2002, Section 6.5.3(2)b" ;
+    rdfs:comment "Serviceability combination normally used for reversible limit states."@en ;
+    rdfs:subClassOf ec:SLSCombination ;
+    skos:scopeNote "Used for reversible serviceability limit state verifications" .
 
 ec:GeometricalProperty a owl:Class ;
     rdfs:label "Geometrical Data"@en,

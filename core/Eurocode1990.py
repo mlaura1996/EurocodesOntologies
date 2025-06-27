@@ -1225,6 +1225,16 @@ g.add((EC1990['StaticAction'], OWL.disjointWith, EC1990.DynamicAction))
 # ULS and SLS combinations are mutually exclusive
 g.add((EC1990['ULSCombination'], OWL.disjointWith, EC1990.SLSCombination))
 
+# All ULS combinations are mutually exclusive
+g.add((EC1990['FundamentalCombination'], OWL.disjointWith, EC1990.SeismicCombination))
+g.add((EC1990['FundamentalCombination'], OWL.disjointWith, EC1990.AccidentalCombination))
+g.add((EC1990['SeismicCombination'], OWL.disjointWith, EC1990.AccidentalCombination))
+
+# All SLS combinations are mutually exclusive
+g.add((EC1990['CharacteristicCombination'], OWL.disjointWith, EC1990.FrequentCombination))
+g.add((EC1990['CharacteristicCombination'], OWL.disjointWith, EC1990.QuasiPermanentCombination))
+g.add((EC1990['QuasiPermanentCombination'], OWL.disjointWith, EC1990.FrequentCombination))
+
 # Effect categories are mutually exclusive where appropriate
 g.add((EC1990['LinearDeformation'], OWL.disjointWith, EC1990.AngularDeformation))
 g.add((EC1990['LinearDeformation'], OWL.disjointWith, EC1990.VolumetricDeformation))
