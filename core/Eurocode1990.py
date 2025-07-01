@@ -20,6 +20,9 @@ g = Graph()
 EC1990 = Namespace(ref)
 BOT = Namespace('https://w3id.org/bot#')
 CC = Namespace('http://creativecommons.org/ns#')
+QUDT = Namespace('http://qudt.org/3.1.2/schema/qudt/')
+UNIT = Namespace('http://qudt.org/3.1.2/vocab/unit/')
+QUANTITYKIND = Namespace('http://qudt.org/3.1.2/vocab/quantitykind/')
 
 # Bind prefixes
 g.bind("ec", EC1990)
@@ -30,6 +33,9 @@ g.bind('xsd', XSD)
 g.bind('skos', SKOS)
 g.bind('bot', BOT)
 g.bind('cc', CC)
+g.bind('qudt', QUDT)
+g.bind('unit', UNIT)
+g.bind('quantitykind',QUANTITYKIND)
 
 # Add improved ontology header triples
 g.add((ref, RDF.type, OWL.Ontology))
@@ -91,17 +97,17 @@ g.add((EC1990['StructuralMember'], SKOS.definition, Literal('Physically distingu
 g.add((EC1990['StructuralMember'], DCTERMS.source, Literal('EN 1990:200, Section 1.5.1.7')))
 g.add((EC1990['StructuralMember'], SKOS.example, Literal('column, beam, slab, foundation pile')))
 
-g.add((EC1990['EurocodeSpace'], RDF.type, OWL.Class))
-g.add((EC1990['EurocodeSpace'], RDFS.subClassOf, BOT.Space))
-g.add((EC1990['EurocodeSpace'], RDFS.label, Literal('Eurocode Space', lang='en')))
-g.add((EC1990['EurocodeSpace'], RDFS.comment, Literal('A space classified according to EN 1991-1-1 usage categories', lang='en')))
-g.add((EC1990['EurocodeSpace'], SKOS.definition, Literal('A space classified according to EN 1991-1-1 usage categories')))
-g.add((EC1990['EurocodeSpace'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
+g.add((EC1990['EurocodeZone'], RDF.type, OWL.Class))
+g.add((EC1990['EurocodeZone'], RDFS.subClassOf, BOT.Zone))
+g.add((EC1990['EurocodeZone'], RDFS.label, Literal('Eurocode Zone', lang='en')))
+g.add((EC1990['EurocodeZone'], RDFS.comment, Literal('A space classified according to EN 1991-1-1 usage categories', lang='en')))
+g.add((EC1990['EurocodeZone'], SKOS.definition, Literal('A space classified according to EN 1991-1-1 usage categories')))
+g.add((EC1990['EurocodeZone'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
 
 # Eurocode-specified categories of areas by use
 # Category A - Domestic and Residential
 g.add((EC1990['Residential'], RDF.type, OWL.Class))
-g.add((EC1990['Residential'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['Residential'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['Residential'], RDFS.label, Literal('Category A - Domestic and Residential', lang='en')))
 g.add((EC1990['Residential'], RDFS.comment, Literal('Area for domestic and residential activities', lang='en')))
 g.add((EC1990['Residential'], SKOS.definition, Literal('Area for domestic and residential activities')))
@@ -110,7 +116,7 @@ g.add((EC1990['Residential'], SKOS.example, Literal('rooms in residential buildi
 
 # Category B - Office Areas
 g.add((EC1990['OfficeArea'], RDF.type, OWL.Class))
-g.add((EC1990['OfficeArea'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['OfficeArea'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['OfficeArea'], RDFS.label, Literal('Category B - Office Areas', lang='en')))
 g.add((EC1990['OfficeArea'], RDFS.comment, Literal('Office area', lang='en')))
 g.add((EC1990['OfficeArea'], SKOS.definition, Literal('Office area')))
@@ -119,7 +125,7 @@ g.add((EC1990['OfficeArea'], SKOS.example, Literal('General office spaces')))
 
 # Category C - Congregation Areas (with subcategories)
 g.add((EC1990['CongregationArea'], RDF.type, OWL.Class))
-g.add((EC1990['CongregationArea'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['CongregationArea'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['CongregationArea'], RDFS.label, Literal('Category C - Congregation Areas', lang='en')))
 g.add((EC1990['CongregationArea'], RDFS.comment, Literal('Area where people may congregate (except areas under category A, B, and D)', lang='en')))
 g.add((EC1990['CongregationArea'], SKOS.definition, Literal('Area where people may congregate (except areas under category A, B, and D)')))
@@ -172,7 +178,7 @@ g.add((EC1990['LargeCrowdsAreas'], SKOS.example, Literal('buildings for public e
 
 # Category D - Shopping Areas
 g.add((EC1990['ShoppingAreas'], RDF.type, OWL.Class))
-g.add((EC1990['ShoppingAreas'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['ShoppingAreas'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['ShoppingAreas'], RDFS.label, Literal('Category D - Shopping Areas', lang='en')))
 g.add((EC1990['ShoppingAreas'], RDFS.comment, Literal('Shopping area', lang='en')))
 g.add((EC1990['ShoppingAreas'], SKOS.definition, Literal('Shopping area')))
@@ -198,7 +204,7 @@ g.add((EC1990['DepartmentStore'], SKOS.example, Literal('department stores')))
 
 # Category E - Storage and Industrial
 g.add((EC1990['IndustrialandStorage'], RDF.type, OWL.Class))
-g.add((EC1990['IndustrialandStorage'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['IndustrialandStorage'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['IndustrialandStorage'], RDFS.label, Literal('Category E - Storage and Industrial', lang='en')))
 g.add((EC1990['IndustrialandStorage'], RDFS.comment, Literal('Storage and industrial area', lang='en')))
 g.add((EC1990['IndustrialandStorage'], SKOS.definition, Literal('Storage and industrial area')))
@@ -224,7 +230,7 @@ g.add((EC1990['IndustrialUse'], SKOS.example, Literal('industrial facilities: pl
 
 # Category F - Light Vehicle Traffic
 g.add((EC1990['LightVehicleTraffic'], RDF.type, OWL.Class))
-g.add((EC1990['LightVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['LightVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['LightVehicleTraffic'], RDFS.label, Literal('Category F - Light Vehicle Traffic', lang='en')))
 g.add((EC1990['LightVehicleTraffic'], RDFS.comment, Literal('Traffic and parking area for light vehicles (≤ 30 kN gross vehicle weight and ≤ 8 seats not including driver)', lang='en')))
 g.add((EC1990['LightVehicleTraffic'], SKOS.definition, Literal('Traffic and parking area for light vehicles (≤ 30 kN gross vehicle weight and ≤ 8 seats not including driver)')))
@@ -233,7 +239,7 @@ g.add((EC1990['LightVehicleTraffic'], SKOS.example, Literal('garages, parking ar
 
 # Category G - Medium Vehicle Traffic
 g.add((EC1990['MediumVehicleTraffic'], RDF.type, OWL.Class))
-g.add((EC1990['MediumVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['MediumVehicleTraffic'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['MediumVehicleTraffic'], RDFS.label, Literal('Category G - Medium Vehicle Traffic', lang='en')))
 g.add((EC1990['MediumVehicleTraffic'], RDFS.comment, Literal('Traffic and parking area for medium vehicles (>30 kN, ≤ 160 kN gross vehicle weight, on 2 axles)', lang='en')))
 g.add((EC1990['MediumVehicleTraffic'], SKOS.definition, Literal('Traffic and parking area for medium vehicles (>30 kN, ≤ 160 kN gross vehicle weight, on 2 axles)')))
@@ -242,7 +248,7 @@ g.add((EC1990['MediumVehicleTraffic'], SKOS.example, Literal('access routes, del
 
 # Category H - Roofs
 g.add((EC1990['Roof'], RDF.type, OWL.Class))
-g.add((EC1990['Roof'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['Roof'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['Roof'], RDFS.label, Literal('Category H - Roofs', lang='en')))
 g.add((EC1990['Roof'], RDFS.comment, Literal('Roof not accessible except for normal maintenance and repair', lang='en')))
 g.add((EC1990['Roof'], SKOS.definition, Literal('Roof not accessible except for normal maintenance and repair')))
@@ -251,7 +257,7 @@ g.add((EC1990['Roof'], SKOS.example, Literal('roofs accessible only for maintena
 
 # Category I - Accessible Roofs
 g.add((EC1990['AccessibleRoofs'], RDF.type, OWL.Class))
-g.add((EC1990['AccessibleRoofs'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['AccessibleRoofs'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['AccessibleRoofs'], RDFS.label, Literal('Category I - Accessible Roofs', lang='en')))
 g.add((EC1990['AccessibleRoofs'], RDFS.comment, Literal('Roof accessible with occupancy according to categories A to G', lang='en')))
 g.add((EC1990['AccessibleRoofs'], SKOS.definition, Literal('Roof accessible with occupancy according to categories A to G')))
@@ -260,7 +266,7 @@ g.add((EC1990['AccessibleRoofs'], SKOS.example, Literal('Roof used as terraces, 
 
 # Category K - Helicopter Landing Areas
 g.add((EC1990['HelicopterLandingAreas'], RDF.type, OWL.Class))
-g.add((EC1990['HelicopterLandingAreas'], RDFS.subClassOf, EC1990['EurocodeSpace']))
+g.add((EC1990['HelicopterLandingAreas'], RDFS.subClassOf, EC1990['EurocodeZone']))
 g.add((EC1990['HelicopterLandingAreas'], RDFS.label, Literal('Category K - Helicopter Landing Areas', lang='en')))
 g.add((EC1990['HelicopterLandingAreas'], RDFS.comment, Literal('Roof accessible for special services, such as helicopter landing areas', lang='en')))
 g.add((EC1990['HelicopterLandingAreas'], SKOS.definition, Literal('Roof accessible for special services, such as helicopter landing areas')))
@@ -409,19 +415,19 @@ g.add((EC1990['HYD'], SKOS.definition, Literal('Hydraulic heave, internal erosio
 g.add((EC1990['HYD'], DCTERMS.source, Literal('EN 1990:2002/A1:2005, Section 6.4.1(1)P f)')))
 
 # SLS types
-g.add((EC1990['ReversibleServiceabilityLimitState'], RDF.type, OWL.NamedIndividual))
-g.add((EC1990['ReversibleServiceabilityLimitState'], RDF.type, EC1990.ServiceabilityLimitState))
-g.add((EC1990['ReversibleServiceabilityLimitState'], RDFS.label, Literal('Reversible Serviceability Limit State', lang='en')))
-g.add((EC1990['ReversibleServiceabilityLimitState'], RDFS.comment, Literal('Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed.', lang='en')))
-g.add((EC1990['ReversibleServiceabilityLimitState'], SKOS.definition, Literal('Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed.')))
-g.add((EC1990['ReversibleServiceabilityLimitState'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 1.5.2.14.2')))
+g.add((EC1990['RSLS'], RDF.type, OWL.NamedIndividual))
+g.add((EC1990['RSLS'], RDF.type, EC1990.ServiceabilityLimitState))
+g.add((EC1990['RSLS'], RDFS.label, Literal('Reversible Serviceability Limit State', lang='en')))
+g.add((EC1990['RSLS'], RDFS.comment, Literal('Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed.', lang='en')))
+g.add((EC1990['RSLS'], SKOS.definition, Literal('Serviceability limit state where no consequences of actions exceeding the specified service requirements will remain when the actions are removed.')))
+g.add((EC1990['RSLS'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 1.5.2.14.2')))
 
-g.add((EC1990['IrreversibleServiceabilityLimitState'], RDF.type, OWL.NamedIndividual))
-g.add((EC1990['IrreversibleServiceabilityLimitState'], RDF.type, EC1990.ServiceabilityLimitState))
-g.add((EC1990['IrreversibleServiceabilityLimitState'], RDFS.label, Literal('Irreversible Serviceability Limit State', lang='en')))
-g.add((EC1990['IrreversibleServiceabilityLimitState'], RDFS.comment, Literal('Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed.', lang='en')))
-g.add((EC1990['IrreversibleServiceabilityLimitState'], SKOS.definition, Literal('Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed.')))
-g.add((EC1990['IrreversibleServiceabilityLimitState'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 1.5.2.14.1')))
+g.add((EC1990['ISLS'], RDF.type, OWL.NamedIndividual))
+g.add((EC1990['ISLS'], RDF.type, EC1990.ServiceabilityLimitState))
+g.add((EC1990['ISLS'], RDFS.label, Literal('Irreversible Serviceability Limit State', lang='en')))
+g.add((EC1990['ISLS'], RDFS.comment, Literal('Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed.', lang='en')))
+g.add((EC1990['ISLS'], SKOS.definition, Literal('Serviceability limit state where some consequences of actions exceeding the specified service requirements will remain when the actions are removed.')))
+g.add((EC1990['ISLS'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 1.5.2.14.1')))
 
 ##########################################################
 #                 DESIGN SITUATIONS                      #
@@ -496,6 +502,7 @@ g.add((EC1990['SeismicDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, 
 ##########################################################
 
 g.add((EC1990['Action'], RDF.type, OWL.Class))
+g.add((EC1990['Action'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['Action'], RDFS.label, Literal('Action', lang='en')))
 g.add((EC1990['Action'], RDFS.comment, Literal('Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action).', lang='en')))
 g.add((EC1990['Action'], SKOS.definition, Literal('Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action).')))
@@ -765,6 +772,7 @@ g.add((EC1990['QuasiPermanentCombination'], DCTERMS.source, Literal('EN 1990:200
 ##########################################################
 
 g.add((EC1990['EffectOfAction'], RDF.type, OWL.Class))
+g.add((EC1990['EffectOfAction'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['EffectOfAction'], RDFS.label, Literal('Effect of Action', lang='en')))
 g.add((EC1990['EffectOfAction'], RDFS.comment, Literal('Effect of actions on structural members (e.g. internal force, moment, stress, strain) or on the whole structure (e.g. deflection, rotation).', lang='en')))
 g.add((EC1990['EffectOfAction'], SKOS.definition, Literal('Effect of actions on structural members (e.g. internal force, moment, stress, strain) or on the whole structure (e.g. deflection, rotation).')))
@@ -984,6 +992,7 @@ g.add((EC1990['Concrete'], RDFS.comment, Literal('A composite material consistin
 g.add((EC1990['Concrete'], SKOS.definition, Literal('A composite material consisting of a mixture of cement, water, aggregates (coarse and fine), and, where appropriate, admixtures and additions, which develops its strength by hydration of the cement. ')))
 
 g.add((EC1990['MaterialProperty'], RDF.type, OWL.Class))
+g.add((EC1990['MaterialProperty'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['MaterialProperty'], RDFS.label, Literal('Material Property', lang='en')))
 g.add((EC1990['MaterialProperty'], RDFS.comment, Literal('Physical or mechanical property of construction materials.', lang='en')))
 g.add((EC1990['MaterialProperty'], SKOS.definition, Literal('Physical or mechanical property of construction materials.')))
@@ -992,11 +1001,17 @@ g.add((EC1990['MaterialProperty'], DCTERMS.source, Literal('EN 1990:2002, Sectio
 g.add((EC1990['Density'], RDF.type, OWL.Class))
 g.add((EC1990['Density'], RDFS.subClassOf, EC1990.MaterialProperty))
 g.add((EC1990['Density'], RDFS.label, Literal('Density', lang='en')))
-g.add((EC1990['Density'], RDFS.comment, Literal('Mass per unit volume of a material, expressed in kilograms per cubic metre.', lang='en')))
-g.add((EC1990['Density'], SKOS.definition, Literal('Mass per unit volume of a material, expressed in kilograms per cubic metre.')))
+g.add((EC1990['Density'], RDFS.comment, Literal('Mass per unit volume of a material.', lang='en')))
+g.add((EC1990['Density'], SKOS.definition, Literal('Mass per unit volume of a material.')))
 
+g.add((EC1990['CompressiveStrength'], RDF.type, OWL.Class))
+g.add((EC1990['CompressiveStrength'], RDFS.subClassOf, EC1990.MaterialProperty))
+g.add((EC1990['CompressiveStrength'], RDFS.label, Literal('Compressive Strength', lang='en')))
+g.add((EC1990['CompressiveStrength'], RDFS.comment, Literal('Compressive strenght of a material.', lang='en')))
+g.add((EC1990['CompressiveStrength'], SKOS.definition, Literal('Compressive Strength of a material.')))
 
 g.add((EC1990['GeometricalProperty'], RDF.type, OWL.Class))
+g.add((EC1990['GeometricalProperty'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['GeometricalProperty'], RDFS.label, Literal('Geometrical Data', lang='en')))
 g.add((EC1990['GeometricalProperty'], RDFS.comment, Literal('Geometrical properties and dimensions of structural elements.', lang='en')))
 g.add((EC1990['GeometricalProperty'], SKOS.definition, Literal('Geometrical properties and dimensions of structural elements.')))
@@ -1009,6 +1024,7 @@ g.add((EC1990['Thickness'], RDFS.comment, Literal('Dimension of a structural ele
 g.add((EC1990['Thickness'], SKOS.definition, Literal('Dimension of a structural element measured perpendicular to its plane or surface.')))
 
 g.add((EC1990['LimitStateValue'], RDF.type, OWL.Class))
+g.add((EC1990['LimitStateValue'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['LimitStateValue'], RDFS.label, Literal('Limit State Value', lang='en')))
 g.add((EC1990['LimitStateValue'], RDFS.comment, Literal('Design resistance or serviceability criterion used for verificatinon of a limit state.', lang='en')))
 g.add((EC1990['LimitStateValue'], SKOS.definition, Literal('Design resistance or serviceability criterion used for verificatinon of a limit state.')))
@@ -1038,8 +1054,89 @@ g.add((EC1990['LimitingServicabilityCriterion'], DCTERMS.source, Literal('EN 199
 g.add((EC1990['LimitingServicabilityCriterion'], SKOS.example, Literal('allowable deflection, allowable crack width')))
 
 ##########################################################
+#                        VALUES                          #
+##########################################################
+
+g.add((EC1990['RepresentativeValue'], RDF.type, OWL.Class))
+g.add((EC1990['RepresentativeValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['NominalValue'], RDF.type, OWL.Class))
+g.add((EC1990['NominalValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['CharacteristicValue'], RDF.type, OWL.Class))
+g.add((EC1990['CharacteristicValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['DesignValue'], RDF.type, OWL.Class))
+g.add((EC1990['DesignValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['MeanValue'], RDF.type, OWL.Class))
+g.add((EC1990['MeanValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['LowerValue'], RDF.type, OWL.Class))
+g.add((EC1990['LowerValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+g.add((EC1990['UpperValue'], RDF.type, OWL.Class))
+g.add((EC1990['UpperValue'], RDFS.subClassOf, QUDT.QuantityValue))
+
+##########################################################
 #                 OBJECT PROPERTIES                      #
 ##########################################################
+
+g.add((EC1990['representativeValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['representativeValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['representativeValue'], RDFS.label, Literal('representative value', lang='en')))
+g.add((EC1990['representativeValue'], RDFS.comment, Literal('Relates a Quantity  with its Representative Value.', lang='en')))
+g.add((EC1990['representativeValue'], SKOS.definition, Literal('Relates a Quantity  with its Representative Value.')))
+g.add((EC1990['representativeValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['representativeValue'], RDFS.range, EC1990.RepresentativeValue))
+
+g.add((EC1990['nominalValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['nominalValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['nominalValue'], RDFS.label, Literal('nominal value', lang='en')))
+g.add((EC1990['nominalValue'], RDFS.comment, Literal('Relates a Quantity  with its Nominal Value.', lang='en')))
+g.add((EC1990['nominalValue'], SKOS.definition, Literal('Relates a Quantity  with its Nominal Value.')))
+g.add((EC1990['nominalValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['nominalValue'], RDFS.range, EC1990.NominalValue))
+
+g.add((EC1990['designValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['designValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['designValue'], RDFS.label, Literal('design value', lang='en')))
+g.add((EC1990['designValue'], RDFS.comment, Literal('Relates a Quantity  with its Design Value.', lang='en')))
+g.add((EC1990['designValue'], SKOS.definition, Literal('Relates a Quantity  with its Design Value.')))
+g.add((EC1990['designValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['designValue'], RDFS.range, EC1990.DesignValue))
+
+g.add((EC1990['characteristicValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['characteristicValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['characteristicValue'], RDFS.label, Literal('characteristic value', lang='en')))
+g.add((EC1990['characteristicValue'], RDFS.comment, Literal('Relates a Quantity  with its Characteristic Value.', lang='en')))
+g.add((EC1990['characteristicValue'], SKOS.definition, Literal('Relates a Quantity  with its Characteristic Value.')))
+g.add((EC1990['characteristicValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['characteristicValue'], RDFS.range, EC1990.CharacteristicValue))
+
+g.add((EC1990['meanValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['meanValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['meanValue'], RDFS.label, Literal('mean value', lang='en')))
+g.add((EC1990['meanValue'], RDFS.comment, Literal('Relates a Quantity  with its Mean Value.', lang='en')))
+g.add((EC1990['meanValue'], SKOS.definition, Literal('Relates a Quantity  with its Mean Value.')))
+g.add((EC1990['meanValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['meanValue'], RDFS.range, EC1990.MeanValue))
+
+g.add((EC1990['lowerValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['lowerValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['lowerValue'], RDFS.label, Literal('lower value', lang='en')))
+g.add((EC1990['lowerValue'], RDFS.comment, Literal('Relates a Quantity  with its Lower Value.', lang='en')))
+g.add((EC1990['lowerValue'], SKOS.definition, Literal('Relates a Quantity  with its Lower Value.')))
+g.add((EC1990['lowerValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['lowerValue'], RDFS.range, EC1990.LowerValue))
+
+g.add((EC1990['upperValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['upperValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['upperValue'], RDFS.label, Literal('upper value', lang='en')))
+g.add((EC1990['upperValue'], RDFS.comment, Literal('Relates a Quantity  with its Upper Value.', lang='en')))
+g.add((EC1990['upperValue'], SKOS.definition, Literal('Relates a Quantity  with its Upper Value.')))
+g.add((EC1990['upperValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['upperValue'], RDFS.range, EC1990.UpperValue))
 
 g.add((EC1990['containsAction'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['containsAction'], RDFS.label, Literal('contains action', lang='en')))
@@ -1104,6 +1201,20 @@ g.add((EC1990['hasLimitStateValue'], SKOS.definition, Literal('Relates a structu
 g.add((EC1990['hasLimitStateValue'], RDFS.domain, EC1990.StructuralMember))
 g.add((EC1990['hasLimitStateValue'], RDFS.range, EC1990.LimitStateValue))
 
+g.add((EC1990['forLimitState'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['forLimitState'], RDFS.label, Literal('for limit state', lang='en')))
+g.add((EC1990['forLimitState'], RDFS.comment, Literal('Relates a limit state value with its corresponding limit state.', lang='en')))
+g.add((EC1990['forLimitState'], SKOS.definition, Literal('Relates a limit state value with its corresponding limit state.')))
+g.add((EC1990['forLimitState'], RDFS.domain, EC1990.LimitStateValue))
+g.add((EC1990['forLimitState'], RDFS.range, EC1990.LimitState))
+
+g.add((EC1990['verifiedAgainstEffect'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['verifiedAgainstEffect'], RDFS.label, Literal('has limit state value', lang='en')))
+g.add((EC1990['verifiedAgainstEffect'], RDFS.comment, Literal('Relates a limitstate value with the Action Effect that needs to be verified against.', lang='en')))
+g.add((EC1990['verifiedAgainstEffect'], SKOS.definition, Literal('Relates a limitstate value with the Action Effect that needs to be verified against.')))
+g.add((EC1990['verifiedAgainstEffect'], RDFS.domain, EC1990.LimitStateValue))
+g.add((EC1990['verifiedAgainstEffect'], RDFS.range, EC1990.EffectOfAction))
+
 g.add((EC1990['isMadeOf'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['isMadeOf'], RDFS.label, Literal('is made of', lang='en')))
 g.add((EC1990['isMadeOf'], RDFS.comment, Literal('Relates a structural member to the material which it is made of.', lang='en')))
@@ -1156,19 +1267,19 @@ g.add((EC1990['hasStructure'], SKOS.definition, Literal('Relates a contrution wo
 g.add((EC1990['hasStructure'], RDFS.domain, EC1990.ConstructionWork))
 g.add((EC1990['hasStructure'], RDFS.range, EC1990.Structure))
 
-g.add((EC1990['belongsTo'], RDF.type, OWL.ObjectProperty))
+'''g.add((EC1990['belongsTo'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['belongsTo'], RDFS.label, Literal('belongs to', lang='en')))
 g.add((EC1990['belongsTo'], RDFS.comment, Literal('Relates a structural element with the zone of which it is a part.', lang='en')))
 g.add((EC1990['belongsTo'], SKOS.definition, Literal('Relates a structural element with the zone of which it is a part.')))
 g.add((EC1990['belongsTo'], RDFS.domain, EC1990.StructuralMember))
-g.add((EC1990['belongsTo'], RDFS.range, BOT.Zone))
+g.add((EC1990['belongsTo'], RDFS.range, BOT.Zone))''' #Not needed. Already defined in BOT 
 
-g.add((EC1990['isVerifiedUnder'], RDF.type, OWL.ObjectProperty))
+'''g.add((EC1990['isVerifiedUnder'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['isVerifiedUnder'], RDFS.label, Literal('is verified under', lang='en')))
 g.add((EC1990['isVerifiedUnder'], RDFS.comment, Literal('Relates a structural element with the combination of action used for verifcation of elevant Limit State.', lang='en')))
 g.add((EC1990['isVerifiedUnder'], SKOS.definition, Literal('Relates a structural element with the combination of action used for verifcation of elevant Limit State.')))
 g.add((EC1990['isVerifiedUnder'], RDFS.domain, EC1990.StructuralMember))
-g.add((EC1990['isVerifiedUnder'], RDFS.range, EC1990.CombinationOfActions))
+g.add((EC1990['isVerifiedUnder'], RDFS.range, EC1990.CombinationOfActions))''' # Redundant
 
 ##########################################################
 #                 DATA TYPE PROPERTIES                   #
@@ -1188,10 +1299,10 @@ g.add((EC1990['hasPartialFactor'], RDFS.comment, Literal('Safety factor applied 
 g.add((EC1990['hasPartialFactor'], SKOS.definition, Literal('Safety factor applied to actions or material properties to account for uncertainties.')))
 g.add((EC1990['hasPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
 g.add((EC1990['hasPartialFactor'], SKOS.altLabel, Literal('γ_f')))
-g.add((EC1990['hasPartialFactor'], RDFS.domain, EC1990.Action))
+#g.add((EC1990['hasPartialFactor'], RDFS.domain, EC1990.Action))
 g.add((EC1990['hasPartialFactor'], RDFS.range, XSD.decimal))
 
-g.add((EC1990['hasPermanentActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
+'''g.add((EC1990['hasPermanentActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.label, Literal('Permanent Action Partial Factor', lang='en')))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.comment, Literal('Partial factor applied to permanent actions, also accounting for model uncertainties and dimensional variations.', lang='en')))
@@ -1199,53 +1310,53 @@ g.add((EC1990['hasPermanentActionPartialFactor'], SKOS.definition, Literal('Part
 g.add((EC1990['hasPermanentActionPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.domain, EC1990.PermanentAction))
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['hasPermanentActionPartialFactor'], SKOS.altLabel, Literal('γ_G')))
+g.add((EC1990['hasPermanentActionPartialFactor'], SKOS.altLabel, Literal('γ_G')))'''
 
-g.add((EC1990['hasReductionFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['hasReductionFactor'], RDFS.label, Literal('has reduction factor', lang='en')))
-g.add((EC1990['hasReductionFactor'], RDFS.comment, Literal('Reduction factor for unfavourable permanent action.', lang='en')))
-g.add((EC1990['hasReductionFactor'], SKOS.definition, Literal('Reduction factor for unfavourable permanent action.')))
-g.add((EC1990['hasReductionFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.4.3.2')))
-g.add((EC1990['hasReductionFactor'], RDFS.domain, EC1990.PermanentAction))
-g.add((EC1990['hasReductionFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['hasReductionFactor'], SKOS.altLabel, Literal('ξ')))
+g.add((EC1990['reductionFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['reductionFactor'], RDFS.label, Literal('has reduction factor', lang='en')))
+g.add((EC1990['reductionFactor'], RDFS.comment, Literal('Reduction factor for unfavourable permanent action.', lang='en')))
+g.add((EC1990['reductionFactor'], SKOS.definition, Literal('Reduction factor for unfavourable permanent action.')))
+g.add((EC1990['reductionFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.4.3.2')))
+#g.add((EC1990['reductionFactor'], RDFS.domain, EC1990.PermanentAction))
+g.add((EC1990['reductionFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['reductionFactor'], SKOS.altLabel, Literal('ξ')))
 
-g.add((EC1990['hasVariableActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['hasVariableActionPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
-g.add((EC1990['hasVariableActionPartialFactor'], RDFS.label, Literal('has variable action partial factor', lang='en')))
-g.add((EC1990['hasVariableActionPartialFactor'], RDFS.comment, Literal('Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations.', lang='en')))
-g.add((EC1990['hasVariableActionPartialFactor'], SKOS.definition, Literal('Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations.')))
-g.add((EC1990['hasVariableActionPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
-g.add((EC1990['hasVariableActionPartialFactor'], RDFS.domain, EC1990.VariableAction))
-g.add((EC1990['hasVariableActionPartialFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['hasVariableActionPartialFactor'], SKOS.altLabel, Literal('γ_Q')))
+'''g.add((EC1990['variableActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['variableActionPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
+g.add((EC1990['variableActionPartialFactor'], RDFS.label, Literal('has variable action partial factor', lang='en')))
+g.add((EC1990['variableActionPartialFactor'], RDFS.comment, Literal('Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations.', lang='en')))
+g.add((EC1990['variableActionPartialFactor'], SKOS.definition, Literal('Partial factor for variable actions, which takes account of the possibility of unfavourable deviations of the action values from the representative values, also accounting for model uncertainties and dimensional variations.')))
+g.add((EC1990['variableActionPartialFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.3.1')))
+g.add((EC1990['variableActionPartialFactor'], RDFS.domain, EC1990.VariableAction))
+g.add((EC1990['variableActionPartialFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['variableActionPartialFactor'], SKOS.altLabel, Literal('γ_Q')))
 
-g.add((EC1990['hasMaterialPartialFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['hasMaterialPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
-g.add((EC1990['hasMaterialPartialFactor'], RDFS.label, Literal('has material partial factor', lang='en')))
-g.add((EC1990['hasMaterialPartialFactor'], RDFS.comment, Literal('Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations.', lang='en')))
-g.add((EC1990['hasMaterialPartialFactor'], SKOS.definition, Literal('Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations.')))
-g.add((EC1990['hasMaterialPartialFactor'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 6.3.3')))
-g.add((EC1990['hasMaterialPartialFactor'], RDFS.domain, EC1990.MaterialProperty))
-g.add((EC1990['hasMaterialPartialFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['hasMaterialPartialFactor'], SKOS.altLabel, Literal('γ_M')))
+g.add((EC1990['materialPartialFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['materialPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
+g.add((EC1990['materialPartialFactor'], RDFS.label, Literal('has material partial factor', lang='en')))
+g.add((EC1990['materialPartialFactor'], RDFS.comment, Literal('Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations.', lang='en')))
+g.add((EC1990['materialPartialFactor'], SKOS.definition, Literal('Partial factor for material properties taking account of the possibility of an unfavourable deviation of a material property from its characteristic value, also accounting for model uncertainties and dimensional variations.')))
+g.add((EC1990['materialPartialFactor'], DCTERMS.source, Literal('UNE-EN 1990:2019, Section 6.3.3')))
+g.add((EC1990['materialPartialFactor'], RDFS.domain, EC1990.MaterialProperty))
+g.add((EC1990['materialPartialFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['materialPartialFactor'], SKOS.altLabel, Literal('γ_M')))'''
 
 #Combination Factors
-g.add((EC1990['hasCombinationFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['hasCombinationFactor'], RDFS.label, Literal('has combination factor', lang='en')))
-g.add((EC1990['hasCombinationFactor'], RDFS.comment, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.', lang='en')))
-g.add((EC1990['hasCombinationFactor'], SKOS.definition, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.')))
-g.add((EC1990['hasCombinationFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.16')))
-g.add((EC1990['hasCombinationFactor'], RDFS.domain, EC1990.VariableAction))
-g.add((EC1990['hasCombinationFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['hasCombinationFactor'], SKOS.altLabel, Literal('ψ_0')))
+g.add((EC1990['combinationFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['combinationFactor'], RDFS.label, Literal('has combination factor', lang='en')))
+g.add((EC1990['combinationFactor'], RDFS.comment, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.', lang='en')))
+g.add((EC1990['combinationFactor'], SKOS.definition, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.')))
+g.add((EC1990['combinationFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.16')))
+#g.add((EC1990['hasCombinationFactor'], RDFS.domain, EC1990.VariableAction)) 
+g.add((EC1990['combinationFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['combinationFactor'], SKOS.altLabel, Literal('ψ_0')))
 
 g.add((EC1990['hasFrequentFactor'], RDF.type, OWL.DatatypeProperty))
 g.add((EC1990['hasFrequentFactor'], RDFS.label, Literal('has frequent factor', lang='en')))
 g.add((EC1990['hasFrequentFactor'], RDFS.comment, Literal('Factor for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value.', lang='en')))
 g.add((EC1990['hasFrequentFactor'], SKOS.definition, Literal('Factor for frequent value of a variable action, determined so that either the total time within the reference period during which it is exceeded is only a small given part of the reference period, or the frequency of it being exceeded is limited to a given value.')))
 g.add((EC1990['hasFrequentFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.17')))
-g.add((EC1990['hasFrequentFactor'], RDFS.domain, EC1990.VariableAction))
+#g.add((EC1990['hasFrequentFactor'], RDFS.domain, EC1990.VariableAction))
 g.add((EC1990['hasFrequentFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasFrequentFactor'], SKOS.altLabel, Literal('ψ_1')))
 
@@ -1254,7 +1365,7 @@ g.add((EC1990['hasQuasiPermanentFactor'], RDFS.label, Literal('has quasi-permane
 g.add((EC1990['hasQuasiPermanentFactor'], RDFS.comment, Literal('Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period.', lang='en')))
 g.add((EC1990['hasQuasiPermanentFactor'], SKOS.definition, Literal('Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period.')))
 g.add((EC1990['hasQuasiPermanentFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.18')))
-g.add((EC1990['hasQuasiPermanentFactor'], RDFS.domain, EC1990.VariableAction))
+#g.add((EC1990['hasQuasiPermanentFactor'], RDFS.domain, EC1990.VariableAction))
 g.add((EC1990['hasQuasiPermanentFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasQuasiPermanentFactor'], SKOS.altLabel, Literal('ψ_2')))
 
