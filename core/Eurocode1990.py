@@ -1312,14 +1312,14 @@ g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.domain, EC1990.PermanentA
 g.add((EC1990['hasPermanentActionPartialFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasPermanentActionPartialFactor'], SKOS.altLabel, Literal('γ_G')))'''
 
-g.add((EC1990['reductionFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['reductionFactor'], RDFS.label, Literal('has reduction factor', lang='en')))
-g.add((EC1990['reductionFactor'], RDFS.comment, Literal('Reduction factor for unfavourable permanent action.', lang='en')))
-g.add((EC1990['reductionFactor'], SKOS.definition, Literal('Reduction factor for unfavourable permanent action.')))
-g.add((EC1990['reductionFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.4.3.2')))
-#g.add((EC1990['reductionFactor'], RDFS.domain, EC1990.PermanentAction))
-g.add((EC1990['reductionFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['reductionFactor'], SKOS.altLabel, Literal('ξ')))
+g.add((EC1990['hasReductionFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['hasReductionFactor'], RDFS.label, Literal('has reduction factor', lang='en')))
+g.add((EC1990['hasReductionFactor'], RDFS.comment, Literal('Reduction factor for unfavourable permanent action.', lang='en')))
+g.add((EC1990['hasReductionFactor'], SKOS.definition, Literal('Reduction factor for unfavourable permanent action.')))
+g.add((EC1990['hasReductionFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 6.4.3.2')))
+#g.add((EC1990['hasReductionFactor'], RDFS.domain, EC1990.PermanentAction))
+g.add((EC1990['hasReductionFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['hasReductionFactor'], SKOS.altLabel, Literal('ξ')))
 
 '''g.add((EC1990['variableActionPartialFactor'], RDF.type, OWL.DatatypeProperty))
 g.add((EC1990['variableActionPartialFactor'], RDFS.subPropertyOf, EC1990.hasPartialFactor))
