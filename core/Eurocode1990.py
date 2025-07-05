@@ -1342,14 +1342,14 @@ g.add((EC1990['materialPartialFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['materialPartialFactor'], SKOS.altLabel, Literal('γ_M')))'''
 
 #Combination Factors
-g.add((EC1990['combinationFactor'], RDF.type, OWL.DatatypeProperty))
-g.add((EC1990['combinationFactor'], RDFS.label, Literal('has combination factor', lang='en')))
-g.add((EC1990['combinationFactor'], RDFS.comment, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.', lang='en')))
-g.add((EC1990['combinationFactor'], SKOS.definition, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.')))
-g.add((EC1990['combinationFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.16')))
+g.add((EC1990['hasCombinationFactor'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['hasCombinationFactor'], RDFS.label, Literal('has combination factor', lang='en')))
+g.add((EC1990['hasCombinationFactor'], RDFS.comment, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.', lang='en')))
+g.add((EC1990['hasCombinationFactor'], SKOS.definition, Literal('Factor for combination value of a variable action used in ultimate limit state verifications.')))
+g.add((EC1990['hasCombinationFactor'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.16')))
 #g.add((EC1990['hasCombinationFactor'], RDFS.domain, EC1990.VariableAction)) 
-g.add((EC1990['combinationFactor'], RDFS.range, XSD.decimal))
-g.add((EC1990['combinationFactor'], SKOS.altLabel, Literal('ψ_0')))
+g.add((EC1990['hasCombinationFactor'], RDFS.range, XSD.decimal))
+g.add((EC1990['hasCombinationFactor'], SKOS.altLabel, Literal('ψ_0')))
 
 g.add((EC1990['hasFrequentFactor'], RDF.type, OWL.DatatypeProperty))
 g.add((EC1990['hasFrequentFactor'], RDFS.label, Literal('has frequent factor', lang='en')))
