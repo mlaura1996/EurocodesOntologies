@@ -638,22 +638,6 @@ ec:causesEffect a owl:ObjectProperty ;
     rdfs:range ec:EffectOfAction ;
     skos:definition "Relates a combination of actions to the effects it causes in the structure." .
 
-ec:characteristicValue a owl:ObjectProperty ;
-    rdfs:label "characteristic value"@en ;
-    rdfs:comment "Relates a Quantity  with its Characteristic Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:CharacteristicValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Characteristic Value." .
-
-ec:combinationFactor a owl:DatatypeProperty ;
-    rdfs:label "has combination factor"@en ;
-    dcterms:source "EN 1990:2002, Section 1.5.3.16" ;
-    rdfs:comment "Factor for combination value of a variable action used in ultimate limit state verifications."@en ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "ψ_0" ;
-    skos:definition "Factor for combination value of a variable action used in ultimate limit state verifications." .
-
 ec:containsAction a owl:ObjectProperty ;
     rdfs:label "contains action"@en ;
     rdfs:comment "Relates a combination of actions to the individual actions it contains."@en ;
@@ -669,20 +653,36 @@ ec:containsStructuralMember a owl:ObjectProperty ;
     rdfs:subPropertyOf bot:hasElement ;
     skos:definition "Relates a a structural element with the structural syste." .
 
-ec:designValue a owl:ObjectProperty ;
-    rdfs:label "design value"@en ;
-    rdfs:comment "Relates a Quantity  with its Design Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:DesignValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Design Value." .
-
 ec:forLimitState a owl:ObjectProperty ;
     rdfs:label "for limit state"@en ;
     rdfs:comment "Relates a limit state value with its corresponding limit state."@en ;
     rdfs:domain ec:LimitStateValue ;
     rdfs:range ec:LimitState ;
     skos:definition "Relates a limit state value with its corresponding limit state." .
+
+ec:hasCharacteristicValue a owl:ObjectProperty ;
+    rdfs:label "has characteristic value"@en ;
+    rdfs:comment "Relates a Quantity  with its Characteristic Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:CharacteristicValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Characteristic Value." .
+
+ec:hasCombinationFactor a owl:DatatypeProperty ;
+    rdfs:label "has combination factor"@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.3.16" ;
+    rdfs:comment "Factor for combination value of a variable action used in ultimate limit state verifications."@en ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ψ_0" ;
+    skos:definition "Factor for combination value of a variable action used in ultimate limit state verifications." .
+
+ec:hasDesignValue a owl:ObjectProperty ;
+    rdfs:label "has design value"@en ;
+    rdfs:comment "Relates a Quantity  with its Design Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:DesignValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Design Value." .
 
 ec:hasDesignWorkingLife a owl:DatatypeProperty ;
     rdfs:label "has design working life"@en ;
@@ -720,12 +720,36 @@ ec:hasLimitStateValue a owl:ObjectProperty ;
     rdfs:range ec:LimitStateValue ;
     skos:definition "Relates a structural member to its capacity for the effect of action." .
 
+ec:hasLowerValue a owl:ObjectProperty ;
+    rdfs:label "has lower value"@en ;
+    rdfs:comment "Relates a Quantity  with its Lower Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:LowerValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Lower Value." .
+
 ec:hasMaterialProperty a owl:ObjectProperty ;
     rdfs:label "has Property"@en ;
     rdfs:comment "Relates a material with its properties."@en ;
     rdfs:domain ec:Material ;
     rdfs:range ec:MaterialProperty ;
     skos:definition "Relates a material with its properties." .
+
+ec:hasMeanValue a owl:ObjectProperty ;
+    rdfs:label "has mean value"@en ;
+    rdfs:comment "Relates a Quantity  with its Mean Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:MeanValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Mean Value." .
+
+ec:hasNominalValue a owl:ObjectProperty ;
+    rdfs:label "has nominal value"@en ;
+    rdfs:comment "Relates a Quantity  with its Nominal Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:NominalValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Nominal Value." .
 
 ec:hasPartialFactor a owl:DatatypeProperty ;
     rdfs:label "Partial Factor"@en ;
@@ -742,6 +766,22 @@ ec:hasQuasiPermanentFactor a owl:DatatypeProperty ;
     rdfs:range xsd:decimal ;
     skos:altLabel "ψ_2" ;
     skos:definition "Factor for quasi-permanent value of a variable action, determined so that the total period of time for which it will be exceeded is a large fraction of the reference period." .
+
+ec:hasReductionFactor a owl:DatatypeProperty ;
+    rdfs:label "has reduction factor"@en ;
+    dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
+    rdfs:comment "Reduction factor for unfavourable permanent action."@en ;
+    rdfs:range xsd:decimal ;
+    skos:altLabel "ξ" ;
+    skos:definition "Reduction factor for unfavourable permanent action." .
+
+ec:hasRepresentativeValue a owl:ObjectProperty ;
+    rdfs:label "has representative value"@en ;
+    rdfs:comment "Relates a Quantity  with its Representative Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:RepresentativeValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Representative Value." .
 
 ec:hasStructuralMember a owl:ObjectProperty ;
     rdfs:label "has structural member"@en ;
@@ -765,6 +805,14 @@ ec:hasSystem a owl:ObjectProperty ;
     rdfs:domain ec:Structure ;
     rdfs:range ec:StructuralSystem ;
     skos:definition "Relates a structure with its structural system." .
+
+ec:hasUpperValue a owl:ObjectProperty ;
+    rdfs:label "has upper value"@en ;
+    rdfs:comment "Relates a Quantity  with its Upper Value."@en ;
+    rdfs:domain qudt:Quantity ;
+    rdfs:range ec:UpperValue ;
+    rdfs:subPropertyOf qudt:quantityValue ;
+    skos:definition "Relates a Quantity  with its Upper Value." .
 
 ec:imposesCombination a owl:ObjectProperty ;
     rdfs:label "imposes combination"@en ;
@@ -794,45 +842,12 @@ ec:isSatisfied a owl:DatatypeProperty ;
     rdfs:range xsd:boolean ;
     skos:definition "Result of verification of the limit state." .
 
-ec:lowerValue a owl:ObjectProperty ;
-    rdfs:label "lower value"@en ;
-    rdfs:comment "Relates a Quantity  with its Lower Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:LowerValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Lower Value." .
-
-ec:meanValue a owl:ObjectProperty ;
-    rdfs:label "mean value"@en ;
-    rdfs:comment "Relates a Quantity  with its Mean Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:MeanValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Mean Value." .
-
-ec:nominalValue a owl:ObjectProperty ;
-    rdfs:label "nominal value"@en ;
-    rdfs:comment "Relates a Quantity  with its Nominal Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:NominalValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Nominal Value." .
-
-ec:reductionFactor a owl:DatatypeProperty ;
-    rdfs:label "has reduction factor"@en ;
-    dcterms:source "EN 1990:2002, Section 6.4.3.2" ;
-    rdfs:comment "Reduction factor for unfavourable permanent action."@en ;
-    rdfs:range xsd:decimal ;
-    skos:altLabel "ξ" ;
-    skos:definition "Reduction factor for unfavourable permanent action." .
-
-ec:representativeValue a owl:ObjectProperty ;
-    rdfs:label "representative value"@en ;
-    rdfs:comment "Relates a Quantity  with its Representative Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:RepresentativeValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Representative Value." .
+ec:isVerifiedFor a owl:ObjectProperty ;
+    rdfs:label "verified for"@en ;
+    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
+    rdfs:domain ec:LimitState ;
+    rdfs:range ec:CombinationOfActions ;
+    skos:definition "Relates a limit state to the combination of actions used for its verification." .
 
 ec:requiresVerficationOf a owl:ObjectProperty ;
     rdfs:label "requires verification of"@en ;
@@ -841,27 +856,12 @@ ec:requiresVerficationOf a owl:ObjectProperty ;
     rdfs:range ec:LimitState ;
     skos:definition "Relates a limit state to the combination of actions used for its verification." .
 
-ec:upperValue a owl:ObjectProperty ;
-    rdfs:label "upper value"@en ;
-    rdfs:comment "Relates a Quantity  with its Upper Value."@en ;
-    rdfs:domain qudt:Quantity ;
-    rdfs:range ec:UpperValue ;
-    rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Upper Value." .
-
 ec:verifiedAgainstEffect a owl:ObjectProperty ;
     rdfs:label "has limit state value"@en ;
     rdfs:comment "Relates a limitstate value with the Action Effect that needs to be verified against."@en ;
     rdfs:domain ec:LimitStateValue ;
     rdfs:range ec:EffectOfAction ;
     skos:definition "Relates a limitstate value with the Action Effect that needs to be verified against." .
-
-ec:verifiedFor a owl:ObjectProperty ;
-    rdfs:label "verified for"@en ;
-    rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
-    rdfs:domain ec:LimitState ;
-    rdfs:range ec:CombinationOfActions ;
-    skos:definition "Relates a limit state to the combination of actions used for its verification." .
 
 ec:AccidentalAction a owl:Class ;
     rdfs:label "Accidental Action"@en ;
