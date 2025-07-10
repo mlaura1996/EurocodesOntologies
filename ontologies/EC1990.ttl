@@ -638,13 +638,6 @@ ec:causesEffect a owl:ObjectProperty ;
     rdfs:range ec:EffectOfAction ;
     skos:definition "Relates a combination of actions to the effects it causes in the structure." .
 
-ec:containsAction a owl:ObjectProperty ;
-    rdfs:label "contains action"@en ;
-    rdfs:comment "Relates a combination of actions to the individual actions it contains."@en ;
-    rdfs:domain ec:CombinationOfActions ;
-    rdfs:range ec:Action ;
-    skos:definition "Relates a combination of actions to the individual actions it contains." .
-
 ec:containsStructuralMember a owl:ObjectProperty ;
     rdfs:label "contains structural member"@en ;
     rdfs:comment "Relates a a structural element with the structural syste."@en ;
@@ -843,7 +836,7 @@ ec:isSatisfied a owl:DatatypeProperty ;
     skos:definition "Result of verification of the limit state." .
 
 ec:isVerifiedFor a owl:ObjectProperty ;
-    rdfs:label "verified for"@en ;
+    rdfs:label "is verified for"@en ;
     rdfs:comment "Relates a limit state to the combination of actions used for its verification."@en ;
     rdfs:domain ec:LimitState ;
     rdfs:range ec:CombinationOfActions ;
@@ -855,6 +848,13 @@ ec:requiresVerficationOf a owl:ObjectProperty ;
     rdfs:domain ec:DesignSituation ;
     rdfs:range ec:LimitState ;
     skos:definition "Relates a limit state to the combination of actions used for its verification." .
+
+ec:usesActionValue a owl:ObjectProperty ;
+    rdfs:label "uses action value"@en ;
+    rdfs:comment "Relates a combination of actions to the individual actions it contains."@en ;
+    rdfs:domain ec:CombinationOfActions ;
+    rdfs:range qudt:QuantityValue ;
+    skos:definition "Relates a combination of actions to the individual actions it contains." .
 
 ec:verifiedAgainstEffect a owl:ObjectProperty ;
     rdfs:label "has limit state value"@en ;
