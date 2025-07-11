@@ -3,7 +3,7 @@ from rdflib.namespace import RDF, RDFS, OWL, VANN, DCTERMS, XSD, SKOS
 import os
 
 # Define the main namespace and save path
-ref = URIRef("http://www.w3id.org/Eurocodes/EC1990#")
+ref = URIRef("http://www.w3id.org/eurocodes/ec1990#")
 save_folder = 'ontologies'
 save_filename = 'EC1990.ttl'
 
@@ -40,7 +40,7 @@ g.bind('quantitykind',QUANTITYKIND)
 
 # Add improved ontology header triples
 g.add((ref, RDF.type, OWL.Ontology))
-g.add((ref, DCTERMS.creator, Literal('Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl) and Maria Laura Leonardi (mlauraleonardi@gmail.com)')))
+g.add((ref, DCTERMS.creator, Literal('Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), José Granja (granja@civil.uminho.pt), Rolando Chacón (rolando.chacon@upc.edu), Daniel V. Oliveira (danvco@civil.uminho.pt), Miguel Azenha (miguel.azenha@civil.uminho.pt)')))
 g.add((ref, DCTERMS.date, Literal('2025-06-30', datatype=XSD.date)))
 g.add((ref, DCTERMS.modified, Literal('2025-06-30', datatype=XSD.date)))
 g.add((ref, DCTERMS.title, Literal('ECO - Eurocode Core Ontology')))

@@ -1,7 +1,7 @@
 @prefix bot: <https://w3id.org/bot#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ec: <http://www.w3id.org/Eurocodes/EC1990#> .
+@prefix ec: <http://www.w3id.org/eurocodes/ec1990#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <http://qudt.org/3.1.2/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,7 +14,7 @@ ec: a owl:Ontology ;
     dcterms:contributor "Agnieszka Jędrzejewska (Silesian Unviersity of Technology)",
         "Carlos Ramonell (Politechnic University of Catalonia)",
         "Maria Laura Leonardi (University of Minho)" ;
-    dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl) and Maria Laura Leonardi (mlauraleonardi@gmail.com)" ;
+    dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), José Granja (granja@civil.uminho.pt), Rolando Chacón (rolando.chacon@upc.edu), Daniel V. Oliveira (danvco@civil.uminho.pt), Miguel Azenha (miguel.azenha@civil.uminho.pt)" ;
     dcterms:date "2025-06-30"^^xsd:date ;
     dcterms:description "Core ontology formalising knowledge from Eurocode 0 for automated structural design and verification" ;
     dcterms:format "ttl" ;
@@ -22,7 +22,7 @@ ec: a owl:Ontology ;
     dcterms:modified "2025-06-30"^^xsd:date ;
     dcterms:title "ECO - Eurocode Core Ontology" ;
     vann:preferredNamespacePrefix "ec" ;
-    vann:preferredNamespaceUri "http://www.w3id.org/Eurocodes/EC1990#" ;
+    vann:preferredNamespaceUri "http://www.w3id.org/eurocodes/ec1990#" ;
     owl:imports <https://www.w3id.org/bot> ;
     owl:versionInfo "1.0.0" ;
     skos:hasTopConcept ec:Action,
