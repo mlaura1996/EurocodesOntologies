@@ -622,12 +622,12 @@ ec:hasLimitStateValue a owl:ObjectProperty ;
     rdfs:range ec:LimitStateValue ;
     skos:definition "Relates a structural member to its capacity for the effect of action." .
 
-ec:hasLowerValue a owl:ObjectProperty ;
-    rdfs:label "has lower value"@en ;
+ec:hasLowerBoundValue a owl:ObjectProperty ;
+    rdfs:label "has lower boundvalue"@en ;
     rdfs:domain qudt:Quantity ;
-    rdfs:range ec:LowerValue ;
+    rdfs:range ec:LowerBoundValue ;
     rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Lower Value." .
+    skos:definition "Relates a Quantity  with its Lower Bound Value." .
 
 ec:hasMaterialProperty a owl:ObjectProperty ;
     rdfs:label "has Property"@en ;
@@ -697,12 +697,12 @@ ec:hasSystem a owl:ObjectProperty ;
     rdfs:range ec:StructuralSystem ;
     skos:definition "Relates a structure with its structural system." .
 
-ec:hasUpperValue a owl:ObjectProperty ;
-    rdfs:label "has upper value"@en ;
+ec:hasUpperBoundValue a owl:ObjectProperty ;
+    rdfs:label "has upper bound value"@en ;
     rdfs:domain qudt:Quantity ;
-    rdfs:range ec:UpperValue ;
+    rdfs:range ec:UpperBoundValue ;
     rdfs:subPropertyOf qudt:quantityValue ;
-    skos:definition "Relates a Quantity  with its Upper Value." .
+    skos:definition "Relates a Quantity  with its Upper Bound Value." .
 
 ec:imposesCombination a owl:ObjectProperty ;
     rdfs:label "imposes combination"@en ;
@@ -775,7 +775,8 @@ ec:Building a owl:Class ;
     skos:example "dwelling house, office building, industrial building" .
 
 ec:CharacteristicValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A statistically defined value of a physical quantity with a specified probability of non-exceedance." .
 
 ec:DeformationEffect a owl:Class ;
     rdfs:label "Deformation Effect"@en ;
@@ -783,7 +784,8 @@ ec:DeformationEffect a owl:Class ;
     skos:definition "Effect of actions in the form of deformations of the structure or structural members." .
 
 ec:DesignValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A value used in structural design verification, derived from a representative value (typically characteristic) through application of partial safety factors." .
 
 ec:FreeAction a owl:Class ;
     rdfs:label "Free Action"@en ;
@@ -806,14 +808,17 @@ ec:IndirectAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:definition "Set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes." .
 
-ec:LowerValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+ec:LowerBoundValue a owl:Class ;
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A conservative or code-specified minimum value of a physical quantity, used to ensure safety under unfavorable conditions." .
 
 ec:MeanValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "Arithmetic average of a set of observations; used to represent the expected or central value of a physical quantity in structural design." .
 
 ec:NominalValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A conventional or assigned value of a physical quantity used for reference in design." .
 
 ec:QuasiPermanentCombination a owl:Class ;
     rdfs:label "Quasi-Permanent Combination"@en ;
@@ -830,7 +835,8 @@ ec:RepresentativeAction a owl:Class ;
     skos:definition "Value ofan action used for limit state verification. A representative value may be the characteristic value or an accompanying value." .
 
 ec:RepresentativeValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A value that approximates a physical parameter in a way that reflects its expected role in structural analysis or verification." .
 
 ec:Resistance a owl:Class ;
     rdfs:label "Resistance"@en ;
@@ -854,8 +860,9 @@ ec:UnfavourableAction a owl:Class ;
     rdfs:subClassOf ec:Action ;
     skos:definition "An action that increases the effect of other actions on a structure, or otherwise reduces structural safety." .
 
-ec:UpperValue a owl:Class ;
-    rdfs:subClassOf qudt:QuantityValue .
+ec:UpperBoundValue a owl:Class ;
+    rdfs:subClassOf qudt:QuantityValue ;
+    skos:definition "A conservative or code-specified maximum value of a physical quantity, used to limit overestimation of capacity or underestimation of actions." .
 
 ec:AccidentalCombination a owl:Class ;
     rdfs:label "Accidental Combination"@en ;

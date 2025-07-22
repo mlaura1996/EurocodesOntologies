@@ -931,24 +931,31 @@ g.add((EC1990['LimitingServicabilityCriterion'], SKOS.example, Literal('allowabl
 
 g.add((EC1990['RepresentativeValue'], RDF.type, OWL.Class))
 g.add((EC1990['RepresentativeValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['RepresentativeValue'], SKOS.definition, Literal('A value that approximates a physical parameter in a way that reflects its expected role in structural analysis or verification.')))
 
 g.add((EC1990['NominalValue'], RDF.type, OWL.Class))
 g.add((EC1990['NominalValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['NominalValue'], SKOS.definition, Literal('A conventional or assigned value of a physical quantity used for reference in design.')))
 
 g.add((EC1990['CharacteristicValue'], RDF.type, OWL.Class))
 g.add((EC1990['CharacteristicValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['CharacteristicValue'], SKOS.definition, Literal('A statistically defined value of a physical quantity with a specified probability of non-exceedance.')))
 
 g.add((EC1990['DesignValue'], RDF.type, OWL.Class))
 g.add((EC1990['DesignValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['DesignValue'], SKOS.definition, Literal('A value used in structural design verification, derived from a representative value (typically characteristic) through application of partial safety factors.')))
 
 g.add((EC1990['MeanValue'], RDF.type, OWL.Class))
 g.add((EC1990['MeanValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['MeanValue'], SKOS.definition, Literal('Arithmetic average of a set of observations; used to represent the expected or central value of a physical quantity in structural design.')))
 
-g.add((EC1990['LowerValue'], RDF.type, OWL.Class))
-g.add((EC1990['LowerValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['LowerBoundValue'], RDF.type, OWL.Class))
+g.add((EC1990['LowerBoundValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['LowerBoundValue'], SKOS.definition, Literal('A conservative or code-specified minimum value of a physical quantity, used to ensure safety under unfavorable conditions.')))
 
-g.add((EC1990['UpperValue'], RDF.type, OWL.Class))
-g.add((EC1990['UpperValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['UpperBoundValue'], RDF.type, OWL.Class))
+g.add((EC1990['UpperBoundValue'], RDFS.subClassOf, QUDT.QuantityValue))
+g.add((EC1990['UpperBoundValue'], SKOS.definition, Literal('A conservative or code-specified maximum value of a physical quantity, used to limit overestimation of capacity or underestimation of actions.')))
 
 ##########################################################
 #                 OBJECT PROPERTIES                      #
@@ -989,19 +996,19 @@ g.add((EC1990['hasMeanValue'], SKOS.definition, Literal('Relates a Quantity  wit
 g.add((EC1990['hasMeanValue'], RDFS.domain, QUDT.Quantity))
 g.add((EC1990['hasMeanValue'], RDFS.range, EC1990.MeanValue))
 
-g.add((EC1990['hasLowerValue'], RDF.type, OWL.ObjectProperty))
-g.add((EC1990['hasLowerValue'], RDFS.subPropertyOf, QUDT.quantityValue))
-g.add((EC1990['hasLowerValue'], RDFS.label, Literal('has lower value', lang='en')))
-g.add((EC1990['hasLowerValue'], SKOS.definition, Literal('Relates a Quantity  with its Lower Value.')))
-g.add((EC1990['hasLowerValue'], RDFS.domain, QUDT.Quantity))
-g.add((EC1990['hasLowerValue'], RDFS.range, EC1990.LowerValue))
+g.add((EC1990['hasLowerBoundValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['hasLowerBoundValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['hasLowerBoundValue'], RDFS.label, Literal('has lower boundvalue', lang='en')))
+g.add((EC1990['hasLowerBoundValue'], SKOS.definition, Literal('Relates a Quantity  with its Lower Bound Value.')))
+g.add((EC1990['hasLowerBoundValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['hasLowerBoundValue'], RDFS.range, EC1990.LowerBoundValue))
 
-g.add((EC1990['hasUpperValue'], RDF.type, OWL.ObjectProperty))
-g.add((EC1990['hasUpperValue'], RDFS.subPropertyOf, QUDT.quantityValue))
-g.add((EC1990['hasUpperValue'], RDFS.label, Literal('has upper value', lang='en')))
-g.add((EC1990['hasUpperValue'], SKOS.definition, Literal('Relates a Quantity  with its Upper Value.')))
-g.add((EC1990['hasUpperValue'], RDFS.domain, QUDT.Quantity))
-g.add((EC1990['hasUpperValue'], RDFS.range, EC1990.UpperValue))
+g.add((EC1990['hasUpperBoundValue'], RDF.type, OWL.ObjectProperty))
+g.add((EC1990['hasUpperBoundValue'], RDFS.subPropertyOf, QUDT.quantityValue))
+g.add((EC1990['hasUpperBoundValue'], RDFS.label, Literal('has upper bound value', lang='en')))
+g.add((EC1990['hasUpperBoundValue'], SKOS.definition, Literal('Relates a Quantity  with its Upper Bound Value.')))
+g.add((EC1990['hasUpperBoundValue'], RDFS.domain, QUDT.Quantity))
+g.add((EC1990['hasUpperBoundValue'], RDFS.range, EC1990.UpperBoundValue))
 
 g.add((EC1990['usesActionValue'], RDF.type, OWL.ObjectProperty))
 g.add((EC1990['usesActionValue'], RDFS.label, Literal('uses action value', lang='en')))
