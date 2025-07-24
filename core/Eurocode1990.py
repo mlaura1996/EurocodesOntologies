@@ -20,6 +20,8 @@ g = Graph()
 EC1990 = Namespace(ref)
 BOT = Namespace('https://w3id.org/bot#')
 BEO = Namespace('https://w3id.org/beo#')
+BFO = Namespace("http://purl.obolibrary.org/obo/")
+EMMO = Namespace("http://emmo.info/emmo#")
 CC = Namespace('http://creativecommons.org/ns#')
 QUDT = Namespace('http://qudt.org/3.1.2/schema/qudt/')
 UNIT = Namespace('http://qudt.org/3.1.2/vocab/unit/')
@@ -59,6 +61,7 @@ g.add((ref, OWL.imports, URIRef('https://www.w3id.org/bot')))
 
 # Construction Works
 g.add((EC1990['ConstructionWork'], RDF.type, OWL.Class))
+g.add((EC1990['ConstructionWork'], RDFS.subClassOf, BFO.BFO_0000040)) #BFO_0000040 is 'material entity'
 g.add((EC1990['ConstructionWork'], RDFS.label, Literal('Construction Works', lang='en')))
 g.add((EC1990['ConstructionWork'], SKOS.definition, Literal('Everything that is constructed or results from construction operations. The term covers both building and civil engineering works comprising structural, non-structural and geotechnical elements.')))
 g.add((EC1990['ConstructionWork'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.1')))
@@ -88,6 +91,7 @@ g.add((EC1990['CivilEngineeringWork'], SKOS.example, Literal('bridge, retaining 
 
 g.add((EC1990['StructuralMember'], RDF.type, OWL.Class))
 g.add((EC1990['StructuralMember'], RDFS.subClassOf, BOT.Element))
+g.add((EC1990['StructuralMember'], RDFS.subClassOf, BFO.BFO_0000040)) #BFO_0000040 is 'material entity'
 g.add((EC1990['StructuralMember'], RDFS.label, Literal('Structural Member', lang='en')))
 g.add((EC1990['StructuralMember'], SKOS.definition, Literal('Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile.')))
 g.add((EC1990['StructuralMember'], DCTERMS.source, Literal('EN 1990:200, Section 1.5.1.7')))
@@ -95,6 +99,7 @@ g.add((EC1990['StructuralMember'], SKOS.example, Literal('column, beam, slab, fo
 
 g.add((EC1990['EurocodeZone'], RDF.type, OWL.Class))
 g.add((EC1990['EurocodeZone'], RDFS.subClassOf, BOT.Zone))
+g.add((EC1990['EurocodeZone'], RDFS.subClassOf, BFO.BFO_0000040)) #BFO_0000040 is 'material entity'
 g.add((EC1990['EurocodeZone'], RDFS.label, Literal('Eurocode Zone', lang='en')))
 g.add((EC1990['EurocodeZone'], SKOS.definition, Literal('A space classified according to EN 1991-1-1 usage categories')))
 g.add((EC1990['EurocodeZone'], DCTERMS.source, Literal('EN 1991-1-1:2002 Table 6.1')))
@@ -251,6 +256,7 @@ g.add((EC1990['HelicopterLandingAreas'], SKOS.example, Literal('helicopter landi
 
 # Structure-related classes
 g.add((EC1990['Structure'], RDF.type, OWL.Class))
+g.add((EC1990['Structure'], RDFS.subClassOf, BFO.BFO_0000040)) #BFO_0000040 is 'material entity'
 g.add((EC1990['Structure'], RDFS.label, Literal('Structure', lang='en')))
 g.add((EC1990['Structure'], SKOS.definition, Literal('Organised combination of connected parts designed to carry loads and provide adequate rigidity.')))
 g.add((EC1990['Structure'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.6')))
@@ -307,6 +313,7 @@ g.add((EC1990['CivilEngineeringStructure'], DCTERMS.source, Literal('EN 1990:200
 g.add((EC1990['CivilEngineeringStructure'], SKOS.example, Literal('dam, tunnel, airport, retaining wall, power station, road')))
 
 g.add((EC1990['StructuralSystem'], RDF.type, OWL.Class))
+g.add((EC1990['StructuralSystem'], RDFS.subClassOf, BFO.BFO_0000040)) #BFO_0000040 is 'material entity'
 g.add((EC1990['StructuralSystem'], RDFS.label, Literal('Structural System', lang='en')))
 g.add((EC1990['StructuralSystem'], SKOS.definition, Literal('Load-bearing members of a building or civil engineering works and the way in which these members function together.')))
 g.add((EC1990['StructuralSystem'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.1.9')))
@@ -394,18 +401,30 @@ g.add((EC1990['DesignSituation'], RDFS.label, Literal('Design Situation', lang='
 g.add((EC1990['DesignSituation'], SKOS.definition, Literal('Sets of physical conditions representing the real conditions occurring during a certain time interval for which the design will demonstrate that relevant limit states are not exceeded.')))
 g.add((EC1990['DesignSituation'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.2.2')))
 
-g.add((EC1990['PersistentDesignSituation'], RDF.type, OWL.NamedIndividual))
-g.add((EC1990['PersistentDesignSituation'], RDF.type, EC1990.DesignSituation))
+g.add((EC1990['PersistentDesignSituation'], RDF.type, OWL.Class))
+g.add((EC1990['PersistentDesignSituation'], RDFS.subClassOf, EC1990.DesignSituation))
 g.add((EC1990['PersistentDesignSituation'], RDFS.label, Literal('Persistent Design Situation', lang='en')))
 g.add((EC1990['PersistentDesignSituation'], SKOS.definition, Literal('Design situation that is relevant during a period of the same order as the design working life of the structure. Generally refers to conditions of normal use.')))
 g.add((EC1990['PersistentDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.2.4')))
 
-g.add((EC1990['TransientDesignSituation'], RDF.type, OWL.NamedIndividual))
-g.add((EC1990['TransientDesignSituation'], RDF.type, EC1990.DesignSituation))
+g.add((EC1990['TransientDesignSituation'], RDF.type, OWL.Class))
+g.add((EC1990['TransientDesignSituation'], RDFS.subClassOf, EC1990.DesignSituation))
 g.add((EC1990['TransientDesignSituation'], RDFS.label, Literal('Transient Design Situation', lang='en')))
 g.add((EC1990['TransientDesignSituation'], SKOS.definition, Literal('Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair.')))
 g.add((EC1990['TransientDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.2.3')))
 g.add((EC1990['TransientDesignSituation'], SKOS.example, Literal('construction phase, repair operations')))
+
+g.add((EC1990['Execution'], RDF.type, OWL.NamedIndividual))
+g.add((EC1990['Execution'], RDF.type, EC1990.TransientDesignSituation))
+g.add((EC1990['Execution'], RDFS.label, Literal('Execution', lang='en')))
+g.add((EC1990['Execution'], SKOS.definition, Literal('Transient design situation during execution of a construction work.')))
+g.add((EC1990['Execution'], DCTERMS.source, Literal('EN 1990:2002, Section 3.2(2)P')))
+
+g.add((EC1990['Repair'], RDF.type, OWL.NamedIndividual))
+g.add((EC1990['Repair'], RDF.type, EC1990.TransientDesignSituation))
+g.add((EC1990['Repair'], RDFS.label, Literal('Repair', lang='en')))
+g.add((EC1990['Repair'], SKOS.definition, Literal('Transient design situation during repair of a construction work.')))
+g.add((EC1990['Repair'], DCTERMS.source, Literal('EN 1990:2002, Section 3.2(2)P')))
 
 g.add((EC1990['AccidentalDesignSituation'], RDF.type, OWL.Class))
 g.add((EC1990['AccidentalDesignSituation'], RDFS.subClassOf, EC1990.DesignSituation))
@@ -438,8 +457,8 @@ g.add((EC1990['LocalizedFailureDesignSituation'], RDFS.label, Literal('Localized
 g.add((EC1990['LocalizedFailureDesignSituation'], SKOS.definition, Literal('Accidental design situation involving local failure conditions.')))
 g.add((EC1990['LocalizedFailureDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.2.5')))
 
-g.add((EC1990['SeismicDesignSituation'], RDF.type, OWL.NamedIndividual))
-g.add((EC1990['SeismicDesignSituation'], RDF.type, EC1990.DesignSituation))
+g.add((EC1990['SeismicDesignSituation'], RDF.type, OWL.Class))
+g.add((EC1990['SeismicDesignSituation'], RDFS.subClassOf, EC1990.DesignSituation))
 g.add((EC1990['SeismicDesignSituation'], RDFS.label, Literal('Seismic Design Situation', lang='en')))
 g.add((EC1990['SeismicDesignSituation'], SKOS.definition, Literal('Design situation involving exceptional conditions of the structure when subjected to a seismic event.')))
 g.add((EC1990['SeismicDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.2.7')))
@@ -450,6 +469,7 @@ g.add((EC1990['SeismicDesignSituation'], DCTERMS.source, Literal('EN 1990:2002, 
 
 g.add((EC1990['Action'], RDF.type, OWL.Class))
 g.add((EC1990['Action'], RDFS.subClassOf, QUDT.Quantity))
+g.add((EC1990['Action'], RDFS.subClassOf, BFO.BFO_0000140)) #BFO_0000140 is 'immaterial entity'
 g.add((EC1990['Action'], RDFS.label, Literal('Action', lang='en')))
 g.add((EC1990['Action'], SKOS.definition, Literal('Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action).')))
 g.add((EC1990['Action'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.1')))
@@ -627,6 +647,7 @@ g.add((EC1990['AccompanyingVariableAction'], DCTERMS.source, Literal('EN 1990:20
 ##########################################################
 
 g.add((EC1990['CombinationOfActions'], RDF.type, OWL.Class))
+g.add((EC1990['CombinationOfActions'], RDFS.subClassOf, BFO.BFO_0000140)) #BFO_0000140 is 'immaterial entity'
 g.add((EC1990['CombinationOfActions'], RDFS.label, Literal('Combination of Actions', lang='en')))
 g.add((EC1990['CombinationOfActions'], SKOS.definition, Literal('Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions.')))
 g.add((EC1990['CombinationOfActions'], DCTERMS.source, Literal('EN 1990:2002, Section 1.5.3.22')))
@@ -684,6 +705,7 @@ g.add((EC1990['QuasiPermanentCombination'], DCTERMS.source, Literal('EN 1990:200
 ##########################################################
 
 g.add((EC1990['EffectOfAction'], RDF.type, OWL.Class))
+g.add((EC1990['EffectOfAction'], RDFS.subClassOf, BFO.BFO_0000140)) #BFO_0000140 is 'immaterial entity'
 g.add((EC1990['EffectOfAction'], RDFS.subClassOf, QUDT.Quantity))
 g.add((EC1990['EffectOfAction'], RDFS.label, Literal('Effect of Action', lang='en')))
 g.add((EC1990['EffectOfAction'], SKOS.definition, Literal('Effect of actions on structural members (e.g. internal force, moment, stress, strain) or on the whole structure (e.g. deflection, rotation).')))
@@ -874,6 +896,7 @@ g.add((EC1990['Concrete'], SKOS.definition, Literal('A composite material consis
 
 g.add((EC1990['MaterialProperty'], RDF.type, OWL.Class))
 g.add((EC1990['MaterialProperty'], RDFS.subClassOf, QUDT.Quantity))
+g.add((EC1990['MaterialProperty'], RDFS.subClassOf, BFO.BFO_0000019)) #BFO_0000019 is 'Quality'
 g.add((EC1990['MaterialProperty'], RDFS.label, Literal('Material Property', lang='en')))
 g.add((EC1990['MaterialProperty'], SKOS.definition, Literal('Physical or mechanical property of construction materials.')))
 g.add((EC1990['MaterialProperty'], DCTERMS.source, Literal('EN 1990:2002, Section 4.2')))
@@ -890,6 +913,7 @@ g.add((EC1990['CompressiveStrength'], SKOS.definition, Literal('Compressive Stre
 
 g.add((EC1990['GeometricalProperty'], RDF.type, OWL.Class))
 g.add((EC1990['GeometricalProperty'], RDFS.subClassOf, QUDT.Quantity))
+g.add((EC1990['GeometricalProperty'], RDFS.subClassOf, BFO.BFO_0000019)) #BFO_0000019 is 'Quality'
 g.add((EC1990['GeometricalProperty'], RDFS.label, Literal('Geometrical Data', lang='en')))
 g.add((EC1990['GeometricalProperty'], SKOS.definition, Literal('Geometrical properties and dimensions of structural elements.')))
 g.add((EC1990['GeometricalProperty'], DCTERMS.source, Literal('EN 1990:2002, Section 4.3')))

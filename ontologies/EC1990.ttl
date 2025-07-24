@@ -197,6 +197,12 @@ ec:EQU a owl:NamedIndividual,
     dcterms:source "EN 1990:2002, Section 6.4.1(1)P a)" ;
     skos:definition "Loss of static equilibrium of the structure or any part of it considered as a rigid body." .
 
+ec:Execution a owl:NamedIndividual,
+        ec:TransientDesignSituation ;
+    rdfs:label "Execution"@en ;
+    dcterms:source "EN 1990:2002, Section 3.2(2)P" ;
+    skos:definition "Transient design situation during execution of a construction work." .
+
 ec:ExplosionDesignSituation a owl:NamedIndividual,
         ec:AccidentalDesignSituation ;
     rdfs:label "Explosion Design Situation"@en ;
@@ -362,10 +368,10 @@ ec:OfficeArea a owl:Class ;
     skos:definition "Office area" ;
     skos:example "General office spaces" .
 
-ec:PersistentDesignSituation a owl:NamedIndividual,
-        ec:DesignSituation ;
+ec:PersistentDesignSituation a owl:Class ;
     rdfs:label "Persistent Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.4" ;
+    rdfs:subClassOf ec:DesignSituation ;
     skos:definition "Design situation that is relevant during a period of the same order as the design working life of the structure. Generally refers to conditions of normal use." .
 
 ec:PhysicalActivitiesAreas a owl:Class ;
@@ -397,6 +403,12 @@ ec:Reaction a owl:Class ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
     rdfs:subClassOf ec:EffectOfAction ;
     skos:definition "Support reaction force or moment at structural supports." .
+
+ec:Repair a owl:NamedIndividual,
+        ec:TransientDesignSituation ;
+    rdfs:label "Repair"@en ;
+    dcterms:source "EN 1990:2002, Section 3.2(2)P" ;
+    skos:definition "Transient design situation during repair of a construction work." .
 
 ec:ReplacableStructuralElements a owl:NamedIndividual,
         ec:Structure ;
@@ -445,10 +457,10 @@ ec:SeismicAction a owl:Class ;
     skos:altLabel "A_E" ;
     skos:definition "Action that arises due to earthquake ground motions." .
 
-ec:SeismicDesignSituation a owl:NamedIndividual,
-        ec:DesignSituation ;
+ec:SeismicDesignSituation a owl:Class ;
     rdfs:label "Seismic Design Situation"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.2.7" ;
+    rdfs:subClassOf ec:DesignSituation ;
     skos:definition "Design situation involving exceptional conditions of the structure when subjected to a seismic event." .
 
 ec:SelfWeight a owl:Class ;
@@ -512,13 +524,6 @@ ec:TorsionalMoment a owl:Class ;
     rdfs:subClassOf ec:InternalForce ;
     skos:altLabel "T" ;
     skos:definition "Internal moment causing twisting in structural members." .
-
-ec:TransientDesignSituation a owl:NamedIndividual,
-        ec:DesignSituation ;
-    rdfs:label "Transient Design Situation"@en ;
-    dcterms:source "EN 1990:2002, Section 1.5.2.3" ;
-    skos:definition "Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair." ;
-    skos:example "construction phase, repair operations" .
 
 ec:Twist a owl:Class ;
     rdfs:label "Twist"@en ;
@@ -892,7 +897,8 @@ ec:FrequentCombination a owl:Class ;
 ec:GeometricalProperty a owl:Class ;
     rdfs:label "Geometrical Data"@en ;
     dcterms:source "EN 1990:2002, Section 4.3" ;
-    rdfs:subClassOf qudt:Quantity ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        qudt:Quantity ;
     skos:definition "Geometrical properties and dimensions of structural elements." .
 
 ec:IndustrialandStorage a owl:Class ;
@@ -924,8 +930,16 @@ ec:SnowLoad a owl:Class ;
 ec:StructuralSystem a owl:Class ;
     rdfs:label "Structural System"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.1.9" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
     skos:definition "Load-bearing members of a building or civil engineering works and the way in which these members function together." ;
     skos:example "Flat-slab system with drop panels, steel potal frame, cable-stayed bridge system, trussed roof system" .
+
+ec:TransientDesignSituation a owl:Class ;
+    rdfs:label "Transient Design Situation"@en ;
+    dcterms:source "EN 1990:2002, Section 1.5.2.3" ;
+    rdfs:subClassOf ec:DesignSituation ;
+    skos:definition "Design situation that is relevant during a period much shorter than the design working life of the structure and which has a high probability of occurrence, e.g. during construction or repair." ;
+    skos:example "construction phase, repair operations" .
 
 ec:VolumetricDeformation a owl:Class ;
     rdfs:label "Volumetric Deformation"@en ;
@@ -953,7 +967,8 @@ ec:Material a owl:Class ;
 ec:MaterialProperty a owl:Class ;
     rdfs:label "Material Property"@en ;
     dcterms:source "EN 1990:2002, Section 4.2" ;
-    rdfs:subClassOf qudt:Quantity ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019>,
+        qudt:Quantity ;
     skos:definition "Physical or mechanical property of construction materials." .
 
 ec:MechanicalEffect a owl:Class ;
@@ -1011,6 +1026,7 @@ ec:AccidentalDesignSituation a owl:Class ;
 ec:ConstructionWork a owl:Class ;
     rdfs:label "Construction Works"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.1.1" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
     skos:definition "Everything that is constructed or results from construction operations. The term covers both building and civil engineering works comprising structural, non-structural and geotechnical elements." ;
     skos:example "building, bridge, nuclea power plant" .
 
@@ -1057,6 +1073,7 @@ ec:VariableAction a owl:Class ;
 ec:CombinationOfActions a owl:Class ;
     rdfs:label "Combination of Actions"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.22" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140> ;
     skos:definition "Set of design values used for the verification of the structural reliability for a limit state under the simultaneous influence of different actions." .
 
 ec:LimitState a owl:Class ;
@@ -1073,14 +1090,16 @@ ec:DesignSituation a owl:Class ;
 ec:StructuralMember a owl:Class ;
     rdfs:label "Structural Member"@en ;
     dcterms:source "EN 1990:200, Section 1.5.1.7" ;
-    rdfs:subClassOf bot:Element ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        bot:Element ;
     skos:definition "Physically distinguishable part of a structure, e.g. a column, a beam, a slab, a foundation pile." ;
     skos:example "column, beam, slab, foundation pile" .
 
 ec:EffectOfAction a owl:Class ;
     rdfs:label "Effect of Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.2" ;
-    rdfs:subClassOf qudt:Quantity ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140>,
+        qudt:Quantity ;
     skos:altLabel "E" ;
     skos:definition "Effect of actions on structural members (e.g. internal force, moment, stress, strain) or on the whole structure (e.g. deflection, rotation)." ;
     skos:editorialNote "Effects of actions can be calculated through structural analysis and must be compared against resistance for verification" ;
@@ -1089,19 +1108,22 @@ ec:EffectOfAction a owl:Class ;
 ec:EurocodeZone a owl:Class ;
     rdfs:label "Eurocode Zone"@en ;
     dcterms:source "EN 1991-1-1:2002 Table 6.1" ;
-    rdfs:subClassOf bot:Zone ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        bot:Zone ;
     skos:definition "A space classified according to EN 1991-1-1 usage categories" .
 
 ec:Structure a owl:Class ;
     rdfs:label "Structure"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.1.6" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
     skos:definition "Organised combination of connected parts designed to carry loads and provide adequate rigidity." ;
     skos:example "Residential building, reatining wall, suspension bridge, underground tunnel" .
 
 ec:Action a owl:Class ;
     rdfs:label "Action"@en ;
     dcterms:source "EN 1990:2002, Section 1.5.3.1" ;
-    rdfs:subClassOf qudt:Quantity ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140>,
+        qudt:Quantity ;
     skos:altLabel "F" ;
     skos:definition "Set of forces (loads) applied to the structure (direct action) or set of imposed deformations or accelerations caused for example, by temperature changes, moisture variation, uneven settlement or earthquakes (indirect action)." ;
     skos:example "dead load, imopsed load, wind load, thermal action" .
