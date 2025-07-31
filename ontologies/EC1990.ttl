@@ -11,10 +11,11 @@
 
 ec: a owl:Ontology ;
     cc:license "http://creativecommons.org/licenses/by/3.0/" ;
-    dcterms:contributor "Agnieszka Jędrzejewska (Silesian Unviersity of Technology)",
-        "Carlos Ramonell (Politechnic University of Catalonia)",
-        "Maria Laura Leonardi (University of Minho)" ;
-    dcterms:creator "Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), José Granja (granja@civil.uminho.pt), Rolando Chacón (rolando.chacon@upc.edu), Daniel V. Oliveira (danvco@civil.uminho.pt), Miguel Azenha (miguel.azenha@civil.uminho.pt)" ;
+    dcterms:contributor "Daniel V. Oliveira (danvco@civil.uminho.pt)",
+        "José Granja (granja@civil.uminho.pt)",
+        "Miguel Azenha (miguel.azenha@civil.uminho.pt)",
+        "Rolando Chacón (rolando.chacon@upc.edu)" ;
+    dcterms:creator "Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), Carlos Ramonell Cazador (carlos.ramonell@upc.edu)" ;
     dcterms:date "2025-06-30"^^xsd:date ;
     dcterms:description "Core ontology formalising knowledge from Eurocode 0 for automated structural design and verification" ;
     dcterms:format "ttl" ;

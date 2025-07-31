@@ -42,7 +42,7 @@ g.bind('quantitykind',QUANTITYKIND)
 
 # Add improved ontology header triples
 g.add((ref, RDF.type, OWL.Ontology))
-g.add((ref, DCTERMS.creator, Literal('Carlos Ramonell Cazador (carlos.ramonell@upc.edu), Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), José Granja (granja@civil.uminho.pt), Rolando Chacón (rolando.chacon@upc.edu), Daniel V. Oliveira (danvco@civil.uminho.pt), Miguel Azenha (miguel.azenha@civil.uminho.pt)')))
+g.add((ref, DCTERMS.creator, Literal('Agnieszka Jędrzejewska (agnieszka.jedrzejewska@polsl.pl), Maria Laura Leonardi (mlauraleonardi@gmail.com), Carlos Ramonell Cazador (carlos.ramonell@upc.edu)')))
 g.add((ref, DCTERMS.date, Literal('2025-06-30', datatype=XSD.date)))
 g.add((ref, DCTERMS.modified, Literal('2025-06-30', datatype=XSD.date)))
 g.add((ref, DCTERMS.title, Literal('ECO - Eurocode Core Ontology')))
@@ -1283,9 +1283,10 @@ g.add((ref, SKOS.hasTopConcept, EC1990.CombinationOfActions))
 g.add((ref, SKOS.hasTopConcept, EC1990.ConstructionWork))
 
 # Add provenance information
-g.add((ref, DCTERMS.contributor, Literal('Agnieszka Jędrzejewska (Silesian Unviersity of Technology)')))
-g.add((ref, DCTERMS.contributor, Literal('Maria Laura Leonardi (University of Minho)')))
-g.add((ref, DCTERMS.contributor, Literal('Carlos Ramonell (Politechnic University of Catalonia)')))
+g.add((ref, DCTERMS.contributor, Literal('José Granja (granja@civil.uminho.pt)')))
+g.add((ref, DCTERMS.contributor, Literal('Rolando Chacón (rolando.chacon@upc.edu)')))
+g.add((ref, DCTERMS.contributor, Literal('Daniel V. Oliveira (danvco@civil.uminho.pt)')))
+g.add((ref, DCTERMS.contributor, Literal('Miguel Azenha (miguel.azenha@civil.uminho.pt)')))
 
 ##########################################################
 #               SEMANTIC RELATIONSHIPS                   #
