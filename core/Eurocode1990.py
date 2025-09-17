@@ -1199,11 +1199,17 @@ g.add((EC1990['hasQuasiPermanentFactor'], DCTERMS.source, Literal('EN 1990:2002,
 g.add((EC1990['hasQuasiPermanentFactor'], RDFS.range, XSD.decimal))
 g.add((EC1990['hasQuasiPermanentFactor'], SKOS.altLabel, Literal('ψ_2')))
 
+#Boolean-type properties
 g.add((EC1990['isSatisfied'], RDF.type, OWL.DatatypeProperty))
 g.add((EC1990['isSatisfied'], RDFS.label, Literal('is satisfied', lang='en')))
 g.add((EC1990['isSatisfied'], SKOS.definition, Literal('Result of verification of the limit state.')))
 g.add((EC1990['isSatisfied'], RDFS.domain, EC1990.LimitState))
 g.add((EC1990['isSatisfied'], RDFS.range, XSD.boolean))
+
+g.add((EC1990['hasNationallyDefinedValue'], RDF.type, OWL.DatatypeProperty))
+g.add((EC1990['hasNationallyDefinedValue'], RDFS.label, Literal('has nationally defined value', lang='en')))
+g.add((EC1990['hasNationallyDefinedValue'], SKOS.definition, Literal('Defines whether parameter has specific value defined in NA.')))
+g.add((EC1990['hasNationallyDefinedValue'], RDFS.range, XSD.boolean))
 
 ##########################################################
 #                    DISJOINT CLASSES                    #

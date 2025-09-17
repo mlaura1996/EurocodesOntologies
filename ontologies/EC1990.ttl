@@ -648,6 +648,11 @@ ec:hasMeanValue a owl:ObjectProperty ;
     rdfs:subPropertyOf qudt:quantityValue ;
     skos:definition "Relates a Quantity  with its Mean Value." .
 
+ec:hasNationallyDefinedValue a owl:DatatypeProperty ;
+    rdfs:label "has nationally defined value"@en ;
+    rdfs:range xsd:boolean ;
+    skos:definition "Defines whether parameter has specific value defined in NA." .
+
 ec:hasNominalValue a owl:ObjectProperty ;
     rdfs:label "has nominal value"@en ;
     rdfs:domain qudt:Quantity ;
